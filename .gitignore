@@ -1,7 +1,4 @@
 # Logs
-public/index.html
-public/
-
 logs
 *.log
 npm-debug.log*
