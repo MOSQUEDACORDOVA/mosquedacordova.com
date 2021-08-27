@@ -1,4 +1,6 @@
 # Logs
+public/index.html
+public/index copy.html
 logs
 *.log
 npm-debug.log*
