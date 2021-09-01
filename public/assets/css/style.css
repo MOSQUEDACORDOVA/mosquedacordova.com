@@ -391,7 +391,8 @@ margin: 0 auto;
   .izquierda{
     background: rgba(200,200,200,0.1);
     vertical-align: bottom;text-align: left;
-    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);    
     border-top-left-radius: 4px;
   }
   .derecha{
