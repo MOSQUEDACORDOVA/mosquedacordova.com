@@ -1,581 +1,485 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>CBFX | Asecryp</title>
-    <!-- SEO Meta Tags-->
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <meta name="author" content="">
+<!doctype html>
+<html lang="es">
+<head>
+	<title>CBFX | Asecryp</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="Webestica.com">
+	<meta name="description" content="Creative Multipurpose Bootstrap Template">
 
-    <!-- Viewport-->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Favicon 
+	<link rel="shortcut icon" href="assets/images/favicon.ico"> -->
 
-    <!-- Favicon and Touch Icons
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="manifest" href="site.webmanifest">
-    <link rel="mask-icon" color="#5bbad5" href="safari-pinned-tab.svg">
-    <meta name="msapplication-TileColor" content="#766df4">
-    <meta name="theme-color" content="#ffffff">
-    -->
+	<!-- Google Font -->
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900%7CPlayfair+Display:400,400i,700,700i%7CRoboto:400,400i,500,700" rel="stylesheet">
 
-    <!-- Page loading styles-->
-    <style>
-      .page-loading {
-        position: fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        -webkit-transition: all .4s .2s ease-in-out;
-        transition: all .4s .2s ease-in-out;
-        background-color: #fff;
-        opacity: 0;
-        visibility: hidden;
-        z-index: 9999;
-      }
-      .page-loading.active {
-        opacity: 1;
-        visibility: visible;
-      }
-      .page-loading-inner {
-        position: absolute;
-        top: 50%;
-        left: 0;
-        width: 100%;
-        text-align: center;
-        -webkit-transform: translateY(-50%);
-        transform: translateY(-50%);
-        -webkit-transition: opacity .2s ease-in-out;
-        transition: opacity .2s ease-in-out;
-        opacity: 0;
-      }
-      .page-loading.active > .page-loading-inner {
-        opacity: 1;
-      }
-      .page-loading-inner > span {
-        display: block;
-        font-family: 'Inter', sans-serif;
-        font-size: 1rem;
-        font-weight: normal;
-        color: #737491;
-      }
-      .page-spinner {
-        display: inline-block;
-        width: 2.75rem;
-        height: 2.75rem;
-        margin-bottom: .75rem;
-        vertical-align: text-bottom;
-        border: .15em solid #766df4;
-        border-right-color: transparent;
-        border-radius: 50%;
-        -webkit-animation: spinner .75s linear infinite;
-        animation: spinner .75s linear infinite;
-      }
-      @-webkit-keyframes spinner {
-        100% {
-          -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
-        }
-      }
-      @keyframes spinner {
-        100% {
-          -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
-        }
-      }
-      
-    </style>
-    <!-- Page loading scripts-->
-    <script>
-      (function () {
-        window.onload = function () {
-          var preloader = document.querySelector('.page-loading');
-          preloader.classList.remove('active');
-          setTimeout(function () {
-            preloader.remove();
-          }, 2000);
-        };
-      })();
-      
-    </script>
-    <!-- Vendor Styles-->
-    <link rel="stylesheet" media="screen" href="vendor/simplebar/dist/simplebar.min.css"/>
-    <link rel="stylesheet" media="screen" href="vendor/tiny-slider/dist/tiny-slider.css"/>
-    <!-- Main Theme Styles + Bootstrap-->
-    <link rel="stylesheet" media="screen" href="css/theme.min.css">
-  </head>
+	<!-- Plugins CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/vendor/font-awesome/css/font-awesome.min.css" />
+	<link rel="stylesheet" type="text/css" href="assets/vendor/themify-icons/css/themify-icons.css" />
+	<link rel="stylesheet" type="text/css" href="assets/vendor/animate/animate.min.css" />
+	<link rel="stylesheet" type="text/css" href="assets/vendor/fancybox/css/jquery.fancybox.min.css" />
+	<link rel="stylesheet" type="text/css" href="assets/vendor/owlcarousel/css/owl.carousel.min.css" />
+	<link rel="stylesheet" type="text/css" href="assets/vendor/swiper/css/swiper.min.css" />
 
-  <!-- Body-->
-  <body>
+	<!-- Theme CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css" />
 
-    <!-- Page loading spinner-->
-    <div class="page-loading active">
-      <div class="page-loading-inner">
-        <div class="page-spinner"></div><span>Loading...</span>
+</head>
+
+<body>
+	<div class="preloader">
+		<img src="assets/images/preloader.svg" alt="Pre-loader">
+	</div>
+
+	<!-- =======================
+	header Start-->
+	<header class="header-static navbar-sticky navbar-light">
+
+		<!-- Logo Nav Start -->
+		<nav class="navbar navbar-expand-lg">
+			<div class="container">
+				<!-- Logo -->
+				<a class="navbar-brand" href="index.html">
+					<img src="assets/images/logo-asecryp.png" alt="Logo Asecryp">
+				</a>
+				<!-- Menu opener button -->
+				<button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+				  <span class="navbar-toggler-icon"> </span>
+			  </button>
+				<!-- Main Menu Start -->
+				<div class="collapse navbar-collapse" id="navbarCollapse">
+					<ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown dropdown-mega"><a class="nav-link" href="#Equipos">Equipos</a>
+            </li>
+            <li class="nav-item dropdown dropdown-mega"><a class="nav-link" href="#Hosting">Hosting</a>
+            </li>
+            <li class="nav-item dropdown dropdown-mega"><a class="nav-link" href="#Asesorias">Asesorías</a>
+            </li>
+           	<li class="nav-item dropdown dropdown-mega"><a class="nav-link" href="#Contacto">Contacto</a>
+            </li>
+					</ul>
+				</div>
+				<!-- Main Menu End -->
+			</div>
+		</nav>
+		<!-- Logo Nav End -->
+	</header>
+	<!-- =======================
+	header End-->
+
+	<!-- =======================
+	Main Banner -->
+	<section class="p-0">
+		<div class="swiper-container height-700-responsive swiper-arrow-hover swiper-slider-fade">
+			<div class="swiper-wrapper">
+				<!-- slide 1-->
+				<div class="swiper-slide bg-overlay-dark-2" style="background-image:url(assets/images/banner/02.jpg); background-position: center center; background-size: cover;">
+					<div class="container h-100">
+						<div class="row d-flex h-100">
+							<div class="col-lg-8 col-xl-6 mr-auto slider-content justify-content-center align-self-center align-items-start text-left">
+								<h2 class="animated fadeInUp dealy-500 display-6 display-md-4 display-lg-3 font-weight-bold text-white">CBFX| Asecryp</h2>
+								<h3 class="animated fadeInUp dealy-1000 text-white display-8 display-md-7 alt-font font-italic mb-2 my-md-4">Ofrecemos servicios de mineria digital</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- slide 2-->
+				<div class="swiper-slide bg-overlay-dark-2" style="background-image:url(assets/images/banner/01.jpg); background-position: center top; background-size: cover;">
+					<div class="container h-100">
+						<div class="row d-flex h-100">
+							<div class="col-md-8 justify-content-center align-self-center align-items-start mx-auto">
+								<div class="slider-content text-center ">
+									<h3 class="animated fadeInUp dealy-500 display-8 display-md-7 text-white alt-font font-italic">Contamos con</h3>
+									<h2 class="animated fadeInUp dealy-1000 display-6 display-md-4 display-lg-3 font-weight-bold text-white">los mejores precios del Mercado</h2>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>		
+			<!-- slide 3-->
+				<div class="swiper-slide bg-overlay-dark-2" style="background-image:url(assets/images/banner/03.jpg); background-position: center top; background-size: cover;">
+					<div class="container h-100">
+						<div class="row d-flex h-100">
+							<div class="col-md-8 justify-content-center align-self-center align-items-start mx-auto">
+								<div class="slider-content text-center ">
+									<h3 class="animated fadeInUp dealy-500 display-8 display-md-7 text-white alt-font font-italic">Atención de los expertos en el area</h3>
+									<h2 class="animated fadeInUp dealy-1000 display-6 display-md-4 display-lg-3 font-weight-bold text-white">las 24 horas del dia.</h2>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Slider buttons -->
+			<div class="swiper-button-next"><i class="ti-angle-right"></i></div>
+			<div class="swiper-button-prev"><i class="ti-angle-left"></i></div>
+			<div class="swiper-pagination"></div>
+		</div>
+	</section>
+	<!-- =======================
+	Main banner -->
+
+		<!-- =======================
+	servicios-->
+	<section class="mt-lg-n9 mt-sm-0 pb-0 z-index-9">
+		<div class="container ">
+			<div class="row bg-white shadow m-0 p-2 p-lg-5 border-radius-3">
+
+				<div class="col-md-4">
+					<div class="feature-box h-100 text-center">
+						<div class="feature-box-icon"><img class="w-75" src="assets/images/service/01.jpg" alt=""></div>
+						<a class="shadow mx-1" href="#Asesorias">                
+                <h3 class="feature-box-title">Asesorías</h4>
+            </a>
+					</div>
+				</div>
+
+				<div class="col-md-4">
+					<div class="feature-box h-100 text-center">
+						<div class="feature-box-icon"><img class="w-75" src="assets/images/service/02.jpg" alt=""></div>
+						<a class="shadow mx-1" href="#Hosting">                
+                <h3 class="feature-box-title">Hosting</h4>
+            </a>
+					</div>
+				</div>
+
+				<div class="col-md-4">
+					<div class="feature-box h-100 text-center">
+						<div class="feature-box-icon"><img class="w-75" src="assets/images/service/03.jpg" alt=""></div>
+						<a class="shadow mx-1" href="#Equipos">                
+                <h3 class="feature-box-title">Equipos</h4>
+            </a>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+	<!-- =======================
+	servicios-->
+
+	<!-- =======================
+	Sobre Nosotros  -->
+	<section class="">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 mx-auto text-center mb-5">
+					<h2 class="h1 font-weight-bold">Sobre Nosotros</h2>
+					<h5>Asecryp es una empresa tecnológica con años de experiencia en los negocios digitales dedicada a brindar asesorías y ventas de equipos de minería digital.</h5>
+				</div>
+			
+				<!-- left -->
+				<div class="col-md-6 pr-lg-5">
+					<!-- content -->
+					<div class="mt-5 mt-md-0">
+					  <!-- image -->
+					<img src="assets/images/mockups/01.png" alt="">
+						<h2 class="h1 font-weight-bold">Nuestra Misión</h2>
+						<div class="d-flex mt-3">
+							<h6 class="display-1 opacity-2 mr-3 align-self-start">01</h6>
+							<div class="align-self-start">
+								<p>Asecryp es una empresa dedicada a difundir todo el conocimiento necesario para crecer en el mundo de las criptomonedas, dando la oportunidad de contar con espacios diseñados para el crecimiento de tus cripto activos digitales.</p>
+								<p>Además contar con proyectos de crecimiento para ir mejorando y avanzar en el mundo de las criptomonedas donde este mundo digital sea tu fuerte y llevarte de la mano en todo el proceso contamos con atención de expertos en el área  para que nuestros clientes tengan la mejor atención en todos nuestros servicios.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- right -->
+				<div class="col-md-6 pl-lg-5 mt-5 mt-md-0">
+					<!-- image -->
+					<img src="assets/images/mockups/02.png" alt="">
+					<!-- content -->
+					<div>
+						<h2 class="h1 font-weight-bold">Nuestra Visión</h2>
+						<div class="d-flex mt-3">
+							<h6 class="display-1 opacity-2 mr-3 align-self-start">02</h6>
+							<div class="align-self-start">
+								<p>Contar  una empresa con una innovación en el mundo de las criptomonedas donde la finalidad es impulsar la economía digital en el sector social,brindando las mejores oportunidades y cubriendo todas las demandas de productos y servicios  de todos  nuestros clientes.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- =======================
+	Sobre Nosotros  -->
+
+	<!-- =======================
+	Equipos -->
+	<section class="blog bg-light" id="Equipos">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 col-lg-8 mx-auto">
+					<div class="title text-center">
+						<h2>Equipos de Mineria</h2>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-12">
+					<div class="owl-carousel arrow-dark arrow-hover" data-dots="false" data-items-xl="3" data-items-lg="3" data-items-md="2" data-items-sm="2" data-items-xs="1" data-autoplay="4500">
+						<!-- post -->
+						<div class="item">
+							<div class="post">
+								<img src="assets/images/equipo-de-mineria.jpg" alt="">
+								<div class="post-info">
+								<div class="card-body">
+	                <h5 class="text-center">Equipo minero</h5>
+									<div class="p-2 mb-2 bg-grad text-white text-center">$19.00</div>
+									<div class="p-2 mb-2 text-center"><a href="#">Consultar</a></div>	
+								</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- post -->
+						<div class="item">
+							<div class="post">
+								<img src="assets/images/equipo-de-mineria.jpg" alt="">
+								<div class="post-info">
+								<div class="card-body">
+	                <h5 class="text-center">Equipo minero</h5>
+									<div class="p-2 mb-2 bg-grad text-white text-center">$19.00</div>
+									<div class="p-2 mb-2 text-center"><a href="#">Consultar</a></div>	
+								</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- post -->
+						<div class="item">
+							<div class="post">
+								<img src="assets/images/equipo-de-mineria.jpg" alt="">
+								<div class="post-info">
+								<div class="card-body">
+	                <h5 class="text-center">Equipo minero</h5>
+									<div class="p-2 mb-2 bg-grad text-white text-center">$19.00</div>
+									<div class="p-2 mb-2 text-center"><a href="#">Consultar</a></div>	
+								</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- post -->
+						<div class="item">
+							<div class="post">
+								<img src="assets/images/equipo-de-mineria.jpg" alt="">
+								<div class="post-info">
+								<div class="card-body">
+	                <h5 class="text-center">Equipo minero</h5>
+									<div class="p-2 mb-2 bg-grad text-white text-center">$19.00</div>
+									<div class="p-2 mb-2 text-center"><a href="#">Consultar</a></div>	
+								</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- post -->
+						<div class="item">
+							<div class="post">
+								<img src="assets/images/equipo-de-mineria.jpg" alt="">
+								<div class="post-info">
+								<div class="card-body">
+	                <h5 class="text-center">Equipo minero</h5>
+									<div class="p-2 mb-2 bg-grad text-white text-center">$19.00</div>
+									<div class="p-2 mb-2 text-center"><a href="#">Consultar</a></div>	
+								</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</section>
+	<!-- =======================
+	Equipos -->
+
+	<!-- =======================
+	Hosting -->
+	<section class="blog bg-light" id="Hosting">
+		<div class="container">
+			<div class="row no-gutters">
+				<!--why us left-->
+				<div class="col-lg-6 d-none d-lg-block bg-light" style="background:url(assets/images/hosting-minero.jpg) no-repeat; background-size:cover;">
+				</div>
+				<!--why us right-->
+				<div class="col-lg-6 col-md-12 bg-grad px-4 py-5 p-lg-5 all-text-white">
+					<div class="h-100">
+						<div class="title text-left p-0">
+							<h2>Ofrecemos espacios adecuados para los equipos de minería</h2>
+						</div>
+						<div class="row">
+							<div class="col">
+								<ul class="list-group list-group-borderless text">
+									<li class="list-group-item text-white"><i class="fa fa-check"></i>Mantenimiento óptimo para cada uno de los equipos</li>
+									<li class="list-group-item text-white"><i class="fa fa-check"></i>Vigilancia todos los días </li>
+								</ul>
+							</div>
+							<div class="col">
+								<ul class="list-group list-group-borderless text">
+									<li class="list-group-item text-white"><i class="fa fa-check"></i>Contamos con un ambiente seguro y óptimo </li>
+									<li class="list-group-item text-white"><i class="fa fa-check"></i>Buenas tarifas asequibles</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- =======================
+	Hosting -->
+
+	<!-- =======================
+	Asesorias -->
+	<section id="Asesorias">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-12 col-lg-8 mx-auto">
+					<div class="title text-center">
+						<span class="pre-title">Asesoría</span>
+						<h2>¿Tienes algunas dudas?</h2>
+						<p class="mb-0">A nosotros nos encantaría resolverlas</p>
+					</div>
+				</div>
       </div>
-    </div>
-    <main class="page-wrapper">
 
-      <!-- Navbar (Floating dark)-->
-      <header class="header navbar navbar-expand-lg navbar-light bg-light navbar-shadow navbar-sticky" data-scroll-header>
-        <div class="container px-0 px-xl-3">
-          <button class="navbar-toggler ms-n2 me-4" type="button" data-bs-toggle="offcanvas" data-bs-target="#primaryMenu"><span class="navbar-toggler-icon"></span></button><a class="navbar-brand flex-shrink-0 order-lg-1 mx-auto ms-lg-0 pe-lg-2 me-lg-4" href="index.html"><img class="d-none d-lg-block" src="img/logo/logo-dark.png" alt="Around" width="153"><img class="d-lg-none" src="img/logo/logo-icon.png" alt="Around" width="58"></a>
-          <div class="d-flex align-items-center order-lg-3 ms-lg-auto">
-            <div class="d-lg-block d-none border-start me-4" style="height: 30px;"></div>
-            <div class="d-lg-block d-none text-nowrap"><a class="btn-social bs-outline bs-facebook me-2" href="#"><i class="ai-facebook"></i></a><a class="btn-social bs-outline bs-twitter me-2" href="#"><i class="ai-twitter"></i></a><a class="btn-social bs-outline bs-instagram me-2" href="#"><i class="ai-instagram"></i></a></div>
-          </div>
-          <div class="offcanvas offcanvas-collapse order-lg-2" id="primaryMenu">
-            <div class="offcanvas-header navbar-shadow">
-              <h5 class="mt-1 mb-0">Menu</h5>
-              <button class="btn-close lead" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-              <!-- Menu -->
-              <ul class="navbar-nav">
-                <li class="nav-item dropdown dropdown-mega"><a class="nav-link" href="#Asesorias">Asesorías</a>
-                </li>
-                <li class="nav-item dropdown dropdown-mega"><a class="nav-link" href="#Hosting">Hosting</a>
-                </li>
-                <li class="nav-item dropdown dropdown-mega"><a class="nav-link" href="#Equipos">Equipos</a>
-                </li>
-                <li class="nav-item dropdown dropdown-mega"><a class="nav-link" href="#Contacto">Contacto</a>
-                </li>
-              </ul>
-                
+			<div class="row justify-content-between align-items-center">
+				<!-- left -->
+				<div class="col-md-6">
+					<img class="rounded" src="assets/images/bg/05.jpg" alt="">
+				</div>
+				<!-- right -->
+				<div class="col-md-6 mt-4 mt-md-0">
+					<h2 class="h1">Somos tu mejor opción para elegir qué equipo de minería te conviene más</h2>
+					<p>Las criptomonedas son un mercado relativamente nuevo que aún se encuentra en auge, y nosotros tenemos de nuestro lado a los expertos, para brindarte la información más veraz y oportuna para ti y tus inversiones.</p>
+					<ul class="list-group list-group-borderless list-group-icon-primary-bg mb-4">
+						<li class="list-group-item"><i class="fa fa-check"></i> Contamos con un personal capacitado, para atender tus dudas 24/7</li>
+						<li class="list-group-item"><i class="fa fa-check"></i> Tenemos equipos para de todas las ganas dependiendo de tus posibilidades</li>
+						<li class="list-group-item"><i class="fa fa-check"></i> Realizamos asesorias del capital a invertir y retorno del mismo</li>
+						
+					</ul>
+					<a href="#" class="btn btn-grad"> -> WhatsApp!</a>
+				</div>
+			</div>
+		
+		</div>
+	</section>
+	<!-- =======================
+	Asesorias -->
 
-            </div>
-            <div class="offcanvas-footer justify-content-center border-top"><a class="btn-social bs-lg bs-outline bs-facebook me-3" href="#"><i class="ai-facebook"></i></a><a class="btn-social bs-lg bs-outline bs-twitter me-3" href="#"><i class="ai-twitter"></i></a><a class="btn-social bs-lg bs-outline bs-instagram me-3" href="#"><i class="ai-instagram"></i></a></div>
-          </div>
-        </div>
-      </header>
-      <!-- Page content-->
-      <!-- Hero with parallax, curved background and device carousel-->
-      <section class="position-relative pb-7 pt-5 pt-lg-6 mb-7">
-        <!-- Background-->
-        <div class="position-absolute jarallax bg-gradient w-100" style="top: 0; left: 0; height: 850px;" data-jarallax data-speed="0.25"><span class="position-absolute top-0 start-0 w-100 h-100 bg-gradient" style="opacity: .85;"></span>
-          <div class="jarallax-img" style="background-image: url(img/demo/mobile-app/hero-bg.jpg);"></div>
-          <div class="shape shape-bottom shape-curve bg-body">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3000 185.4">
-            <path fill="currentColor" d="M3000,0v185.4H0V0c496.4,115.6,996.4,173.4,1500,173.4S2503.6,115.6,3000,0z"></path>
-          </svg>
-          </div>
-        </div>
-        <!-- Content-->
-        <div class="container position-relative zindex-5 pb-7">
-          <div class="row align-items-center pb-7">
-            <div class="col-lg-3">
-              <ul class="nav nav-tabs media-tabs media-tabs-light justify-content-center justify-content-lg-start pb-3 mb-4 pb-lg-0 mb-lg-0" role="tablist">
-                <li class="nav-item me-3 mb-3"><a class="nav-link active" href="#camera" data-bs-toggle="tab" role="tab">
-                    <div class="d-flex align-items-center"><img class="flex-shrink-0 rounded" src="img/demo/shop-homepage/thumbnails/01.jpg" alt="Product" width="60">
-                      <div class="w-100 ps-2 ms-1">
-                        <div class="d-flex justify-content-between align-items-center">
-                          <div class="fs-sm pe-1">Bitman Antminer L3</div><i class="ai-chevron-right lead ms-2 me-1"></i>
-                        </div>
-                      </div>
-                    </div></a></li>
-                <li class="nav-item me-3 mb-3"><a class="nav-link" href="#sneakers" data-bs-toggle="tab" role="tab">
-                    <div class="d-flex align-items-center"><img class="flex-shrink-0 rounded" src="img/demo/shop-homepage/thumbnails/02.jpg" alt="Product" width="60">
-                      <div class="w-100 ps-2 ms-1">
-                        <div class="d-flex justify-content-between align-items-center">
-                          <div class="fs-sm pe-1">Bitman Antminer S9</div><i class="ai-chevron-right lead ms-2 me-1"></i>
-                        </div>
-                      </div>
-                    </div></a></li>
-              </ul>
-            </div>
-            <div class="col-lg-9">
-              <div class="tab-content">
-                <div class="tab-pane fade show active" id="camera">
-                  <div class="row align-items-center">
-                    <div class="col-lg-6 order-lg-2 pb-1 mb-4 pb-lg-0 mb-lg-0">
-                      <div class="mx-auto" style="max-width: 443px;"><img src="img/demo/shop-homepage/hero/01.png" alt="Security Camera"></div>
-                    </div>
-                    <div class="col-lg-6 order-lg-1 text-center text-lg-start">
-                      <div class="ps-xl-5">
-                        <h2 class="h1 text-light">Bitman Antminer L3</h2>
-                        <p class="fs-lg text-light mb-lg-5">Es el minero Litecoin más poderoso en el mercado</p><a class="btn btn-translucent-light" href="#">Lo Quiero - $45.00</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="tab-pane fade" id="sneakers">
-                  <div class="row align-items-center">
-                    <div class="col-lg-6 order-lg-2 pb-1 mb-4 pb-lg-0 mb-lg-0">
-                      <div class="mx-auto" style="max-width: 443px;"><img src="img/demo/shop-homepage/hero/02.png" alt="Running Sneakers"></div>
-                    </div>
-                    <div class="col-lg-6 order-lg-1 text-center text-lg-start">
-                      <div class="ps-xl-5">
-                        <h2 class="h1 text-light">Bitman Antminer S9</h2>
-                        <p class="fs-lg text-light mb-lg-5">El minero más eficiente del mundo y el primero ASIC</p><a class="btn btn-translucent-light" href="#">Lo Quiero - $99.00</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+	<!-- =======================
+	FAQ -->
+	<section>
+		<div class="container h-100">
+			<div class="row">
+				<div class="col-md-12 col-lg-6 align-self-center mb-5 mb-lg-0">
+					<div class="title pb-4 text-left">
+						<h2>Preguntas frecuentes</h2>
+					</div>
+					<div class="accordion accordion-grad" id="accordion3">
+						<!-- item -->
+						<div class="accordion-item">
+							<div class="accordion-title">
+								<a class="h6 mb-0" data-toggle="collapse" href="#collapse-7">¿Qué es minería digital?</a>
+							</div>
+							<div class="collapse show" id="collapse-7" data-parent="#accordion3">
+								<div class="accordion-content">La minería digital se podría definir como la serie de procesos que se necesitan para validar, registrar y procesar transacciones de una criptomoneda dentro de una cadena de bloques (Blockchain)</div>
+							</div>
+						</div>
+						<!-- item -->
+						<div class="accordion-item">
+							<div class="accordion-title">
+								<a class="collapsed" data-toggle="collapse" href="#collapse-8">¿Cuál es la función de la minería digital?</a>
+							</div>
+							<div class="collapse" id="collapse-8" data-parent="#accordion3">
+								<div class="accordion-content">La función primordial de la minería digital se basa en liberar bloques de moneda para su circulación en el sistema.</div>
+							</div>
+						</div>
+						<!-- item -->
+						<div class="accordion-item">
+							<div class="accordion-title">
+								<a class="collapsed" data-toggle="collapse" href="#collapse-9">¿Qué necesito para minar?</a>
+							</div>
+							<div class="collapse" id="collapse-9" data-parent="#accordion3">
+								<div class="accordion-content">Para minar se necesita un espacio adecuado para la instalación de cierto tipo de hardware y software, además de garantizar servicios de electricidad e Internet, y un sistema de refrigeración acorde con el tipo de hardware minero que tengas y el lugar donde esté ubicado.</div>
+							</div>
+						</div>
+						<!-- item -->
+						<div class="accordion-item">
+							<div class="accordion-title">
+								<a class="collapsed" data-toggle="collapse" href="#collapse-9">¿Qué es una granja especializada en minería?</a>
+							</div>
+							<div class="collapse" id="collapse-9" data-parent="#accordion3">
+								<div class="accordion-content">Son espacios especializados para la actividad minera, compuestos por una serie de hardware y software que garantizan, permiten y facilitan dicha actividad.</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- right -->
+				<div class="col-md-10 col-lg-6 mx-md-auto align-self-center text-center">
+					<img src="assets/images/faq.png" alt="">
+				</div>
+			</div>
+			<!-- row end -->
+		</div>
+	</section>
+	<!-- =======================
+	FAQ -->
 
-      <!-- Categorias-->
-      <section class="container position-relative zindex-5" style="margin-top: -290px;">
-        <div class="tns-carousel-wrapper">
-          <div class="tns-carousel-inner" data-carousel-options="{&quot;items&quot;: 3, &quot;controls&quot;: false, &quot;gutter&quot;: 24, &quot;responsive&quot;: {&quot;0&quot;:{&quot;items&quot;:1},&quot;560&quot;:{&quot;items&quot;:2},&quot;850&quot;:{&quot;items&quot;:3}}}">
-            
-            <!-- Category-->
-            <div class="pb-2"><a class="card card-category shadow mx-1" href="#Asesorias"><img class="card-img-top" src="img/shop/categories/01.jpg" alt="">
-                <div class="card-body">
-                  <h4 class="card-title">Asesorías</h4>
-                </div></a></div>
-
-            <!-- Category-->
-            <div class="pb-2"><a class="card card-category shadow mx-1" href="#Hosting"><img class="card-img-top" src="img/shop/categories/02.jpg" alt="">
-                <div class="card-body">
-                  <h4 class="card-title">Hosting</h4>
-                </div></a></div>
-
-            <!-- Category-->
-            <div class="pb-2"><a class="card card-category shadow mx-1" href="#Equipos"><img class="card-img-top" src="img/shop/categories/03.jpg" alt="">
-                <div class="card-body">
-                  <h4 class="card-title">Equipos</h4>
-                </div></a></div>
-
-          </div>
-        </div>
-      </section>
-
-      <!-- Presentacion -->
-      <section class="container py-5 py-md-6 py-lg-7">
-        <div class="row align-items-center mt-3 mt-md-0">
-          <div class="col-lg-4 col-md-5 order-md-2 text-center text-md-start mb-5 mb-md-0">
-            <h2 class="mb-3">Sobre Nosotros</h2>
-            <p class="text-muted mb-4 pb-2">Esta es un área diseñada especialmente para que transmitan a sus clientes quienes son, que hacen y porque lo hacen, y como eso contribuye de manera positiva en la vida de sus futuros clientes.</p><a class="btn btn-primary" href="#services">Explorar Servicios</a>
-          </div>
-          <div class="col-lg-8 col-md-7 order-md-1 bg-position-start-bottom bg-repeat-0" style="background-image: url(img/demo/marketing-seo/services/bg-shape.svg);">
-            <div class="mx-auto mx-md-0 ms-xl-7" style="max-width: 600px;">
-              <div class="row align-items-center">
-                <div class="col-sm-6">
-                  <div class="bg-light shadow-lg rounded-3 p-4 mb-grid-gutter text-center text-sm-start"><img class="d-inline-block mb-4 mt-2" src="img/demo/marketing-seo/services/01.svg" alt="" width="100">
-                    <h3 class="h5 mb-2">Puntos FUERTES</h3>
-                    <p class="fs-sm">Destacar valores fuertes que hacen única a la empresa, junto a los productos y servicios que ofrece.</p>
-                  </div>
-                </div>
-                <div class="col-sm-6">
-                  <div class="bg-light shadow-lg rounded-3 p-4 mb-grid-gutter text-center text-sm-start"><img class="d-inline-block mb-4 mt-2" src="img/demo/marketing-seo/services/02.svg" alt="" width="100">
-                    <h3 class="h5 mb-2">Puntos FUERTES</h3>
-                    <p class="fs-sm">Destacar valores fuertes que hacen única a la empresa, junto a los productos y servicios que ofrece.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="mx-auto mx-md-0" style="max-width: 600px;">
-              <div class="row align-items-center">
-                <div class="col-sm-6">
-                  <div class="bg-light shadow-lg rounded-3 p-4 mb-grid-gutter text-center text-sm-start"><img class="d-inline-block mb-4 mt-2" src="img/demo/marketing-seo/services/03.svg" alt="" width="100">
-                    <h3 class="h5 mb-2">Puntos FUERTES</h3>
-                    <p class="fs-sm">Destacar valores fuertes que hacen única a la empresa, junto a los productos y servicios que ofrece</p>
-                  </div>
-                </div>
-                <div class="col-sm-6">
-                  <div class="bg-light shadow-lg rounded-3 p-4 mb-grid-gutter text-center text-sm-start"><img class="d-inline-block mb-4 mt-2" src="img/demo/marketing-seo/services/04.svg" alt="" width="100">
-                    <h3 class="h5 mb-2">Puntos FUERTES</h3>
-                    <p class="fs-sm">Destacar valores fuertes que hacen única a la empresa, junto a los productos y servicios que ofrece.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Asesoria -->
-      <section class="bg-secondary" id="Asesorias">
-        <div class="container">
-          <div class="row align-items-center">
-            <div class="col-md-4 mt-3 mt-md-0 py-5 py-md-0">
-              <h2 class="text-lg-nowrap pb-2 text-center text-md-start">Asesorias Especializadas</h2>
-              <p class="pb-2 text-center text-md-start">Resaltar en que consiste este servicio</p>
-              <ul class="list-unstyled fs-sm pb-1 d-table mx-auto mx-md-0">
-                <li class="d-flex mb-2"><i class="ai-check-circle text-success fs-lg me-3"></i><span>Ventajas que incorpora</span></li>
-                <li class="d-flex mb-2"><i class="ai-check-circle text-success fs-lg me-3"></i><span>Ventajas que incorpora</span></li>
-                <li class="d-flex mb-2"><i class="ai-check-circle text-success fs-lg me-3"></i><span>Ventajas que incorpora</span></li>
-              </ul>
-            </div>
-            <div class="col-md-8">
-              <div class="parallax ms-auto" style="max-width: 757px;"><img class="d-block" src="img/demo/marketing-seo/about-img/lines.png" alt="">
-                <div class="parallax-layer" style="z-index: 2;" data-depth="0.15"><img src="img/demo/marketing-seo/about-img/image.png" alt=""></div>
-                <div class="parallax-layer" style="z-index: 3;" data-depth="0.3"><img src="img/demo/marketing-seo/about-img/badge.png" alt=""></div>
-                <div class="parallax-layer" data-depth="0.25"><img src="img/demo/marketing-seo/about-img/shape.png" alt=""></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Productos -->
-      <section class="container pt-5 mt-5 mt-md-0 pt-md-6 pt-lg-7" id="Equipos">
-        <h2 class="text-center mb-5">Equipos de Mineria</h2>
-        <div class="row pb-1">
-
-          <!-- Item Oferta -->
-          <div class="col-lg-3 col-md-4 col-sm-6 mb-grid-gutter">
-            <div class="card card-product card-hover"><span class="badge badge-floating rounded-pill bg-danger">Oferta</span><a class="card-img-top" href="producto.html"><img src="img/shop/catalog/04.jpg" alt=""></a>
-              <div class="card-body">
-                <h3 class="fs-md fw-medium mb-2"><a class="meta-link" href="producto.html">360 Degrees Camera</a></h3>
-                <del class="fs-sm text-muted me-1">$120.40</del><span class="text-heading fw-semibold">$98.75</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Item Normal -->
-          <div class="col-lg-3 col-md-4 col-sm-6 mb-grid-gutter">
-            <div class="card card-product card-hover"><a class="card-img-top" href="producto.html"><img src="img/shop/catalog/01.jpg" alt=""></a>
-              <div class="card-body">
-                <h3 class="fs-md fw-medium mb-2"><a class="meta-link" href="producto.html">Simple Cotton Gray T-shirt</a></h3><span class="text-heading fw-semibold">$19.00</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Item New -->
-          <div class="col-lg-3 col-md-4 col-sm-6 mb-grid-gutter">
-            <div class="card card-product card-hover"><span class="badge badge-floating rounded-pill bg-success">New</span><a class="card-img-top" href="producto.html"><img src="img/shop/catalog/03.jpg" alt=""></a>
-              <div class="card-body">
-                <h3 class="fs-md fw-medium mb-2"><a class="meta-link" href="producto.html">Military Cotton Cap</a></h3><span class="text-heading fw-semibold">$28.00</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Item Normal -->
-          <div class="col-lg-3 col-md-4 col-sm-6 mb-grid-gutter">
-            <div class="card card-product card-hover"><a class="card-img-top" href="producto.html"><img src="img/shop/catalog/01.jpg" alt=""></a>
-              <div class="card-body">
-                <h3 class="fs-md fw-medium mb-2"><a class="meta-link" href="producto.html">Simple Cotton Gray T-shirt</a></h3><span class="text-heading fw-semibold">$19.00</span>
-              </div>
-            </div>
-          </div>
-
-                    <!-- Item Oferta -->
-          <div class="col-lg-3 col-md-4 col-sm-6 mb-grid-gutter">
-            <div class="card card-product card-hover"><span class="badge badge-floating rounded-pill bg-danger">Oferta</span><a class="card-img-top" href="producto.html"><img src="img/shop/catalog/04.jpg" alt=""></a>
-              <div class="card-body">
-                <h3 class="fs-md fw-medium mb-2"><a class="meta-link" href="producto.html">360 Degrees Camera</a></h3>
-                <del class="fs-sm text-muted me-1">$120.40</del><span class="text-heading fw-semibold">$98.75</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Item Normal -->
-          <div class="col-lg-3 col-md-4 col-sm-6 mb-grid-gutter">
-            <div class="card card-product card-hover"><a class="card-img-top" href="producto.html"><img src="img/shop/catalog/01.jpg" alt=""></a>
-              <div class="card-body">
-                <h3 class="fs-md fw-medium mb-2"><a class="meta-link" href="producto.html">Simple Cotton Gray T-shirt</a></h3><span class="text-heading fw-semibold">$19.00</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Item New -->
-          <div class="col-lg-3 col-md-4 col-sm-6 mb-grid-gutter">
-            <div class="card card-product card-hover"><span class="badge badge-floating rounded-pill bg-success">New</span><a class="card-img-top" href="producto.html"><img src="img/shop/catalog/03.jpg" alt=""></a>
-              <div class="card-body">
-                <h3 class="fs-md fw-medium mb-2"><a class="meta-link" href="producto.html">Military Cotton Cap</a></h3><span class="text-heading fw-semibold">$28.00</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Item Normal -->
-          <div class="col-lg-3 col-md-4 col-sm-6 mb-grid-gutter">
-            <div class="card card-product card-hover"><a class="card-img-top" href="producto.html"><img src="img/shop/catalog/01.jpg" alt=""></a>
-              <div class="card-body">
-                <h3 class="fs-md fw-medium mb-2"><a class="meta-link" href="producto.html">Simple Cotton Gray T-shirt</a></h3><span class="text-heading fw-semibold">$19.00</span>
-              </div>
-            </div>
-          </div>
+	<!-- =======================
+	Contacto -->
+ 
+		<!-- =======================
+	Contacto -->
 
 
-        </div>
-      </section>
+	<!-- =======================
+	footer  -->
+	<div class="divider mt-3"></div>
+		<footer class="footer-copyright bg-light py-3">
+			<div class="container">
+				<div class="d-md-flex justify-content-between align-items-center py-3 text-center text-md-left">
+					<!-- copyright text -->
+					<div class="copyright-text">Desarrollado por <a href="https://mosquedacordova.com/" target="_blank" rel="noopener">Mosqueda Cordova</a></div>
+					<!-- copyright links-->
+					<div class="copyright-links primary-hover mt-3 mt-md-0">
+						<ul class="list-inline">
+							<li class="list-inline-item pl-2"><a class="list-group-item-action" href="#Equipos">Equipos</a></li>
+							<li class="list-inline-item pl-2"><a class="list-group-item-action" href="#Hosting">Hosting</a></li>
+							<li class="list-inline-item pl-2"><a class="list-group-item-action" href="#Asesorias">Asesorías</a></li>				
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+	<!-- =======================
+	footer  -->
 
-      <!-- Hosting -->
-      <section class="container mb-3 mt-4 pt-5 pb-4 my-md-0 pt-md-7 pb-md-6" id="Hosting">
-            <h2 class="text-center mb-5">Hosting Minero</h2>
-            <div class="row">
-              <div class="col-lg-4 col-sm-6 mb-grid-gutter">
-                <div class="card border-0 shadow w-100">
-                  <div class="card-img-top bg-secondary text-center py-5 px-grid-gutter">
-                    <h3 class="text-body mb-0">Estandar</h3>
-                  </div>
-                  <div class="card-body px-grid-gutter py-grid-gutter">
-                    <div class="d-flex align-items-end py-2 px-4 mb-4"><span class="h2 fw-normal text-muted mb-1 me-2">$</span><span class="price display-2 fw-normal text-primary px-1 me-2">99</span><span class="h3 fs-lg fw-medium text-muted mb-2">per<br>month</span></div>
-                    <ul class="list-unstyled py-2 mb-4">
-                      <li class="d-flex align-items-center mb-3"><i class="ai-check fs-xl text-primary me-2"></i><span>Ventaja incluida</span></li>
-                      <li class="d-flex align-items-center mb-3"><i class="ai-check fs-xl text-primary me-2"></i><span>Ventaja incluida</span></li>
-                      <li class="d-flex align-items-center mb-3"><i class="ai-check fs-xl text-primary me-2"></i><span>Ventaja incluida</span></li>
-                      <li class="d-flex align-items-center mb-3"><i class="ai-check fs-xl text-primary me-2"></i><span>Ventaja incluida</span></li>
-                      <li class="d-flex align-items-center mb-3"><i class="ai-x fs-xl text-muted me-2"></i><span class="text-muted">lo que no tiene</span></li>
-                      <li class="d-flex align-items-center mb-3"><i class="ai-x fs-xl text-muted me-2"></i><span class="text-muted">lo que no tiene</span></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4 col-sm-6 mb-grid-gutter">
-                <div class="card card-active w-100">
-                  <div class="card-img-top bg-gradient text-center py-5 px-grid-gutter">
-                    <h3 class="text-light mb-0">Economico</h3>
-                  </div>
-                  <div class="card-body px-grid-gutter py-grid-gutter">
-                    <div class="d-flex align-items-end py-2 px-4 mb-4"><span class="h2 fw-normal text-muted mb-1 me-2">$</span><span class="price display-2 fw-normal text-primary px-1 me-2">199</span><span class="h3 fs-lg fw-medium text-muted mb-2">per<br>month</span></div>
-                    <ul class="list-unstyled py-2 mb-4">
-                      <li class="d-flex align-items-center mb-3"><i class="ai-check fs-xl text-primary me-2"></i><span>Ventaja incluida</span></li>
-                      <li class="d-flex align-items-center mb-3"><i class="ai-check fs-xl text-primary me-2"></i><span>Ventaja incluida</span></li>
-                      <li class="d-flex align-items-center mb-3"><i class="ai-check fs-xl text-primary me-2"></i><span>Ventaja incluida</span></li>
-                      <li class="d-flex align-items-center mb-3"><i class="ai-check fs-xl text-primary me-2"></i><span>Ventaja incluida</span></li>
-                      <li class="d-flex align-items-center mb-3"><i class="ai-x fs-xl text-muted me-2"></i><span class="text-muted">lo que no tiene</span></li>
-                      <li class="d-flex align-items-center mb-3"><i class="ai-x fs-xl text-muted me-2"></i><span class="text-muted">lo que no tiene</span></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4 col-sm-6 mb-grid-gutter">
-                <div class="card border-0 shadow w-100">
-                  <div class="card-img-top bg-secondary text-center py-5 px-grid-gutter">
-                    <h3 class="text-body mb-0">Especial</h3>
-                  </div>
-                  <div class="card-body px-grid-gutter py-grid-gutter">
-                    <div class="d-flex align-items-end py-2 px-4 mb-4"><span class="h2 fw-normal text-muted mb-1 me-2">$</span><span class="price display-2 fw-normal text-primary px-1 me-2">299</span><span class="h3 fs-lg fw-medium text-muted mb-2">per<br>month</span></div>
-                    <ul class="list-unstyled py-2 mb-4">
-                      <li class="d-flex align-items-center mb-3"><i class="ai-check fs-xl text-primary me-2"></i><span>Ventaja incluida</span></li>
-                      <li class="d-flex align-items-center mb-3"><i class="ai-check fs-xl text-primary me-2"></i><span>Ventaja incluida</span></li>
-                      <li class="d-flex align-items-center mb-3"><i class="ai-check fs-xl text-primary me-2"></i><span>Ventaja incluida</span></li>
-                      <li class="d-flex align-items-center mb-3"><i class="ai-check fs-xl text-primary me-2"></i><span>Ventaja incluida</span></li>
-                      <li class="d-flex align-items-center mb-3"><i class="ai-x fs-xl text-muted me-2"></i><span class="text-muted">lo que no tiene</span></li>
-                      <li class="d-flex align-items-center mb-3"><i class="ai-x fs-xl text-muted me-2"></i><span class="text-muted">lo que no tiene</span></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-      </section>
+	<div> <a href="#" class="back-top btn btn-grad"><i class="ti-angle-up"></i></a> </div>
 
-      <!-- FAQ preguntas frecuentes -->
-      <section class="container pb-5 mb-3 pb-md-6 pb-lg-7">
-        <h2 class="text-center mb-5">Preguntas frecuentes</h2>
-        <div class="row align-items-center">
-          <div class="col-md-6 mb-5 mb-md-0">
-            <div class="accordion" id="faq">
-              <div class="accordion-item shadow">
-                <h2 class="accordion-header" id="faq-heading-1">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-1" aria-expanded="true" aria-controls="faq-content-1">Deducir pregunta importante para el cliente</button>
-                </h2>
-                <div class="accordion-collapse collapse show" id="faq-content-1" aria-labelledby="faq-heading-1" data-bs-parent="#faq">
-                  <div class="accordion-body">
-                    <div class="fs-sm">Las repuestas de esta área tienen como objetivo responder rápidamente a interrogantes repetidas que el cliente pueda tener antes de adquirir su producto o servicio, con el objetivo de reducir tiempo y acercar al cliente a la adquisición.</div>
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item shadow">
-                <h2 class="accordion-header" id="faq-heading-2">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-2" aria-expanded="false" aria-controls="faq-content-2">Deducir pregunta importante para el cliente</button>
-                </h2>
-                <div class="accordion-collapse collapse" id="faq-content-2" aria-labelledby="faq-heading-2" data-bs-parent="#faq">
-                  <div class="accordion-body">
-                    <div class="fs-sm">Las repuestas de esta área tienen como objetivo responder rápidamente a interrogantes repetidas que el cliente pueda tener antes de adquirir su producto o servicio, con el objetivo de reducir tiempo y acercar al cliente a la adquisición.</div>
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item shadow">
-                <h2 class="accordion-header" id="faq-heading-3">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-3" aria-expanded="false" aria-controls="faq-content-3">Deducir pregunta importante para el cliente</button>
-                </h2>
-                <div class="accordion-collapse collapse" id="faq-content-3" aria-labelledby="faq-heading-3" data-bs-parent="#faq">
-                  <div class="accordion-body">
-                    <div class="fs-sm">Las repuestas de esta área tienen como objetivo responder rápidamente a interrogantes repetidas que el cliente pueda tener antes de adquirir su producto o servicio, con el objetivo de reducir tiempo y acercar al cliente a la adquisición.</div>
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item shadow">
-                <h2 class="accordion-header" id="faq-heading-4">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-4" aria-expanded="false" aria-controls="faq-content-4">Deducir pregunta importante para el cliente</button>
-                </h2>
-                <div class="accordion-collapse collapse" id="faq-content-4" aria-labelledby="faq-heading-4" data-bs-parent="#faq">
-                  <div class="accordion-body">
-                    <div class="fs-sm">Las repuestas de esta área tienen como objetivo responder rápidamente a interrogantes repetidas que el cliente pueda tener antes de adquirir su producto o servicio, con el objetivo de reducir tiempo y acercar al cliente a la adquisición.</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6"><img class="d-block mx-auto" src="img/demo/mobile-app/faq-illustration.svg" alt="Illustration"></div>
-        </div>
-      </section>
+	<!--Global JS-->
+	<script src="assets/vendor/jquery/jquery.min.js"></script>
+	<script src="assets/vendor/popper.js/umd/popper.min.js"></script>
+	<script src="assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="assets/vendor/jquery-easing/jquery.easing.min.js"></script>
 
-      <!-- Contacto -->
-      <section class="bg-secondary" id="Contacto">
-        <div class="container pt-5 pb-6 py-md-7">
-          <h2 class="text-center mb-5">Contacto</h2>
-          <div class="row">
-            <div class="col-md-6 mb-5 mb-md-0">
-              <form class="needs-validation mb-4 pb-2" novalidate>
-                <div class="input-group mb-3"><i class="ai-user position-absolute top-50 start-0 translate-middle-y ms-3"></i>
-                  <input class="form-control rounded" type="text" placeholder="Nombre" required>
-                </div>
-                <div class="input-group mb-3"><i class="ai-mail position-absolute top-50 start-0 translate-middle-y ms-3"></i>
-                  <input class="form-control rounded" type="email" placeholder="Email" required>
-                </div>
-                <div class="mb-3 pb-1">
-                  <textarea class="form-control" rows="4" placeholder="Mensaje" required></textarea>
-                </div>
-                <div class="row pt-2">
-                  <div class="col-sm-6">
-                    <button class="btn btn-primary d-block w-100" type="submit">Enviar</button>
-                  </div>
-                </div>
-              </form>
-              <div class="row">
-                <div class="col-sm-6">
-                  <h5>Direccion</h5>
-                  <ul class="list-unstyled mb-0">
-                    <li class="mb-0">Las Mercedes</li>
-                    <li class="mb-0">Caracas, VENEZUELA</li>
-                  </ul>
-                </div>
-                <div class="col-sm-6">
-                  <h5>Directo</h5>
-                  <ul class="list-unstyled mb-0">
-                    <li class="mb-0">+58 0212 1568 958</li>
-                    <li class="mb-0">contacto@ejemplo.com</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-xl-5 offset-xl-1">
-             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3922.906497835855!2d-66.92154788547407!3d10.508030492504005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c2a5edb33d3af49%3A0x2f1a2341f344cce!2sPalacio%20de%20Miraflores!5e0!3m2!1ses-419!2spe!4v1626938833073!5m2!1ses-419!2spe" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe> 
-            </div>
-          </div>
-        </div>
-      </section>
+	<!--Vendors-->
+	<script src="assets/vendor/fancybox/js/jquery.fancybox.min.js"></script>
+	<script src="assets/vendor/owlcarousel/js/owl.carousel.min.js"></script>
+	<script src="assets/vendor/swiper/js/swiper.js"></script>
+	<script src="assets/vendor/wow/wow.min.js"></script>
 
-    </main>
+	<!--Template Functions-->
+	<script src="assets/js/functions.js"></script>
 
-    <!-- Footer-->
-    <footer class="footer bg-dark pt-5 pb-4">
-      <div class="container pb-2 text-center text-md-start">
-        <p class="fs-sm text-center mb-0"><span class="text-light opacity-50">En Desarrollo Por </span><a class="nav-link-style nav-link-light" href="https://mosquedacordova.com/" target="_blank" rel="noopener">Mosqueda Cordova</a></p>
-      </div>
-    </footer>
-
-    <!-- Back to top button--><a class="btn-scroll-top" href="#top" data-scroll data-fixed-element><span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span><i class="btn-scroll-top-icon ai-arrow-up">   </i></a>
-    <!-- Vendor scrits: js libraries and plugins-->
-    <script src="vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="vendor/simplebar/dist/simplebar.min.js"></script>
-    <script src="vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
-    <script src="vendor/tiny-slider/dist/min/tiny-slider.js"></script>
-    <script src="vendor/jarallax/dist/jarallax.min.js"></script>
-    <!-- Main theme script-->
-    <script src="js/theme.min.js"></script>
-  </body>
+</body>
 </html>
