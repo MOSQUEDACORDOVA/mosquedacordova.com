@@ -27,9 +27,8 @@ body > section{
 /* FIN para todo el documento*/
 
 .opening, .servicios,.curriculum{
-  padding-bottom: 75vh;
+  padding-bottom: 50vh;
 }
-
 .encabezado{
   background-image: url("../../img/brillantina.jpg");
   background-size: 100px;
@@ -95,7 +94,9 @@ h2{
   margin-bottom: 64px;
   font-weight: lighter;
 }
-
+.seccion_generica h1{
+  text-align: left;
+}
 /* OPENING */
 .presentaciones-container{
   width: 100%;
@@ -600,6 +601,9 @@ audio{
 
 /*responsivo para tablet*/
 @media (min-width: 720px) {
+  .opening, .servicios,.curriculum{
+    padding-bottom: 75vh;
+  }
   .opening > .mi_msj, .seccion_generica > .mi_msj{
     font-size: 18px;
   }
@@ -617,6 +621,9 @@ audio{
     display: grid;
     grid-gap: 8px;
     width: 90%;
+  }
+  .seccion_generica h1{
+    text-align: center;
   }
   .grid-item {
     margin-bottom: 0;
