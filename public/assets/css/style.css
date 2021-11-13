@@ -12,7 +12,7 @@ body > section{
   z-index:3;
   position:relative;
   padding:0 2%;
-  overflow-x: hidden;
+  overflow: hidden;
   text-align: center;
 
 }
@@ -216,7 +216,7 @@ h2{
   background: linear-gradient(135deg, rgba(227,253,255,1) 0%, rgb(67, 165, 173) 100%);
 }
 .item3 h3{
-  line-height:42px;
+  line-height:24px;
 }
 .item4 {
   grid-column: 2 / span 2;
@@ -425,6 +425,7 @@ h2{
 }
 #recomendaciones{
   background-color: #053E43;
+  position: relative;
 }
 #recomendaciones div{
   min-height: 100%;
