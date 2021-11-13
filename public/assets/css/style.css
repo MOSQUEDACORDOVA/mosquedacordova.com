@@ -479,6 +479,7 @@ audio{
 .contactame .redes_sociales {
   display: flex;
   justify-content:space-between;
+  padding-top: 16px;
 }
 .contactame .redes_sociales a{
   background-color: #fff;
