@@ -590,16 +590,11 @@ audio{
   .opening > .mi_msj, .seccion_generica > .mi_msj{
     font-size: 16px;
   }
-}
-
-/*responsivo desde 600 vertical para tablet*/
-@media (min-width: 600px) and (orientation: portrait) {
-
-}
-
-/*responsivo desde 700 horizontal para tablet*/
-@media (min-width: 700px) and (orientation: landscape) {
-  
+  h2{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 /*responsivo para tablet*/
@@ -612,6 +607,7 @@ audio{
     line-height: 64px;
   }
   h2{
+    width: auto;
     font-size: 28px;
     line-height: 34px;
     margin-bottom: 32px;
