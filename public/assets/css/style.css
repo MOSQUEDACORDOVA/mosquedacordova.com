@@ -93,6 +93,7 @@ h2{
   font-size: 24px;
   line-height:28px;
   margin-bottom: 64px;
+  font-weight: lighter;
 }
 
 /* OPENING */
@@ -611,7 +612,6 @@ audio{
     font-size: 28px;
     line-height: 34px;
     margin-bottom: 32px;
-    font-weight: lighter;
   }
   .grid-container{
     display: grid;
