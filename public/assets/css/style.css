@@ -27,7 +27,7 @@ body > section{
 /* FIN para todo el documento*/
 
 .opening, .servicios,.curriculum{
-  padding-bottom: 50vh;
+  padding-bottom: 300px;
 }
 .encabezado{
   background-image: url("../../img/brillantina.jpg");
@@ -478,19 +478,17 @@ audio{
 
 .contactame .redes_sociales {
   display: flex;
-  justify-content: center;
-  padding: 32px;
+  justify-content:space-between;
 }
 .contactame .redes_sociales a{
   background-color: #fff;
   border-radius: 100px;
-  width: 64px;
-  height: 64px;
+  width: 54px;
+  height: 54px;
   display: flex;
   justify-content: center;
   align-items: center;
   box-shadow: 16px 16px 32px rgba(0,0,0,0.2);
-  margin-right: 32px;
 }
 .contactame .contenedor:before{
   content: '';
@@ -506,14 +504,13 @@ audio{
 }
 .contactame .contenedor{
   background: #053E43;
-  width: 50%;
   margin: 32px auto 0 auto;
   border-radius: 16px;
   position: relative;
-  padding: 32px 32px 64px 32px;
+  padding: 16px 16px 0 16px;
   overflow:hidden;
   box-shadow: 16px 16px 32px rgba(0,0,0,0.2);
-
+  min-height: 550px;
 }
 .contactame .contenedor .mi_msj{
   text-align: left;
@@ -531,7 +528,7 @@ audio{
   color: #ccc;
   display: inline-block;
   min-width: 60%;
-  max-width: 70%;
+  max-width: 90%;
   margin-bottom: 8px;
 }
 .contactame .contenedor .cola_mi_msj{
@@ -565,6 +562,7 @@ audio{
   width: 100%;
   left: 0;
   padding: 16px 0;
+  bottom: 0;
 }
 .contactame .agendar a{
   background-color: #1F9EA8;
@@ -601,6 +599,9 @@ audio{
 @media (min-width: 720px) {
   .opening, .servicios,.curriculum{
     padding-bottom: 75vh;
+  }
+  .servicios,.curriculum{
+    padding-bottom: 40vh;
   }
   .opening > .mi_msj, .seccion_generica > .mi_msj{
     font-size: 18px;
@@ -690,6 +691,21 @@ audio{
   }
   #recomendaciones div{
     padding: 32px;
+  }
+  .contactame .redes_sociales {
+    display: flex;
+    justify-content: center;
+    padding: 32px;
+  }
+  .contactame .redes_sociales a{
+    width: 64px;
+    height: 64px;
+    margin-right: 32px;
+  }
+  .contactame .contenedor{
+    width: 70%;
+    padding: 32px 32px 0 32px;
+    min-height: 500px;
   }
 }
 @media (min-width: 1024px){
@@ -801,6 +817,10 @@ audio{
   .item5 div {
     padding:12px 14px;
     font-size: 16px;
+  }
+  .contactame .contenedor{
+    min-height: 450px;
+    width: 50%;
   }
 }
 @media (min-width: 1280px) and (orientation: landscape){
