@@ -164,9 +164,13 @@ h2{
 .grid-item img{
   height: 40px;
 }
+.grid-item h3{
+  font-size: 24px;
+  line-height: 28px;
+}
 .grid-item h3, .contenedor{
-  font-size: 32px;
-  line-height: 32px;
+  font-size: 18px;
+  line-height: 20px;
 }
 .grid-item p{
   font-size: 16px;
@@ -299,17 +303,17 @@ h2{
 }
 .curriculum .secciones{
   display: flex;
-  justify-content: center;
-  width: 90%;
+  justify-content:space-between;
+  width: 100%;
   max-width:1400px;
   margin: 32px auto 0 auto;
+  flex-direction: row-reverse;
 }
 .curriculum .secciones ul{
   list-style: none;
   text-align: left;
   padding: 0;
-  width: 35%;
-  margin-right: 32px;
+  margin-right: 0;
   margin-top: 0;
 }
 .curriculum .secciones li{
@@ -326,12 +330,7 @@ h2{
   color: #00393C;
 }
 .curriculum .secciones ul label div{
-  background: rgba(255,255,255,1);
-  background: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(245,245,245,1) 100%);
-  border-radius: 100px;
-  margin-left: 16px;
-  padding: 12px 0 12px 46px;
-  width: 100%;
+  display: none;
 }
 .curriculum .secciones ul .activo svg{
   color: #00393C;
@@ -345,7 +344,7 @@ h2{
   animation-duration: 1s;
 }
 .curriculum .secciones .contenedor{
-  width: 65%;
+  width: 80%;
   max-height: 600px;
   background: rgba(255,255,255,1);
   box-shadow: 16px 16px 32px rgba(0,0,0,0.2);
@@ -362,19 +361,16 @@ h2{
   display: flex;
   padding: 32px;
 }
-#comunicacion div,  #sobre_mi div{
-  margin-right: 32px;
-}
 #comunicacion p, #sobre_mi p{
   font-size: 16px;
   line-height: 24px;
   margin-top: 32px;
 }
-#comunicacion img,  #sobre_mi img{
-  border-radius: 16px;
+#comunicacion img, #sobre_mi img{
+  display: none;
 }
 #habilidades{
-  padding: 32px;
+  padding: 16px;
   text-align: center;
 }
 #habilidades > div > div {
@@ -384,20 +380,21 @@ h2{
   border-radius: 16px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 #habilidades div > div > div {
   text-align: center;
   display: inline-block;
   font-size: 16px;
   margin-bottom: 32px;
-  margin-right: 32px;
   line-height: 24px;
-  width: 100px;
+  width: 70px;
 }
 #habilidades h3{
   text-align: left;
 }
 #habilidades svg{
+  width: 100%;
   display: block;
   margin:0 auto 16px auto;
 }
@@ -432,7 +429,7 @@ h2{
 #recomendaciones div{
   min-height: 100%;
   color: #ccc;
-  padding: 32px;
+  padding: 16px;
   position: relative;
   z-index: 1;
 }
@@ -654,6 +651,45 @@ audio{
     background: rgba(227,253,255,1);
     background: linear-gradient(135deg, rgb(255, 255, 255) 60%, rgb(255, 187, 0) 100%);  
   }
+  .curriculum .secciones{
+    width:90%;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .curriculum .secciones ul label div{
+    background: rgba(255,255,255,1);
+    background: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(245,245,245,1) 100%);
+    border-radius: 100px;
+    margin-left: 16px;
+    padding: 12px 0 12px 46px;
+    width: 100%;
+    display: block;
+  }
+  .curriculum .secciones ul{
+    margin-right: 32px;
+  }
+  .curriculum .secciones .contenedor{
+    width: 65%;
+  }
+  #comunicacion div,  #sobre_mi div{
+    margin-right: 32px;
+  }
+  #habilidades{
+    padding: 32px;
+  }
+  #habilidades svg{
+    width: auto;
+  }
+  #habilidades div > div > div {
+    margin-right: 32px;
+    width: 100px;
+  }
+  #habilidades > div > div {
+    justify-content: start;
+  }
+  #recomendaciones div{
+    padding: 32px;
+  }
 }
 @media (min-width: 1024px){
   .item1,.item2,.item4,.item6,.item7 {
@@ -667,6 +703,9 @@ audio{
   }
   .item5 div{
     font-size: 14px;
+  }
+  .curriculum .secciones ul{
+    width: 35%;
   }
 }
 
@@ -783,6 +822,10 @@ audio{
   }
   .item5 div {
     padding:16px;
+  }
+  #comunicacion img, #sobre_mi img{
+    border-radius: 16px;
+    display: block;
   }
 }
 
