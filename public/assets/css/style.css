@@ -694,14 +694,14 @@ audio{
     padding: 32px;
   }
   .contactame .redes_sociales {
+    max-width: 50%;
+    margin: 0 auto;
     display: flex;
-    justify-content: center;
     padding: 32px;
   }
   .contactame .redes_sociales a{
     width: 64px;
     height: 64px;
-    margin-right: 32px;
   }
   .contactame .contenedor{
     width: 70%;
