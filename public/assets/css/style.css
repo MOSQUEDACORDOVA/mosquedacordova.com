@@ -20,9 +20,6 @@ body > section{
 .none{
   display: none !important;
 }
-.removido{
-  display: none !important;
-}
 
 /* FIN para todo el documento*/
 
@@ -310,11 +307,7 @@ h2{
   flex-direction: row-reverse;
 }
 .curriculum .secciones ul{
-  list-style: none;
-  text-align: left;
-  padding: 0;
-  margin-right: 0;
-  margin-top: 0;
+  display: none;
 }
 .curriculum .secciones li{
   margin-bottom: 32px;
@@ -344,7 +337,7 @@ h2{
   animation-duration: 1s;
 }
 .curriculum .secciones .contenedor{
-  width: 80%;
+  width: 100%;
   max-height: 600px;
   background: rgba(255,255,255,1);
   box-shadow: 16px 16px 32px rgba(0,0,0,0.2);
@@ -359,7 +352,6 @@ h2{
 }
 #comunicacion, #sobre_mi{
   display: flex;
-  padding: 32px;
 }
 #comunicacion p, #sobre_mi p{
   font-size: 16px;
@@ -369,8 +361,10 @@ h2{
 #comunicacion img, #sobre_mi img{
   display: none;
 }
-#habilidades{
+#habilidades,#comunicacion, #sobre_mi{
   padding: 16px;
+}
+#habilidades{
   text-align: center;
 }
 #habilidades > div > div {
@@ -388,7 +382,7 @@ h2{
   font-size: 16px;
   margin-bottom: 32px;
   line-height: 24px;
-  width: 70px;
+  width: 60px;
 }
 #habilidades h3{
   text-align: left;
@@ -400,7 +394,7 @@ h2{
 }
 #habilidades p{
   font-size: 16px;
-  text-align: center;
+  text-align: left;
   line-height: 24px;
 }
 #habilidades a{
@@ -411,7 +405,8 @@ h2{
   padding: 8px 32px;
   border-radius: 8px;
   margin-top: 16px;
-  display: inline-block;
+  display: block;
+  margin-bottom: 32px;
 }
 #recomendaciones:before{
   content: '';
@@ -598,6 +593,9 @@ audio{
 
 /*responsivo para tablet*/
 @media (min-width: 720px) {
+  .removido{
+    display: none !important;
+  }
   .opening, .servicios,.curriculum{
     padding-bottom: 75vh;
   }
@@ -659,6 +657,14 @@ audio{
     flex-direction: row;
     justify-content: center;
   }
+  .curriculum .secciones ul{
+    display: block;
+    list-style: none;
+    text-align: left;
+    padding: 0;
+    margin-right: 0;
+    margin-top: 0;
+  }
   .curriculum .secciones ul label div{
     background: rgba(255,255,255,1);
     background: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(245,245,245,1) 100%);
@@ -677,8 +683,11 @@ audio{
   #comunicacion div,  #sobre_mi div{
     margin-right: 32px;
   }
-  #habilidades{
+  #habilidades,#comunicacion, #sobre_mi{
     padding: 32px;
+  }
+  #habilidades p{
+    text-align: center;
   }
   #habilidades svg{
     width: auto;
@@ -692,6 +701,10 @@ audio{
   }
   #recomendaciones div{
     padding: 32px;
+  }
+  #habilidades a{
+    display: inline-block;
+    margin-bottom: 32px;
   }
   .contactame .redes_sociales {
     max-width: 50%;
