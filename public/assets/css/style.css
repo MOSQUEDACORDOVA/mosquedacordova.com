@@ -23,7 +23,7 @@ body > section{
 
 /* FIN para todo el documento*/
 
-.opening, .servicios,.curriculum{
+.opening, .servicios, .curriculum, .rompe_hielo{
   padding-bottom: 300px;
 }
 .encabezado{
@@ -139,6 +139,31 @@ h2{
   right: -54%;
 }
 /* FIN OPENING */
+
+/* ROMPE HIELO */
+.rompe_hielo .tu_msj{
+  text-align: right;
+}
+.rompe_hielo .tu_msj p{
+  background: #056162;
+  color: #fff;
+  position: relative;
+  display: inline-block;
+  padding: 0 8px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+.rompe_hielo .tu_msj b{
+  display: block;
+  text-align: left;
+  color: #00eafa;
+}
+.rompe_hielo .contenedor .cola_tu_msj{
+  position: absolute;
+  color: #056162;
+  right: -6px;
+}
+/* FIN ROMPE HIELO */
 
 /* SERVICIOS */
 .grid-container {
@@ -531,16 +556,16 @@ audio{
   position: absolute;
   color: #001E21;
 }
-.contactame .tu_msj {
+.contactame .tu_msj_con_img {
   text-align: right;
 }
-.contactame .tu_msj img{
+.contactame .tu_msj_con_img img{
   position: absolute;
   width: 80px;
   bottom: 28px;
   right: 2px;
 }
-.contactame .tu_msj p{
+.contactame .tu_msj_con_img p{
   background: #056162;
   color: #69A5A8;
   position: relative;
@@ -596,10 +621,10 @@ audio{
   .removido{
     display: none !important;
   }
-  .opening, .servicios,.curriculum{
+  .opening{
     padding-bottom: 75vh;
   }
-  .servicios,.curriculum{
+  .servicios,.curriculum,.rompe_hielo{
     padding-bottom: 40vh;
   }
   .opening > .mi_msj, .seccion_generica > .mi_msj{
@@ -719,7 +744,7 @@ audio{
   .contactame .contenedor{
     width: 70%;
     padding: 32px 32px 0 32px;
-    min-height: 500px;
+    min-height: 550px;
   }
 }
 @media (min-width: 1024px){
@@ -833,7 +858,7 @@ audio{
     font-size: 16px;
   }
   .contactame .contenedor{
-    min-height: 450px;
+    min-height: 500px;
     width: 50%;
   }
 }
