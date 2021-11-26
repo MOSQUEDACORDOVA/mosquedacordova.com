@@ -23,13 +23,13 @@ body > section{
 
 /* FIN para todo el documento*/
 
-.opening, .servicios, .curriculum, .rompe_hielo{
+.servicios, .curriculum, .rompe_hielo{
   padding-bottom: 300px;
 }
 .encabezado{
   background-image: url("../../img/brillantina.jpg");
   background-size: 100px;
-  padding: 4px;
+  padding: 2px;
   border-radius: 100px;
   width: auto;
   margin: 32px auto 32px auto;
@@ -149,9 +149,10 @@ h2{
   color: #fff;
   position: relative;
   display: inline-block;
-  padding: 0 8px;
+  padding: 4px 8px;
   border-radius: 4px;
   font-size: 14px;
+  max-width: 90%;
 }
 .rompe_hielo .tu_msj b{
   display: block;
@@ -162,6 +163,7 @@ h2{
   position: absolute;
   color: #056162;
   right: -6px;
+  top: 0;
 }
 /* FIN ROMPE HIELO */
 
@@ -523,9 +525,14 @@ audio{
   left: 0;
   top: 0;
 }
+.rompe_hielo .contenedor{
+  margin: 0 auto;
+}
+.datos_contacto .contenedor{
+  margin: 32px auto 0 auto;
+}
 .contactame .contenedor{
   background: #053E43;
-  margin: 32px auto 0 auto;
   border-radius: 16px;
   position: relative;
   padding: 16px 16px 0 16px;
@@ -604,7 +611,7 @@ audio{
 /*responsivo para telefonos grandes*/
 @media (min-width: 360px){
   .encabezado{
-    width: 290px;
+    width: 300px;
   }
   .opening > .mi_msj, .seccion_generica > .mi_msj{
     font-size: 16px;
@@ -620,9 +627,6 @@ audio{
 @media (min-width: 720px) {
   .removido{
     display: none !important;
-  }
-  .opening{
-    padding-bottom: 75vh;
   }
   .servicios,.curriculum,.rompe_hielo{
     padding-bottom: 40vh;
@@ -721,9 +725,7 @@ audio{
     margin-right: 32px;
     width: 100px;
   }
-  #habilidades > div > div {
-    justify-content: start;
-  }
+
   #recomendaciones div{
     padding: 32px;
   }
@@ -767,9 +769,6 @@ audio{
 
 /*responsivo para tablet vertical*/
 @media (min-width: 1024px) and (orientation: portrait){
-  .opening{
-    padding-top: 25vh;
-  }
   .presentaciones-container{
     margin-top: 16vh;
   }
