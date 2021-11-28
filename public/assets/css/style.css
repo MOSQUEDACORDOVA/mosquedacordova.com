@@ -328,43 +328,12 @@ h2{
   left: 10%;
 }
 .curriculum .secciones{
-  display: flex;
-  justify-content:space-between;
   width: 100%;
   max-width:1400px;
   margin: 32px auto 0 auto;
   flex-direction: row-reverse;
 }
-.curriculum .secciones ul{
-  display: none;
-}
-.curriculum .secciones li{
-  margin-bottom: 32px;
-}
-.curriculum .secciones li label{
-  display: flex;
-  align-items: center;
-  color: #999;
-  cursor: pointer;
-  transition: color 0.5s;
-}
-.curriculum .secciones li label:hover{
-  color: #00393C;
-}
-.curriculum .secciones ul label div{
-  display: none;
-}
-.curriculum .secciones ul .activo svg{
-  color: #00393C;
-}
-.curriculum .secciones ul .activo div{
-  background: rgba(255,255,255,1);
-  box-shadow: 16px 16px 32px rgba(0,0,0,0.2);
-  color: #00393C;
-  font-weight: bold;
-  animation-name: label_curriculum;
-  animation-duration: 1s;
-}
+
 .curriculum .secciones .contenedor{
   width: 100%;
   max-height: 700px;
@@ -373,6 +342,7 @@ h2{
   border-radius: 16px;
   text-align: left;
   overflow-y: scroll;
+  margin: 0 auto;
 }
 .item_curriculum{
   color: #00393C;
@@ -452,7 +422,6 @@ h2{
   position: relative;
 }
 #recomendaciones div{
-  min-height: 100%;
   color: #ccc;
   padding: 16px;
   position: relative;
@@ -707,34 +676,7 @@ audio{
     background: rgba(227,253,255,1);
     background: linear-gradient(135deg, rgb(255, 255, 255) 60%, rgb(255, 187, 0) 100%);  
   }
-  .curriculum .secciones{
-    width:90%;
-    flex-direction: row;
-    justify-content: center;
-  }
-  .curriculum .secciones ul{
-    display: block;
-    list-style: none;
-    text-align: left;
-    padding: 0;
-    margin-right: 0;
-    margin-top: 0;
-  }
-  .curriculum .secciones ul label div{
-    background: rgba(255,255,255,1);
-    background: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(245,245,245,1) 100%);
-    border-radius: 100px;
-    margin-left: 16px;
-    padding: 12px 0 12px 46px;
-    width: 100%;
-    display: block;
-  }
-  .curriculum .secciones ul{
-    margin-right: 32px;
-  }
-  .curriculum .secciones .contenedor{
-    width: 65%;
-  }
+
   #comunicacion div,  #sobre_mi div{
     margin-right: 32px;
   }
@@ -769,6 +711,9 @@ audio{
     width: 64px;
     height: 64px;
   }
+  .curriculum .secciones .contenedor{
+    width: 80%;
+  }
   .contactame .contenedor{
     width: 70%;
     padding: 32px 32px 0 32px;
@@ -790,9 +735,6 @@ audio{
   }
   .item5 div{
     font-size: 14px;
-  }
-  .curriculum .secciones ul{
-    width: 35%;
   }
 }
 
@@ -888,6 +830,9 @@ audio{
   .item5 div {
     padding:12px 14px;
     font-size: 16px;
+  }
+  .curriculum .secciones .contenedor{
+    width: 60%;
   }
   .contactame .contenedor{
     width: 50%;
