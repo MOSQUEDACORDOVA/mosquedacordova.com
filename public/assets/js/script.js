@@ -13,16 +13,3 @@ function detectar_dom(){
 	//document.getElementById("enlace_1").href=enlace_de_llamado;
 }
 detectar_dom();
-
-function mostrar_item(activo,item){
-	//ocultar item anterior
-	var label_antiguo=document.getElementsByClassName("label_curriculum");
-	var item_curriculum=document.getElementsByClassName("item_curriculum");
-	for (i = 0; i < item_curriculum.length; i++) {
-		label_antiguo[i].classList.remove("activo");
-		item_curriculum[i].classList.add("removido");
-	}
-	//mostrar nuevo item
-	activo.classList.add("activo");
-	item.classList.remove("removido");
-}

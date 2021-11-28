@@ -28,8 +28,8 @@ body > section{
 }
 .encabezado{
   background-color: #00393C;
-  background-image: url("../../img/brillantina.jpg");
-  background-size: 70px;
+  background-image: url("../../img/brillantina.webp");
+  background-size: 100px;
   padding: 2px;
   border-radius: 100px;
   width: auto;
@@ -443,7 +443,7 @@ h2{
   height: 100%;
   position: absolute;
   opacity: 0.1;
-  background-image: url("../../img/bg-chat-tile-dark_9f39e76b5a0e039e53afc5d9d4bdd780.png");
+  background-image: url("../../img/bg-chat-tile-dark_9f39e76b5a0e039e53afc5d9d4bdd780.webp");
   background-size: 300px;
   z-index: 0;
 }
@@ -521,7 +521,7 @@ audio{
   height: 100%;
   position: absolute;
   opacity: 0.1;
-  background-image: url("../../img/bg-chat-tile-dark_9f39e76b5a0e039e53afc5d9d4bdd780.png");
+  background-image: url("../../img/bg-chat-tile-dark_9f39e76b5a0e039e53afc5d9d4bdd780.webp");
   background-size: 300px;
   z-index: 0;
   left: 0;
