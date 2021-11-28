@@ -27,8 +27,9 @@ body > section{
   padding-bottom: 300px;
 }
 .encabezado{
+  background-color: #00393C;
   background-image: url("../../img/brillantina.jpg");
-  background-size: 100px;
+  background-size: 70px;
   padding: 2px;
   border-radius: 100px;
   width: auto;
@@ -36,7 +37,8 @@ body > section{
   text-align: left;
 }
 .encabezado > div{
-  background: rgba(200,200,200,.1);
+  background-color: #00393C;
+  background: rgba(0,57,60,0.1);
   -webkit-backdrop-filter: blur(30px);
   backdrop-filter: blur(30px);
   border-radius: 100px;
