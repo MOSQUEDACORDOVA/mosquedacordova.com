@@ -2,8 +2,197 @@
 html,body{
   margin:0;font-family: 'Poppins', sans-serif;
   position:relative;
-  }
-a:link, a:visited, a:hover, a:active{text-decoration:none;}
-html,body{
-  font-size: 1vh;
+  background: #111B21;
+  font-size:1.8vh;
+
+}
+a:link, a:visited, a:hover, a:active{text-decoration:none;color: #fff;}
+h3,p{
+  margin: 0;
+}
+/* start header */
+header{
+  background:#11181C;
+  color:#fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1vh;
+  position: fixed;
+  width: -webkit-fill-available;
+  z-index: 2;
+}
+.texto_logo{
+  display: flex;
+  align-items: center;
+}
+header img{
+  width:7vh;
+  margin-right: 4vw;
+}
+header p{
+  opacity: 0.5;
+}
+header .llamar{
+  margin-right: 12px;
+}
+/* end header */
+
+/* start mensajeria */
+.mensajeria{
+ background: #202C33;
+ position: fixed;
+ bottom: 0;
+ width: -webkit-fill-available;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ padding: 1vh;
+ height: 6vh;
+ z-index: 2;
+ -webkit-box-shadow: 0px -16px 33px 0px rgba(11,17,20,1);
+-moz-box-shadow: 0px -16px 33px 0px rgba(11,17,20,1);
+box-shadow: 0px -16px 33px 0px rgba(11,17,20,1);
+}
+.mensajeria input{
+  height: 100%;
+  width: inherit;
+  margin-right: 2vh;
+  border-radius: 1vh;
+  border: 0;
+  font-size: 2vh;
+  padding: 2vh;
+  background:#2A3942;
+  color: #fff;
+}
+/* end mensajeria */
+
+/* start chat */
+.chat{
+  background: #000000;
+  min-height: 100vh;
+  width: -webkit-fill-available;
+  display: inline-block;
+  position: relative;
+  height: max-content;
+}
+.chat > div{
+  padding: 11vh 1vh 1vh 1vh;
+
+}
+.chat:before{
+  content: '';
+  background-image: url(../../img/backws.webp);
+  background-size: 50vh;
+  width: -webkit-fill-available;
+  display: block;
+  opacity: 0.1;
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  left:0;
+}
+.chat .mi_msj p{
+  display: table;
+}
+.chat .mi_msj p,.chat .tu_msj p{
+  padding: 1vh;
+  border-radius: 1vh;
+  margin-bottom: 1vh;
+  max-width: 80vw;
+  
+}
+/* end chat */
+
+/* start msjs */
+.mi_msj, .tu_msj{
+  margin-bottom: 2vh;
+  position: relative;
+  z-index: 1;
+  color: #fff;
+}
+
+.mi_msj .traingulo{
+  width: 0px;
+  height: 0px;
+  border-right: 1vh solid transparent;
+  border-left: 1vh solid transparent;
+  border-top: 1vh solid #202C33;
+  float: left;
+  margin-right: -1vh;
+}
+.tu_msj{
+  text-align: right;
+}
+.tu_msj span{
+  color: #00FFC8;
+  display: block;
+  font-weight: bold;
+}
+
+.mi_msj p{
+  background:#202C33;
+  margin-left: 1vh;
+}
+.tu_msj p{
+  background:#005C4B;
+  display: inline-block;
+  text-align: left;
+}
+.tu_msj .traingulo{
+  width: 0px;
+  height: 0px;
+  border-right: 1vh solid transparent;
+  border-left: 1vh solid transparent;
+  border-top: 1vh solid #005C4B;
+  float: right;
+  margin-left: -1vh;
+}
+.chat img{
+  width: 30vw;
+}
+.chat .hora{
+  display: inline-block;
+  padding: 1vh;
+  border-radius: 1vh;
+  margin-top: 1vh;
+  font-size: 1.5vh;
+}
+.mi_msj .hora{
+  background: #202C33;
+}
+.tu_msj .hora{
+  background: #005C4B;
+}
+/* end msjs */
+
+/* end footer */
+footer{
+  text-align: center;
+  padding: 10vh 0 20vh 0;
+  background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 34%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,0)), color-stop(34%, rgba(0,0,0,1)));
+  background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 34%);
+  background: -o-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 34%);
+  background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 34%);
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 34%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000', GradientType=0 );
+  position: relative;
+  z-index: 2;
+  color: #fff;
+}
+.redes_sociales{
+  width: 50vw;
+  margin: 2vh auto;
+  display: flex;
+  justify-content: space-around;
+}
+.testos_secundarios{
+  opacity: 0.5;
+}
+/* end footer */
+
+.nav{
+  display: none;
 }

@@ -1,0 +1,28 @@
+body{
+  display: flex;
+  padding: 2vh;
+  justify-content: space-between;
+}
+header{
+  display: none;
+}
+.nav{
+  display: block;
+  width: 27vw;
+  height: 100px;
+  background-color: #f00;
+}
+.chat{
+  min-height: auto;
+  height: 96vh;;
+  overflow: auto;
+  width: 70vw;
+  border-radius: 8px;
+}
+.chat:before{
+  background-size: 60vh;
+  position: sticky;
+}
+.mensajeria{
+  position: sticky;
+}
