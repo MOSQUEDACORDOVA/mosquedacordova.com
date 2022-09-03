@@ -72,7 +72,7 @@ header p{
 .chat .mi_msj p{
   display: table;
 }
-.chat .mi_msj p,.chat .tu_msj p{
+.chat .mi_msj p,.chat .tu_msj p, .pack_imagenes{
   padding: 1vh;
   border-radius: 1vh;
   margin-bottom: 1vh;
@@ -139,7 +139,7 @@ header p{
   font-weight: bold;
 }
 
-.mi_msj p{
+.mi_msj p, .pack_imagenes{
   background:#202C33;
   margin-left: 1vh;
 }
@@ -157,8 +157,11 @@ header p{
   float: right;
   margin-left: -1vh;
 }
-.chat img{
+.chat .mi_msj > img, .chat .tu_msj > img{
   width: 30vw;
+}
+.mi_msj > img, .mi_msj .hora{
+  margin-left: 1vh;
 }
 .chat .hora{
   display: inline-block;
@@ -166,12 +169,22 @@ header p{
   border-radius: 1vh;
   margin-top: 1vh;
   font-size: 1.5vh;
+  margin-bottom: 1vh;
 }
 .mi_msj .hora{
   background: #202C33;
 }
 .tu_msj .hora{
   background: #005C4B;
+}
+.pack_imagenes{
+  display: grid;
+  justify-content: space-between;
+  grid-gap: 1.2vh;
+}
+.pack_imagenes img{
+  border-radius: 1vh;
+  width: 100%;
 }
 .chat footer{
   background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 34%);

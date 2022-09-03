@@ -88,11 +88,14 @@ header{
   height: 99vh;
 }
 
-.chat .mi_msj p, .chat .tu_msj p{
+.chat .mi_msj p, .chat .tu_msj p, .pack_imagenes{
   max-width: 50vw;
 }
-.chat img{
+.chat .mi_msj > img, .chat .tu_msj > img{
   width: 8vw;
+}
+.pack_imagenes{
+  grid-template-columns: 1fr 1fr 1fr;
 }
 .chat footer{
   display: none;
