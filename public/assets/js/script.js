@@ -1,8 +1,3 @@
-function detectar_msj_para_mi(msj){
-	var div1 = document.getElementById("btn_enviar_msj_para_mi");
-div1.href="https://api.whatsapp.com/send?phone=16188470531&text="+msj.value;
-}
-
 function detectar_dom(){
 	var enlace_de_llamado="";
 	var URLdomain = window.location.host;
@@ -15,6 +10,6 @@ function detectar_dom(){
 		break;
 		default: enlace_de_llamado="https://api.whatsapp.com/send?phone=16188470531&text=Hola%20Mosqueda%20C%C3%B3rdova%2C%20me%20interesan%20tus%20servicios%2C%20%C2%BFpuedes%20ayudarme%3F%20gracias.";
 	}
-	document.getElementById("enlace_1").href=enlace_de_llamado;
+	//document.getElementById("enlace_1").href=enlace_de_llamado;
 }
 detectar_dom();
