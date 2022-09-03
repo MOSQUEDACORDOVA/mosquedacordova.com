@@ -211,6 +211,9 @@ footer{
   display: flex;
   justify-content: space-around;
 }
+.redes_sociales svg{
+  width:10vw;
+}
 .testos_secundarios{
   opacity: 0.5;
 }
