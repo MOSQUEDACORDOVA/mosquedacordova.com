@@ -196,6 +196,9 @@ header p{
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000', GradientType=0 );
   padding: 10vh 0 20vh 0;
 }
+.chat div footer{
+  display: none;
+}
 /* end msjs */
 
 /* start footer */
