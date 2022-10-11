@@ -1,8 +1,8 @@
 html,body{
   margin:0;font-family: 'Poppins', sans-serif;
   position:relative;
-  background: #111B21;
   font-size:1.8vh;
+  background-color: #000000;
 
 }
 a:link, a:visited, a:hover, a:active{text-decoration:none;color: #fff;}
@@ -11,42 +11,99 @@ h3,p{
 }
 /* start header */
 header{
-  background:#11181C;
-  color:#fff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 1vh;
   position: fixed;
   width: -webkit-fill-available;
   z-index: 2;
+  background-color: #202C33;
+  top: 0;
 }
+header div{
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header a{
+  color: #8696a0 !important;
+  font-weight: bold;
+}
+header .activo{
+  color: #fff !important;
+}
+/* end header */
+.titulos{
+  display: none;
+}
+
 .texto_logo{
   display: flex;
   align-items: center;
 }
-header img{
-  width:7vh;
-  margin-right: 4vw;
-}
-header p{
-  opacity: 0.5;
-}
-.llamar{
-  margin-right: 12px;
-}
-/* end header */
 
-/* start link_contacto*/
-.link_contacto svg{
-  width: 3vh;
+/* start nav */
+.nav{
+  display: block;
+  width: 98vw;
+  height: 88vh;
+  margin:8vh auto 0 auto;
+  padding: 0.5vw;
+  border-radius: 0.8vw;
+  box-sizing: border-box; /* para que considere el padding */
+  position: relative;
 }
-/* end link_contacto*/
+.nav > a{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 0.8vw;
+  padding: 2vw;
+  margin-bottom: 0.5vw;
+}
+.chat_activo{
+  background-color: #2A3942;
+}
+.nav img{
+  width:7vh;
+  margin-right: 2vh;
+}
+.nav h3{
+  font-size: 1.9vh;
+}
+.nav a p{
+  font-size: 1.9vh;
+  opacity: 0.5;
+  width: 60vw;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.nav h3, .nav p{
+  color:#fff;
+}
+.info_fake .fecha{
+  text-align: right;
+  margin-bottom: 1vh;
+}
+.info_fake .fecha svg{
+  width:5.5vw;
+}
+.info_fake .other{
+  display: flex;
+}
+.info_fake .notification{
+  width:5.5vw;
+}
+.nav footer{
+  position: absolute;
+  bottom: 2vh;
+  width: 100%;
+}
+/* end nav */
 
 /* start chat */
 .chat{
   background: #000000;
-  min-height: 100vh;
   width: -webkit-fill-available;
   display: inline-block;
   position: relative;
@@ -196,9 +253,7 @@ header p{
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000', GradientType=0 );
   padding: 10vh 0 20vh 0;
 }
-.chat div footer{
-  display: none;
-}
+
 /* end msjs */
 
 /* start footer */
@@ -222,8 +277,9 @@ footer{
 }
 /* end footer */
 
-/* start nav */
-.nav{
-  display: none;
+.icon_chat_ws{
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 999;
 }
-/* end nav */
