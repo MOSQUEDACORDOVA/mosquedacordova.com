@@ -35,7 +35,9 @@ header .activo{
 .titulos{
   display: none;
 }
-
+em{
+  font-weight: lighter;
+}
 .texto_logo{
   display: flex;
   align-items: center;
