@@ -29,6 +29,9 @@ header .activo{
 .titulos h1,.titulos p {
   margin-bottom: 0;
 }
+em{
+  font-weight: lighter;
+}
 
 /* start nav */
 .nav{
