@@ -1,173 +1,89 @@
 html,body{
-  font-size:1vw;
+  font-size:4vh;
 }
-body{
+h1{
+  font-size: 6vw;
+  line-height: 6vw;
+  margin-top: 0vh;
+}
+
+.zona-principal{
   display: flex;
-  justify-content: center;
-  background-color: #fff;
-  flex-direction: column;
-  align-items: center;
 }
-.no_escritorio{
-  display: none;
-}
-/* start header */
-header{
-  background-color: #fff;
-  border-bottom: 1px solid #eee;
-}
-header div{
-  width: 30vw;
-}
-header .activo{
-  color: #111b21 !important;
-}
-/* end header */
-
-/* stard Intro */
-.intro{
-  top: 0;
-}
-#columns {
-	column-width: 12vw;
-  width: 99vw;
-	margin: 7vh auto;
-}
-div#columns figure img {
-  border-radius: 2vh;
-}
-/* end Intro */
-
-.titulos{
-  position: relative;
-  z-index: 2;
-  background: rgb(255,255,255);
-  background: linear-gradient(0deg, rgba(255,255,255,1) 21%, rgba(255,255,255,0) 100%);
-  width: 100%;
-  height: 88vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-  margin-top: 7vh;
-  text-align: center;
-  padding-bottom: 5vh;
-  font-size: 4vh;
-  color: #000;
-}
-.titulos::after{
-  content: '';
-  width: 100%;
-  height: 300px;
-  background: #fff;
-  position: absolute;
-  top: 93vh;
-}
-.titulos h1,.titulos p {
-  margin-bottom: 0;
-}
-em{
-  display: inline;
-  font-weight: lighter;
-}
-
-/* start nav */
-.nav{
+.foto-nosotros{
   display: block;
-  width: 40vw;
-  height: 88vh;
-  margin-top:8vh;
-  background-color: #202C33;
-  padding: 0.5vw;
-  border-radius: 0.8vw;
-  box-sizing: border-box; /* para que considere el padding */
-  position: relative;
+  margin-right: 1vw;
+  width: 10vw;
 }
-.nav > a{
+.foto-nosotros img{
+  border: 1vw solid #181831;
+  border-radius: 100%;
+}
+.menu-principal{
+  width: 10vw;
+  left: auto;
+  right: 1vw;
+  display: block;
+  bottom: auto;
+}
+.menu-principal a{
+  background-color: rgba(170, 170, 195, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-radius: 0.8vw;
-  padding: 0.5vw;
+  border-radius: 100%;
+  margin-bottom: 1vw;
+  width: 6vw;
+  float: right;
+}
+.menu-principal svg{
+  width:6vw;
+  height:6vw;
+}
+.zona-msj{
+  width: 74vw;
+}
+.mis-msjs .msj,.mis-msjs .primer-msj{
+  display: inline-block;
+  background: #181831;
+  max-width: 90%;
+  margin-bottom: 0.5vw;
+  padding: 2vw 4vw;
+}
+
+.zona-msj .ejemplos{
+  margin-top: 1vw;
+  width: 100vw;
+  height: 40vw;
+  position: relative;
+  overflow: hidden;
+  margin-left: -12vw;
+}
+.zona-msj .ejemplos img{
+  height: 100%;
+  position: absolute;
+  left: -38%;
+}
+.mis-msjs .msj,.mis-msjs .primer-msj{
   margin-bottom: 0.5vw;
 }
-.chat_activo{
-  background-color: #2A3942;
+.zona-msj .mis-msjs img,.zona-msj .tus-msjs img{
+  margin-bottom: 0.5vw;
+  width: 16vw;
+  border-radius: 1vw;
 }
-.nav img{
-  width:7vh;
-  margin-right: 2vh;
+.tus-msjs div{
+  margin-bottom: 0.5vw;
 }
-.nav h3{
-  font-size: 1.9vh;
+.msj,.btn{
+  border-radius: 10vw;
 }
-.nav a p{
-  font-size: 1.9vh;
-  opacity: 0.5;
-  width: 25vw;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+.mis-msjs .primer-msj{
+  border-radius: 0px 10vw 10vw 10vw;
 }
-.nav h3, .nav p{
-  color:#fff;
+.tus-msjs .primer-msj{
+  border-radius: 10vw 0vw 10vw 10vw;
 }
-.info_fake .fecha{
-  text-align: right;
-  margin-bottom: 1vh;
+.pie{
+  margin-bottom: auto;
 }
-.info_fake .fecha svg{
-  width:1.5vw;
-}
-.info_fake .other{
-  display: flex;
-}
-.info_fake .notification{
-  width:1.5vw;
-}
-/* end nav */
-
-/* start chat */
-.chat{
-  min-height: auto;
-  width: 50vw;
-  border-radius: 0.8vw;
-  margin-top: 5vh;
-  margin-bottom:8vh;
-  position: relative;
-  z-index: 3;
-}
-.chat:before{
-  background-size: 60vh;
-}
-.chat > div{
-  padding: 0.5vw 0.5vw 0vw 0.5vw;
-}
-
-.chat .mi_msj p, .chat .tu_msj p, .pack_imagenes{
-  max-width: 40vw;
-}
-.chat .mi_msj > img, .chat .tu_msj > img{
-  width: 8vw;
-}
-.pack_imagenes{
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
-.chat div footer{
-  display: block;
-}
-/* end chat */
-
-/* start footer */
-.nav footer{
-  position: absolute;
-  bottom: 2vh;
-  width: 100%;
-}
-.redes_sociales{
-  width: 12vw;
-}
-.redes_sociales svg{
-  width:2vw;
-}
-/* end footer */
