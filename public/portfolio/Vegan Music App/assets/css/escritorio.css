@@ -1,0 +1,13 @@
+.nonemov{
+	display:block !important;
+}
+body {
+
+	padding: 5vw;
+
+}
+
+.phone {
+	width: 460px;
+	border-radius: 25px;
+}
