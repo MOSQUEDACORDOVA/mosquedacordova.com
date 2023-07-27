@@ -19,7 +19,7 @@ h1{
 h1{
   font-size: 7vw;
   line-height: normal;
-    margin-top: 4vh;
+    margin-top: 2vh;
 }
 
 .none{
@@ -27,7 +27,7 @@ h1{
 }
 .background{
     background-image: url(../../img/backws.webp);
-    opacity: 0.1;
+    opacity: 0.15;
     position: fixed;
     width: 100%;
     height: 100%;
@@ -38,9 +38,7 @@ h1{
 .zona-principal{
   position: relative;
 }
-.foto-nosotros{
-  display: none;
-}
+
 .menu-principal{
   width: 36vw;
   position: fixed;
@@ -67,12 +65,11 @@ h1{
   color:#AAAAC3;
 }
 .zona-msj .ejemplos{
-  margin: 8vw 0 8vw -1vw;
+  margin: 8vw 0 2vw -1vw;
   width: 100vw;
   height: 60vw;
   position: relative;
   overflow: hidden;
-
 }
 .zona-msj .ejemplos img{
   height: 100%;
@@ -114,7 +111,7 @@ h1{
   font-weight: bold;
 }
 .zona-msj .mis-msjs img,.zona-msj .tus-msjs img{
-  margin-bottom: 1vw;
+  margin-bottom: 2vw;
   width: 32vw;
   border-radius: 2vw;
 }
@@ -133,9 +130,8 @@ h1{
   margin-bottom: 2vw;
 }
 .pie{
-  margin-top: 10vw;
+  margin: 2vw;
   text-align: center;
-  margin-bottom: 20vw;
 }
 .pie img{
   border: 1vw solid #181831;
@@ -159,6 +155,12 @@ h1{
 .borde_amarillo{
   border-color: #FFFF00 !important;
 }
+.borde_negro{
+  border: 0.3vw solid #000;
+}
+.borde_blanco{
+  border: 0.3vw solid #fff;
+}
 .azul{
   background: #00FFFF !important;
 }
@@ -170,4 +172,104 @@ h1{
 }
 .color_rojo{
   color: #FF00FF !important;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 48.8vw 48.8vw ;
+  gap: 0.4vw;
+  margin-bottom: 10vw;
+  justify-content: center;
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  border-radius: 1vw;
+  padding: 1vw;
+}
+.preview{
+  display: inline-block;
+  background-color: #fff;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 1vw;
+  width:99%;
+}
+
+.grid-item1{
+  grid-column: 1/3;
+}
+.grid-item4{
+  grid-row: 3/5;
+}
+.grid-item6{
+  grid-column: 2/2;
+  grid-row: 3/4;
+}
+.grid-item7{
+  grid-row: 4/5;
+}
+.grid-item8{
+  grid-column: 1/1;
+  grid-row:5/5;
+}
+.grid-item10{
+  grid-column: 2/2;
+  grid-row:5/5;
+}
+
+.grid-item1 .preview{
+  background-image: url(../../img_proyectos/bikes.webp);
+  background-size: 100%;
+  height: 71vw;
+}
+.grid-item2 .preview{
+  background-image: url(../../img_proyectos/shop-star-wars.webp);
+  background-size: 102%;
+  height: 34vw;
+}
+.grid-item3 .preview{
+  background-image: url(../../img_proyectos/reviews.webp);
+  background-size: 102%;
+  height: 34vw;
+}
+.grid-item4 .preview{
+  background-image: url(../../img_proyectos/vegan_musc_app.webp);
+  background-size: 100%;
+  height: 90vw;
+}
+.grid-item5 .preview{
+  background-image: url(../../img_proyectos/botones_donwload.webp);
+  background-size: 102%;
+  height: 22.1vw;
+}
+.grid-item6 .preview{
+  background-image: url(../../img_proyectos/music_app.webp);
+  background-size: 152%;
+  height: 44.6vw;
+}
+.grid-item7 .preview{
+  background-image: url(../../img_proyectos/logo_disney.webp);
+  background-size: 102%;
+  height: 42.4vw;
+}
+.grid-item8 .preview{
+  background-image: url(../../img_proyectos/lovincar.webp);
+  background-size: 102%;
+  height: 34.4vw;
+}
+.grid-item9 .preview{
+  background-image: url(../../img_proyectos/galeriaanimacion.webp);
+  background-size: 100%;
+  height: 22.1vw;
+}
+.grid-item10 .preview{
+  background-image: url(../../img_proyectos/landingparallax.webp);
+  background-size: 102%;
+  height: 34.4vw;
+}
+.grid-item11 .preview{
+  background-image: url(../../img_proyectos/animationcarita.webp);
+  background-size: 102%;
+  height: 36.4vw;
 }
