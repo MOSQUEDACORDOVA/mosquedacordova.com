@@ -1,0 +1,17 @@
+.nonemov{
+	display: none !important;
+}
+
+
+body, html {
+  width:100%;
+  height:100%;
+  background:#ddd;
+  font-family: 'Montserrat', sans-serif;
+  font-size:99px;
+  text-align:center;
+}
+
+div {
+  position:absolute;
+}
