@@ -115,6 +115,10 @@ h1{
 .grid-item11{
   grid-column: 3/3;
 }
+.grid-item12{
+  grid-column: 1/1;
+  grid-row: 4/6;
+}
 
 .grid-item1 .preview{
   background-size: 102%;
@@ -161,4 +165,9 @@ h1{
 .grid-item11 .preview{
   background-size: 102%;
   height: 16.4vw;
+}
+.grid-item12 .preview{
+  background-size: 102%;
+  background-position: top;
+  height: 29.4vw;
 }

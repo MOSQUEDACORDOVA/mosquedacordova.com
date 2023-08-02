@@ -271,5 +271,11 @@ h1{
 .grid-item11 .preview{
   background-image: url(../../img_proyectos/EfectoHighLucasZanottosArnold.webp);
   background-size: 102%;
-  height: 36.4vw;
+  height: 46.4vw;
+}
+.grid-item12 .preview{
+  background-image: url(../../img_proyectos/RubikPaPensar.webp);
+  background-size: 102%;
+  background-position: top;
+  height: 46.4vw;
 }
