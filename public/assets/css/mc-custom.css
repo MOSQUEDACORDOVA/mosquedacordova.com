@@ -1,3 +1,6 @@
 .w150px{
   width: 150px;
 }
+.template-customizer-open-btn{
+  display: none !important;
+}
