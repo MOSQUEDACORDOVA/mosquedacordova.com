@@ -5166,7 +5166,7 @@ textarea.form-control-lg {
   --bs-tooltip-margin: ;
   --bs-tooltip-font-size: 0.9375rem;
   --bs-tooltip-color: #fff;
-  --bs-tooltip-bg: #4a5072;
+  --bs-tooltip-bg: #2e2e2f;
   --bs-tooltip-border-radius: var(--bs-border-radius);
   --bs-tooltip-opacity: 1;
   --bs-tooltip-arrow-width: 0.8rem;
@@ -9863,7 +9863,7 @@ select.form-select option {
 }
 
 .form-check .form-check-input:disabled:not(:checked) {
-  background-color: #4a5072;
+  background-color: #2e2e2f;
 }
 .form-check .form-check-input:checked, .form-check .form-check-input[type=checkbox]:indeterminate {
   box-shadow: 0 0.125rem 0.25rem rgba(15, 20, 34, 0.4);
@@ -21866,7 +21866,7 @@ html:not([dir=rtl]) .switches-stacked .switch {
 
 .switch-input:disabled ~ .switch-toggle-slider {
   opacity: 0.5;
-  background: #4a5072;
+  background: #2e2e2f;
   border-color: transparent !important;
 }
 .switch-input:disabled ~ .switch-toggle-slider::after {
@@ -22295,7 +22295,7 @@ html:not([dir=rtl]) .switches-stacked .switch {
 }
 .avatar-group .avatar .avatar-initial {
   color: #bdc1c6;
-  background-color: #4a5072;
+  background-color: #2e2e2f;
 }
 .avatar-group .avatar:hover {
   z-index: 30;
