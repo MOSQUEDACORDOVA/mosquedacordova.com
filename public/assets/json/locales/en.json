@@ -1,11 +1,51 @@
 {
+  "Light": "Light",
+  "Dark": "Dark",
+  "System": "System",
   "Home": "Home",
   "Hard skills": "Hard skills",
   "Soft skills": "Soft skills",
   "Experience": "Experience",
-  "Objective": "Objective",
+  "Goal": "Goal",
   "Community service": "Community service",
   "Hobbies": "Hobbies",
+
+  "Saludo-Inicial": "Hello 👋 I'm Engineer <b>MOSQUEDA CÓRDOVA</b>, I'm the person you're looking for 💪🏻 ",
+  "Titulo-Principal": "SOFTWARE DEVELOPER",
+  "Overview-Tiempo-Leer": "Don't have much time to read?",
+  "Download-CV": "Download CV",
+  "Contact-Me": "Contact Me",
+  "Why-Hire-Me": "Why should you hire me?",
+  "I-Understand-You-Need": "I understand that you need someone who knows what to do before you even ask.",
+  "My-Greatest-Virtue": "My greatest virtue is knowing how to listen and put into practice.",
+  "Other-Skills": "And i also hace other skills that you might want to know about, keep reading 😃. . .",
+  "Effective-Communication":"Effective Communication",
+  "Teamwork":"Teamwork",
+  "Conflict-Resolution":"Conflict Resolution",
+  "Creativity":"Creativity",
+  "Adaptability":"Adaptability",
+  "Leadership-Skills":"Leadership Skills",
+  "Empathy":"Empathy",
+  "Time-Management":"Time Management",
+  "Critical-Thinking":"Critical Thinking",
+  "Negotiation":"Negotiation",
+  "Influence-Persuasion":"Influence and Persuasion",
+
+  "Estudios Universitarios":"I graduated as a Systems Engineer from <b>Gran Mariscal de Ayacucho University</b>. However, I don't like to be hired/recognized solely for this. I prefer to be hired for being the person who can/knows how to solve problems. Nevertheless, here are some technical details 🙌.",
+  "I adapt quickly":"I adapt quickly, you know what they say, 'Once you learn one language, it's easier to learn others.",
+
+  "Goal-Descrption": "I want to build my first SaaS, and for that, I'm expanding my network of contacts. Let's do something together!",
+  
+  "Community service description 1": "I'm developing",
+  "Community service description 2": "a place where we gather job offers to help others find more and better employment opportunities. My goal is to create a community of freelancers where we can all grow together.",
+
+  "Hobbies description": "I'm building my farm, I love the countryside, the outdoors, the smell of cows, and playing around with the solar panels I just bought 🫢. Sorry, I just didn't have anyone else to tell. 😅",
+
+  "Congratulation": "Thank you for reading this far! 🙌",
+  "Job offers": "Job offers",
+
+
+
   "Dashboards": "Dashboards",
   "Dashboard": "Dashboard",
   "eCommerce": "eCommerce",
