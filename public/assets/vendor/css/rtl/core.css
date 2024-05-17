@@ -2100,7 +2100,7 @@ progress {
   padding: 0;
 }
 .form-control::placeholder {
-  color: #b7b5be;
+  color: #999999;
   opacity: 1;
 }
 .form-control:disabled {
@@ -6870,7 +6870,7 @@ a.bg-lightest:hover, a.bg-lightest:focus {
 }
 
 .text-light {
-  color: #b7b5be !important;
+  color: #999999 !important;
 }
 .text-light[href]:hover, .text-light[href]:focus {
   color: #93909d !important;
@@ -10250,7 +10250,7 @@ html:not([dir=rtl]) .input-group-merge .form-control:not(textarea):not(:last-chi
 
 .form-floating > .form-control:focus::placeholder,
 .form-floating > .form-control:not(:placeholder-shown)::placeholder {
-  color: #b7b5be;
+  color: #999999;
 }
 
 [dir=rtl] .form-floating > label {
@@ -13379,7 +13379,7 @@ html:not([dir=rtl]) .card .card-separator {
 
 .text-light {
   --bs-text-opacity: 1;
-  color: #b7b5be !important;
+  color: #999999 !important;
 }
 
 .text-dark {
@@ -23031,9 +23031,6 @@ html:not([dir=rtl]) .timeline-item {
   border-top-right-radius: 0.375rem;
 }
 
-.content-footer .footer-container {
-  block-size: 56px;
-}
 
 .footer-light {
   color: rgba(0, 0, 0, 0.5);
@@ -25613,7 +25610,7 @@ a.bg-vimeo:hover, a.bg-vimeo:focus {
 .navbar.bg-gray .navbar-nav > .nav-link.disabled,
 .navbar.bg-gray .navbar-nav > .nav-item > .nav-link.disabled,
 .navbar.bg-gray .navbar-nav > .nav > .nav-item > .nav-link.disabled {
-  color: #b7b5be !important;
+  color: #999999 !important;
 }
 .navbar.bg-gray .navbar-nav .show > .nav-link,
 .navbar.bg-gray .navbar-nav .active > .nav-link,
@@ -26031,7 +26028,7 @@ a.bg-vimeo:hover, a.bg-vimeo:focus {
   color: #4b465c;
 }
 .footer.bg-gray .footer-link.disabled {
-  color: #b7b5be !important;
+  color: #999999 !important;
 }
 .footer.bg-gray .footer-text {
   color: #4b465c;

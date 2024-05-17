@@ -35,10 +35,14 @@ body{
   .menu-vertical .menu-icon{
     margin-right: 26px;
   }
+  
 }
 @media (orientation: landscape) {
   .menu-item .menu-link {
     font-size: 0.9rem;
+  }
+  .w-md-50{
+    width: 50%;
   }
 }
 
@@ -50,4 +54,8 @@ body{
        url('ButtershineSerif.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
+}
+
+.accordion-body{
+  font-size: 17px;
 }
