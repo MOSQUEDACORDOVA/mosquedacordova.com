@@ -41,39 +41,41 @@
     <meta property="og:image:type" content="image/webp">
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cantata+One&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&display=swap" rel="stylesheet">
+    
     <!-- Icons -->
-    <link rel="stylesheet" href="assets/vendor/fonts/fontawesome.css?v=2" />
-    <link rel="stylesheet" href="assets/vendor/fonts/tabler-icons.css?v=2" />
-    <link rel="stylesheet" href="assets/vendor/fonts/flag-icons.css?v=2" />
+    <link rel="stylesheet" href="assets/vendor/fonts/fontawesome.css?v=4" />
+    <link rel="stylesheet" href="assets/vendor/fonts/tabler-icons.css?v=4" />
+    <link rel="stylesheet" href="assets/vendor/fonts/flag-icons.css?v=4" />
 
     <!-- Core CSS -->
-    <link rel="stylesheet" href="assets/vendor/css/rtl/core.css?v=2" class="template-customizer-core-css" />
-    <link rel="stylesheet" href="assets/vendor/css/rtl/theme-bordered.css?v=2" class="template-customizer-theme-css" />
-    <link rel="stylesheet" href="assets/css/demo.css?v=2" />
-    <link rel="stylesheet" href="assets/css/mc-custom.css?v=2" />
+    <link rel="stylesheet" href="assets/vendor/css/rtl/core.css?v=4" class="template-customizer-core-css" />
+    <link rel="stylesheet" href="assets/vendor/css/rtl/theme-bordered.css?v=4" class="template-customizer-theme-css" />
+    <link rel="stylesheet" href="assets/css/demo.css?v=4" />
+    <link rel="stylesheet" href="assets/css/mc-custom.css?v=4" />
 
     <!-- Vendors CSS -->
-    <link rel="stylesheet" href="assets/vendor/libs/node-waves/node-waves.css?v=2" />
-    <link rel="stylesheet" href="assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css?v=2" />
-    <link rel="stylesheet" href="assets/vendor/libs/typeahead-js/typeahead.css?v=2" />
-    <link rel="stylesheet" href="assets/vendor/libs/apex-charts/apex-charts.css?v=2" />
-    <link rel="stylesheet" href="assets/vendor/libs/swiper/swiper.css?v=2" />
-    <link rel="stylesheet" href="assets/vendor/libs/datatables-bs5/datatables.bootstrap5.css?v=2" />
-    <link rel="stylesheet" href="assets/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.css?v=2" />
-    <link rel="stylesheet" href="assets/vendor/libs/datatables-checkboxes-jquery/datatables.checkboxes.css?v=2" />
+    <link rel="stylesheet" href="assets/vendor/libs/node-waves/node-waves.css?v=4" />
+    <link rel="stylesheet" href="assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css?v=4" />
+    <link rel="stylesheet" href="assets/vendor/libs/typeahead-js/typeahead.css?v=4" />
+    <link rel="stylesheet" href="assets/vendor/libs/apex-charts/apex-charts.css?v=4" />
+    <link rel="stylesheet" href="assets/vendor/libs/swiper/swiper.css?v=4" />
+    <link rel="stylesheet" href="assets/vendor/libs/datatables-bs5/datatables.bootstrap5.css?v=4" />
+    <link rel="stylesheet" href="assets/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.css?v=4" />
+    <link rel="stylesheet" href="assets/vendor/libs/datatables-checkboxes-jquery/datatables.checkboxes.css?v=4" />
 
     <!-- Page CSS -->
-    <link rel="stylesheet" href="assets/vendor/css/pages/cards-advance.css?v=2" />
+    <link rel="stylesheet" href="assets/vendor/css/pages/cards-advance.css?v=4" />
 
     <!-- Helpers -->
-    <script src="assets/vendor/js/helpers.js?v=2"></script>
+    <script src="assets/vendor/js/helpers.js?v=4"></script>
 
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
-    <script src="assets/js/config.js?v=2"></script>
+    <script src="assets/js/config.js?v=4"></script>
 
-    <script src="assets/js/mc-custom.js?v=2"></script>
+    <script src="assets/js/mc-custom.js?v=4"></script>
   </head>
 
   <body>
@@ -86,8 +88,8 @@
           <div class="container-xxl">
             <div class="w150px d-none d-xl-block"></div>
             <div class="navbar-brand app-brand demo d-none d-xl-flex p-0 m-0 border-bottom border-xl-none">
-              <a href="index.html" class="app-brand-link gap-2">
-                <span class="h6 my-0 demo menu-text fw-bold ps-4 ps-xl-0">MOSQUEDA CÓRDOVA</span>
+              <a href="#" class="app-brand-link gap-2">
+                <span class="h6 my-0 demo menu-text ps-4 ps-xl-0">MOSQUEDA CÓRDOVA</span>
               </a>
 
               <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-xl-none">
@@ -224,14 +226,20 @@
             <div class="container-xxl flex-grow-1 container-p-y">
               <div class="row">
                 <!-- Start Overview -->
-                <div class="col-lg-7 mb-4" id="home">
+                <div class="col-lg-7 mb-5" id="home">
                   <div
-                    class="card h-100 border-0 justify-content-center text-center align-items-center">
-                    <p data-i18n="Saludo-Inicial">Hola 👋 soy el Ing. <b>MOSQUEDA CÓRDOVA</b>, soy la persona que estás buscando 💪🏻 </p>
-                    <h1 class="display-3" data-i18n="Titulo-Principal">PROGRAMADOR DE SOFTWARE</h1>
-                    <div class="col-12 col-xl-9">
-                      <h5 class="card-header" data-i18n="Overview-Tiempo-Leer">¿No tienes mucho tiempo para leer?</h5>
+                    class="card transparent h-100 border-0 justify-content-center text-center align-items-center">
+                    <h1 class="display-3 mb-5" data-i18n="Titulo-Principal">I'm the person you're looking for 💪🏻</h1>
+                    <p>
+                      <span data-i18n="Saludo-Inicial">
+                        Hello 👋 I'm Engineer Mosqueda Córdova, <br>i'm a <b>Software Developer</b> 😃
+                      </span><br>
+                      <span data-i18n="Overview-Tiempo-Leer">
+                        . . .Don't have much time to read?
+                      </span>
+                    </p>
 
+                    <div class="col-12 col-xl-9 mt-5">
                       <div class="row">
                         <div class="col-lg-6">
                           <button type="button" id="btnDescargar" class="btn btn-outline-primary btn-xl w-100 mb-2">
@@ -252,9 +260,9 @@
                 <!--/ End Overview -->
 
                 <!-- Start Foto JuntOS -->
-                <div class="col-lg-5 col-sm-6 mb-4">
-                  <div class="card h-100">
-                    <img class="card-img" src="assets/img/elements/JuntOS4x4.webp" alt="Card image cap">
+                <div class="col-lg-5 col-sm-6 mb-5">
+                  <div class="card h-100 rotate-1">
+                    <img class="card-img" src="assets/img/elements/Trabajos JuntOS.webp" alt="Card image cap">
                   </div>
                 </div>
                 <!-- End Foto JuntOS -->                
@@ -266,7 +274,7 @@
                 <!-- Start Trabajos JuntOS -->
                 <div class="col-lg-5 col-sm-6 mb-4 d-none d-md-block">
                   <div class="card h-100">
-                    <img class="card-img h-100" src="assets/img/elements/Trabajos JuntOS.webp" alt="Card image cap">
+                    <img class="card-img h-100" src="assets/img/elements/JuntOS4x4.webp" alt="Card image cap">
                   </div>
                 </div>
                 <!-- End Trabajos JuntOS -->  
@@ -313,7 +321,7 @@
                 <!-- Start Trabajos JuntOS Movil  -->
                 <div class="col-lg-5 col-sm-6 mb-4 d-md-none ">
                   <div class="card h-100">
-                    <img class="card-img" src="assets/img/elements/Trabajos JuntOS.webp" alt="Card image cap">
+                    <img class="card-img" src="assets/img/elements/JuntOS4x4.webp" alt="Card image cap">
                   </div>
                 </div>
                 <!-- End Trabajos JuntOS Movil -->  
@@ -1028,7 +1036,7 @@
 
                 <!-- Start Congratulations -->
                 <div class="">
-                  <div class="card h-100 border-0">
+                  <div class="card h-100 border-0 transparent text-black">
 
                     <div class="card-body">
                       <p class="m-0 text-center fs-3" data-i18n="Congratulation">¡Gracias por leerme hasta aquí! 🙌</p>
@@ -1094,17 +1102,17 @@
     <!-- Core JS -->
     <!-- build:js assets/vendor/js/core.js -->
 
-    <script src="assets/vendor/libs/jquery/jquery.js?v=2"></script>
-    <script src="assets/vendor/libs/popper/popper.js?v=2"></script>
-    <script src="assets/vendor/js/bootstrap.js?v=2"></script>
-    <script src="assets/vendor/libs/i18n/i18n.js?v=2"></script>
-    <script src="assets/vendor/libs/typeahead-js/typeahead.js?v=2"></script>
-    <script src="assets/vendor/js/menu.js?v=2"></script>
+    <script src="assets/vendor/libs/jquery/jquery.js?v=4"></script>
+    <script src="assets/vendor/libs/popper/popper.js?v=4"></script>
+    <script src="assets/vendor/js/bootstrap.js?v=4"></script>
+    <script src="assets/vendor/libs/i18n/i18n.js?v=4"></script>
+    <script src="assets/vendor/libs/typeahead-js/typeahead.js?v=4"></script>
+    <script src="assets/vendor/js/menu.js?v=4"></script>
 
     <!-- endbuild -->
 
     <!-- Main JS -->
-    <script src="assets/js/main.js?v=2"></script>
+    <script src="assets/js/main.js?v=4"></script>
 
   </body>
 </html>

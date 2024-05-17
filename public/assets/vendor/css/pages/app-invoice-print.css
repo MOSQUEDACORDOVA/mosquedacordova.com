@@ -16,7 +16,7 @@ body > :not(.invoice-print) {
 }
 
 .invoice-print * {
-  border-color: rgba(75, 70, 92, 0.5) !important;
+  border-color: rgba(0, 0, 0, 0.5) !important;
   color: #6f6b7d !important;
 }
 

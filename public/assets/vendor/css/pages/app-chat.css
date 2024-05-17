@@ -232,7 +232,7 @@
 .light-style .app-chat .app-chat-contacts,
 .light-style .app-chat .app-chat-sidebar-left {
   background-color: #fff;
-  box-shadow: 0 0 0 1px rgba(75, 70, 92, 0.075);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.075);
 }
 .light-style .app-chat .app-chat-contacts .chat-actions .chat-search-input,
 .light-style .app-chat .app-chat-sidebar-left .chat-actions .chat-search-input {
@@ -268,7 +268,7 @@
 }
 .light-style .app-chat .app-chat-sidebar-right {
   background-color: #fff;
-  box-shadow: 16px 1px 45px 3px rgba(75, 70, 92, 0.5);
+  box-shadow: 16px 1px 45px 3px rgba(0, 0, 0, 0.5);
 }
 @media (max-width: 992px) {
   .light-style .app-chat .app-chat-contacts .chat-actions .chat-search-input {

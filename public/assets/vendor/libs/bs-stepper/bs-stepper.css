@@ -314,7 +314,7 @@ html:not([dir=rtl]) .bs-stepper .bs-stepper-header .step:last-child .step-trigge
   background-color: #fff;
 }
 .light-style .bs-stepper:not(.wizard-modern) {
-  box-shadow: 0 0.25rem 1.125rem rgba(75, 70, 92, 0.1);
+  box-shadow: 0 0.25rem 1.125rem rgba(0, 0, 0, 0.1);
 }
 .light-style .bs-stepper .bs-stepper-header {
   border-bottom: 1px solid #dbdade;
@@ -358,7 +358,7 @@ html:not([dir=rtl]) .bs-stepper .bs-stepper-header .step:last-child .step-trigge
 }
 .light-style .bs-stepper.wizard-modern .bs-stepper-content {
   background-color: #fff;
-  box-shadow: 0 0.25rem 1.125rem rgba(75, 70, 92, 0.1);
+  box-shadow: 0 0.25rem 1.125rem rgba(0, 0, 0, 0.1);
 }
 .light-style .bs-stepper.wizard-icons .bs-stepper-header .bs-stepper-icon svg {
   fill: #6f6b7d;

@@ -2825,7 +2825,7 @@
 .light-style .vakata-context.jstree-contextmenu {
   background: #fff;
   border: 0;
-  box-shadow: 0px 0px 50px 0px rgba(75, 70, 92, 0.1);
+  box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.1);
 }
 .light-style .vakata-context.jstree-contextmenu li a {
   padding: 0 1.5rem;
@@ -2843,7 +2843,7 @@
 .light-style .vakata-context.jstree-contextmenu li ul {
   background: #fff;
   border: 0;
-  box-shadow: 0px 0px 50px 0px rgba(75, 70, 92, 0.1);
+  box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.1);
 }
 .light-style .vakata-context.jstree-contextmenu .vakata-contextmenu-sep {
   display: none;

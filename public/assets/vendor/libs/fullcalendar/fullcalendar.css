@@ -182,7 +182,7 @@ html:not([dir=rtl]) .fc .fc-view-harness .fc-scrollgrid-section-header > * {
   cursor: pointer;
 }
 .light-style .fc .fc-list .fc-list-table .fc-list-event:hover td {
-  background-color: rgba(75, 70, 92, 0.04);
+  background-color: rgba(0, 0, 0, 0.04);
 }
 .light-style .fc .fc-list .fc-list-table .fc-list-event td {
   border-color: #dbdade;
@@ -200,7 +200,7 @@ html:not([dir=rtl]) .fc .fc-view-harness .fc-scrollgrid-section-header > * {
   color: #a5a3ae;
 }
 .light-style .fc .fc-day-disabled {
-  background-color: rgba(75, 70, 92, 0.16);
+  background-color: rgba(0, 0, 0, 0.16);
 }
 .light-style .fc-event-primary:not(.fc-list-event) {
   background-color: #eae8fd !important;
@@ -260,10 +260,10 @@ html:not([dir=rtl]) .fc .fc-view-harness .fc-scrollgrid-section-header > * {
 }
 .light-style .fc-event-gray:not(.fc-list-event) {
   background-color: rgba(254, 254, 254, 0.8575) !important;
-  color: rgba(75, 70, 92, 0.05) !important;
+  color: rgba(0, 0, 0, 0.05) !important;
 }
 .light-style .fc-event-gray.fc-list-event .fc-list-event-dot {
-  border-color: rgba(75, 70, 92, 0.05) !important;
+  border-color: rgba(0, 0, 0, 0.05) !important;
 }
 
 .dark-style .fc .fc-toolbar .fc-prev-button .fc-icon,

@@ -475,7 +475,7 @@ div.dt-buttons div.dropdown-menu .dt-button {
   color: #28c76f;
 }
 .light-style .dt-button-info {
-  box-shadow: 0 0.31rem 1.25rem 0 rgba(75, 70, 92, 0.4);
+  box-shadow: 0 0.31rem 1.25rem 0 rgba(0, 0, 0, 0.4);
 }
 .light-style .dt-button-collection .dropdown-item {
   padding: 0.42rem 1rem;

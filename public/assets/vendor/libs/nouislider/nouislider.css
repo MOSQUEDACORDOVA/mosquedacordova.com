@@ -596,7 +596,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 }
 
 .light-style .noUi-target {
-  background: rgba(75, 70, 92, 0.08);
+  background: rgba(0, 0, 0, 0.08);
 }
 .light-style .noUi-connect {
   background: #93909d !important;
@@ -607,7 +607,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   background: #6f6b7d !important;
 }
 .light-style .noUi-target[disabled] {
-  background: rgba(75, 70, 92, 0.24);
+  background: rgba(0, 0, 0, 0.24);
 }
 .light-style .noUi-value {
   color: #a5a3ae;
@@ -663,7 +663,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   background: #3c3c3c !important;
 }
 .light-style .noUi-gray .noUi-connect {
-  background: rgba(75, 70, 92, 0.05) !important;
+  background: rgba(0, 0, 0, 0.05) !important;
 }
 .light-style .noUi-gray .noUi-handle {
   background: rgba(7, 7, 9, 0.24) !important;
