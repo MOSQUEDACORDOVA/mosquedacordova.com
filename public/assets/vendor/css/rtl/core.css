@@ -74,8 +74,8 @@
   --bs-body-font-size: 1.2rem;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.47;
-  --bs-body-color: #7c7c7c;
-  --bs-body-color-rgb: 111, 107, 125;
+  --bs-body-color: #585858;
+  --bs-body-color-rgb: 88, 88, 88;
   --bs-body-bg: #f8f7fa;
   --bs-body-bg-rgb: 248, 247, 250;
   --bs-emphasis-color: #4b465c;
@@ -166,7 +166,7 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2{
 }
 
 h1, .h1 {
-  font-size: calc(1.3625rem + 1.35vw);
+  font-size: calc(2.3625rem + 1.35vw);
   font-family: "Buttershine Serif", serif;
   margin-top: 0;
   margin-bottom: 1rem;
@@ -176,7 +176,7 @@ h1, .h1 {
 }
 @media (min-width: 1200px) {
   h1, .h1 {
-    font-size: 2.375rem;
+    font-size: 3.375rem;
   }
 }
 
