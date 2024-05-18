@@ -324,14 +324,14 @@ html:not([dir=rtl]) .bs-stepper .bs-stepper-header .step:last-child .step-trigge
 }
 .light-style .bs-stepper .bs-stepper-header .bs-stepper-title,
 .light-style .bs-stepper .bs-stepper-header .bs-stepper-label {
-  color: #5d596c;
+  color: #000000;
 }
 .light-style .bs-stepper .bs-stepper-header .bs-stepper-label .bs-stepper-subtitle {
   color: #a5a3ae !important;
 }
 .light-style .bs-stepper .bs-stepper-header .step:not(.active) .bs-stepper-circle {
   background-color: #f1f0f2;
-  color: #6f6b7d;
+  color: #7c7c7c;
 }
 .light-style .bs-stepper .bs-stepper-header .step.active .bs-stepper-circle {
   box-shadow: 0 0.125rem 0.25rem rgba(165, 163, 174, 0.3);
@@ -341,7 +341,7 @@ html:not([dir=rtl]) .bs-stepper .bs-stepper-header .step:last-child .step-trigge
   color: #a5a3ae;
 }
 .light-style .bs-stepper .step-trigger:focus {
-  color: #5d596c;
+  color: #000000;
 }
 .light-style .bs-stepper.vertical .bs-stepper-header {
   border-bottom: none;
@@ -361,13 +361,13 @@ html:not([dir=rtl]) .bs-stepper .bs-stepper-header .step:last-child .step-trigge
   box-shadow: 0 0.25rem 1.125rem rgba(0, 0, 0, 0.1);
 }
 .light-style .bs-stepper.wizard-icons .bs-stepper-header .bs-stepper-icon svg {
-  fill: #6f6b7d;
+  fill: #7c7c7c;
 }
 .light-style .bs-stepper.wizard-icons .bs-stepper-header .bs-stepper-icon i {
-  fill: #6f6b7d;
+  fill: #7c7c7c;
 }
 .light-style .bs-stepper.wizard-icons .bs-stepper-header .bs-stepper-label {
-  color: #6f6b7d;
+  color: #7c7c7c;
 }
 
 [dir=rtl] .light-style .bs-stepper.vertical .bs-stepper-header {

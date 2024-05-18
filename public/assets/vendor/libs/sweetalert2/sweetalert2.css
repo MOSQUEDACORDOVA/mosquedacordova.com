@@ -1169,7 +1169,7 @@ body.swal2-toast-shown .swal2-container.swal2-bottom-end, body.swal2-toast-shown
 .light-style .swal2-popup .swal2-title {
   font-size: 2rem;
   font-weight: 500;
-  color: #6f6b7d;
+  color: #7c7c7c;
 }
 .light-style .swal2-popup .swal2-content {
   color: #a5a3ae;
@@ -1182,11 +1182,11 @@ body.swal2-toast-shown .swal2-container.swal2-bottom-end, body.swal2-toast-shown
 .light-style .swal2-popup .swal2-textarea {
   border: var(--bs-border-width) solid #dbdade !important;
   font-size: 1rem;
-  color: #6f6b7d;
+  color: #7c7c7c;
   border-radius: 0.5rem;
 }
 .light-style .swal2-popup .swal2-validationerror {
-  color: #6f6b7d;
+  color: #7c7c7c;
   background: rgba(0, 0, 0, 0.05);
 }
 .light-style .swal2-popup .swal2-icon.swal2-success {

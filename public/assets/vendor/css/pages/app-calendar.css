@@ -103,10 +103,10 @@
 .light-style .app-calendar-wrapper .app-calendar-sidebar .flatpickr-calendar .flatpickr-month,
 .light-style .app-calendar-wrapper .app-calendar-sidebar .flatpickr-calendar .flatpickr-weekday,
 .light-style .app-calendar-wrapper .app-calendar-sidebar .flatpickr-calendar .flatpickr-weekdays {
-  color: #6f6b7d;
+  color: #7c7c7c;
 }
 .light-style .app-calendar-wrapper .app-calendar-sidebar .flatpickr-calendar .flatpickr-months svg {
-  fill: #6f6b7d;
+  fill: #7c7c7c;
 }
 .light-style[dir=rtl] .app-calendar-sidebar {
   border-right: 0;

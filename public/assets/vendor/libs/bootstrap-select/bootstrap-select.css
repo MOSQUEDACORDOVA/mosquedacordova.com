@@ -539,7 +539,7 @@ html[class] .bootstrap-select.form-select {
   border: var(--bs-border-width) solid var(--bs-border-color-translucent);
 }
 .light-style .bootstrap-select .dropdown-menu .popover-header button {
-  color: #6f6b7d;
+  color: #7c7c7c;
 }
 
 .dark-style .bootstrap-select {

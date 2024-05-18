@@ -144,7 +144,7 @@ html:not([dir=rtl]) .fc .fc-view-harness .fc-scrollgrid-section-header > * {
 
 .light-style .fc .fc-toolbar .fc-prev-button .fc-icon,
 .light-style .fc .fc-toolbar .fc-next-button .fc-icon {
-  color: #6f6b7d;
+  color: #7c7c7c;
 }
 .light-style .fc table.fc-scrollgrid {
   border-color: #dbdade;

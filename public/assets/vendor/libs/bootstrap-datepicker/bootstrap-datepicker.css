@@ -256,7 +256,7 @@ html:not([dir=rtl]) .datepicker table tr td.range-end:not(.range-start) {
   background-color: #f1f0f2;
 }
 .light-style .datepicker th.prev::after, .light-style .datepicker th.next::after {
-  border-color: #6f6b7d;
+  border-color: #7c7c7c;
 }
 .light-style .datepicker.datepicker-inline table {
   box-shadow: 0 0.25rem 1rem rgba(165, 163, 174, 0.45);
@@ -266,7 +266,7 @@ html:not([dir=rtl]) .datepicker table tr td.range-end:not(.range-start) {
 }
 .light-style .datepicker table thead tr,
 .light-style .datepicker table thead td {
-  color: #5d596c;
+  color: #000000;
 }
 .light-style .datepicker table tr td.new,
 .light-style .datepicker table tr th.new {
@@ -277,7 +277,7 @@ html:not([dir=rtl]) .datepicker table tr td.range-end:not(.range-start) {
 }
 .light-style .datepicker table tr td.cw {
   background-color: #fff;
-  color: #6f6b7d;
+  color: #7c7c7c;
 }
 .light-style .datepicker table tr td.day:hover, .light-style .datepicker table tr td.focused {
   background: #f1f0f2;

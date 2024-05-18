@@ -263,13 +263,13 @@
   background: #fff !important;
 }
 .shepherd-element .shepherd-content .shepherd-header .shepherd-title {
-  color: #5d596c !important;
+  color: #000000 !important;
 }
 .shepherd-element .shepherd-content .shepherd-header .shepherd-cancel-icon {
   color: #a5a3ae !important;
 }
 .shepherd-element .shepherd-content .shepherd-text {
-  color: #6f6b7d !important;
+  color: #7c7c7c !important;
 }
 .shepherd-element .shepherd-arrow:before {
   background-color: #fff !important;

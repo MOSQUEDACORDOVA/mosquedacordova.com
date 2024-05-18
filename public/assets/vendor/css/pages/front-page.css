@@ -153,7 +153,7 @@ nav.layout-navbar.navbar-active::after {
   background: rgba(255, 255, 255, 0.38);
 }
 .light-style .layout-navbar .navbar.landing-navbar .navbar-nav .nav-link {
-  color: #5d596c;
+  color: #000000;
 }
 .light-style .layout-navbar .navbar.landing-navbar .navbar-nav .show > .nav-link,
 .light-style .layout-navbar .navbar.landing-navbar .navbar-nav .active > .nav-link,
@@ -171,7 +171,7 @@ nav.layout-navbar.navbar-active::after {
   box-shadow: 0 0.125rem 0.25rem rgba(165, 163, 174, 0.3);
 }
 .light-style .layout-navbar .menu-text {
-  color: #5d596c;
+  color: #000000;
 }
 
 .dark-style .layout-navbar .navbar.landing-navbar {

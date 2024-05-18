@@ -638,7 +638,7 @@
 .light-style .tags-inline .tagify__dropdown__item {
   border: 1px solid #dbdade;
   background: #f6f6f7;
-  color: #6f6b7d;
+  color: #7c7c7c;
 }
 .light-style .tags-inline .tagify__dropdown__item--active {
   color: #fff !important;
@@ -780,7 +780,7 @@
   box-shadow: 0 0 0 1.1em rgba(168, 170, 174, 0.16) inset;
 }
 .light-style .tagify__tag .tagify__tag-text {
-  color: #6f6b7d;
+  color: #7c7c7c;
 }
 .light-style .tagify__tag:hover:not([readonly]) div::before, .light-style .tagify__tag:focus div::before {
   box-shadow: 0 0 0 1.1em #dbdade inset;

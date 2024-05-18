@@ -604,7 +604,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 .light-style .noUi-handle {
   border: 2px solid #fff;
   box-shadow: 0 0.125rem 0.25rem rgba(165, 163, 174, 0.3);
-  background: #6f6b7d !important;
+  background: #7c7c7c !important;
 }
 .light-style .noUi-target[disabled] {
   background: rgba(0, 0, 0, 0.24);
@@ -616,7 +616,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   background: #dbdade;
 }
 .light-style .noUi-tooltip {
-  color: #5d596c;
+  color: #000000;
   background: #e2e1e5;
   font-weight: 500;
 }

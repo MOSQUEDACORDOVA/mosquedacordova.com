@@ -240,7 +240,7 @@ button.toast-close-button {
 
 .toast-title {
   margin-left: 0.75rem;
-  color: #5d596c;
+  color: #000000;
   margin-bottom: 0.25rem;
 }
 [dir=rtl] .toast-title {
@@ -349,7 +349,7 @@ button.toast-close-button {
 .light-style #toast-container .toast-error,
 .light-style #toast-container .toast-info,
 .light-style #toast-container .toast-warning {
-  color: #5d596c;
+  color: #000000;
   background-color: #fff;
 }
 
