@@ -1559,7 +1559,7 @@ html:not(.layout-menu-collapsed) .bg-menu-theme .menu-inner .menu-item:not(.acti
 }
 
 .layout-horizontal .bg-footer-theme {
-  border-top: 2px solid rgba(0, 0, 0, 0.1);;
+  border-top: 2px solid #585858;
 }
 
 .card {
