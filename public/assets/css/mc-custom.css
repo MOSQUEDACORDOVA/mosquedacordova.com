@@ -1,9 +1,23 @@
-body{
-  background-image: url(../img/backgrounds/3d-gradient.svg), url(../img/backgrounds/footer-gradient.svg);
-  background-position: top, bottom;
+.background-top {
+  display: flex;
+  justify-content: center;
+  position:absolute;
+  top:-6em;
+  width: 100%;
+}   
+
+.punto-rgb {
+  width: 50em;
+  height: 12em;
+  border-radius: 100%;
+  filter: blur(46px);
+  background: linear-gradient(to right, #FFC83A, #FF008A, #6100FF), linear-gradient(to right, #001AFF, #6EE5C2);
+  background-size: 50% 100%, 50% 100%;
+  background-position: left top, right top;
   background-repeat: no-repeat;
-  background-size: 1100px auto;
+  opacity:0.6;
 }
+
 .w150px{
   width: 150px;
 }
