@@ -60,16 +60,6 @@
   }
 }
 
-@font-face {
-  font-family: 'Buttershine Serif';
-  src: url('ButtershineSerif.woff2') format('woff2'),
-       url('ButtershineSerif.woff') format('woff'),
-       url('ButtershineSerif.otf') format('opentype'),
-       url('ButtershineSerif.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
 .accordion-body{
   font-size: 17px;
 }
