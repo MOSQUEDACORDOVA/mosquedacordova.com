@@ -169,7 +169,7 @@ h1, .h1 {
   font-size: calc(2.3625rem + 1.35vw);
   
   font-family: "Bodoni Moda", serif;
-  font-optical-sizing: none;
+  font-optical-sizing: none !important;
   font-weight: 900;
   font-style: normal;
   margin-top: 0;
