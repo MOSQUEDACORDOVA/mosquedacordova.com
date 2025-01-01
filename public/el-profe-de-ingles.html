@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Proyecto: El Profe de Inglés</title>
+    <meta
+      name="description"
+      content="Mejora tu inglés sin lidiar con horarios incómodos, 😎 y claro, lo harás directamente desde WhatsApp. ¿Por qué? Porque, admitámoslo, ya lo tienes instalado. 🙌"
+    />
+    <meta property="og:title" content="Proyecto: El Profe de Inglés" />
+    <meta
+      property="og:description"
+      content="Mejora tu inglés sin lidiar con horarios incómodos, 😎 y claro, lo harás directamente desde WhatsApp. ¿Por qué? Porque, admitámoslo, ya lo tienes instalado. 🙌"
+    />
+    <meta
+      property="og:image"
+      content="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/e839fc27-5d7a-4129-b28c-d940dbdc27ab/953a9395-8f9f-4e98-b94e-499c00d20d97?org_if_sml=1&amp;force_format=original"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;  -webkit-font-smoothing: antialiased;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;  color: inherit;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}details {  display: block;  margin: 0;  padding: 0;}summary::-webkit-details-marker {  display: none;}[data-thq="accordion"] [data-thq="accordion-content"] {  max-height: 0;  overflow: hidden;  transition: max-height 0.3s ease-in-out;  padding: 0;}[data-thq="accordion"] details[data-thq="accordion-trigger"][open] + [data-thq="accordion-content"] {  max-height: 300vh;}details[data-thq="accordion-trigger"][open] summary [data-thq="accordion-icon"] {  transform: rotate(180deg);}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Inter;
+        font-size: 16px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+        color: var(--dl-color-theme-neutral-dark);
+        background: var(--dl-color-theme-neutral-light);
+
+        fill: var(--dl-color-theme-neutral-dark);
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/animate.css@4.1.1/animate.css"
+    />
+    <link
+      rel="shortcut icon"
+      href="public/logo.png"
+      type="icon/png"
+      sizes="32x32"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
+    />
+    <!--This is the head section-->
+    <style>
+      .instagramImageContainerEscritorio img, .instagramImageContainerMovil img{
+          border-radius: 8px;
+          border: 1px solid rgba(187, 187, 187, 1);
+          object-fit: cover;
+          display: inline;
+          width: 100%;
+      }
+      .review-card{
+          display: flex;
+          gap: 16px;
+          flex-direction:column;
+      }
+      .review-card img{
+          width:64px;
+      }
+      .content-text-revews{
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+          line-height: 1.5;
+      }
+      .content-text-revews div, .content-text-revews a{
+          font-size: 1.1rem;
+          font-weight:bold;
+      }
+
+      /* Efecto de "brillo" */
+      .shine {
+          width: 100%; /* Ancho del brillo */
+          height: 100%; /* Alto del brillo */
+          background: linear-gradient(90deg,
+              rgba(255, 255, 255, 0) 0%,
+              rgba(255, 255, 255, 0.5) 50%,
+              rgba(255, 255, 255, 0) 100%);
+          position: absolute;
+          top: 0;
+          left: -100%; /* Empieza fuera del contenedor */
+          animation: shine-animation 1s infinite; /* Animación */
+      }
+
+      /* Animación del brillo */
+      @keyframes shine-animation {
+          0% {
+              left: -100%;
+          }
+          100% {
+              left: 100%;
+          }
+      }
+
+      @media (orientation: landscape) {
+          .review-card{
+              flex: 0 1 calc(50% - 32px);
+              flex-direction:row;
+          }
+      }
+    </style>
+  </head>
+  <body>
+    <link rel="stylesheet" href="./style.css" />
+    <div>
+      <link href="./el-profe-de-ingles.css" rel="stylesheet" />
+
+      <div class="el-profe-de-ingls-container1">
+        <div class="el-profe-de-ingls-frame510">
+          <img
+            alt="Profedeingles11141"
+            src="public/external/profe%20de%20ingle%C3%AC%C2%81s-200h.jpg"
+            class="el-profe-de-ingls-profedeingles11"
+          />
+          <div class="el-profe-de-ingls-frame48">
+            <div class="el-profe-de-ingls-frame46">
+              <span class="el-profe-de-ingls-text100">
+                <span class="el-profe-de-ingls-text101">Te enseño</span>
+                <span class="el-profe-de-ingls-text102">inglés</span>
+              </span>
+            </div>
+            <span class="el-profe-de-ingls-text103">
+              <span class="el-profe-de-ingls-text104">de la misma forma</span>
+              <span>en la que aprendiste</span>
+            </span>
+            <div class="el-profe-de-ingls-frame47">
+              <span class="el-profe-de-ingls-text106">
+                <span class="el-profe-de-ingls-text107">a hablar</span>
+                <span>español:</span>
+              </span>
+            </div>
+          </div>
+          <div class="el-profe-de-ingls-frame33">
+            <div class="el-profe-de-ingls-frame49">
+              <span class="el-profe-de-ingls-text109">👂 Escuchando</span>
+            </div>
+            <img
+              alt="Frame1193"
+              src="public/external/frame1193-7jup.svg"
+              class="el-profe-de-ingls-frame1"
+            />
+            <div class="el-profe-de-ingls-frame50">
+              <span class="el-profe-de-ingls-text110">⁉️ Preguntando</span>
+            </div>
+            <img
+              alt="Frame1193"
+              src="public/external/frame1193-phk9.svg"
+              class="el-profe-de-ingls-frame3"
+            />
+            <div class="el-profe-de-ingls-frame51">
+              <span class="el-profe-de-ingls-text111">🔁 Repitiendo</span>
+            </div>
+          </div>
+        </div>
+        <div class="el-profe-de-ingls-frame511">
+          <div class="el-profe-de-ingls-frame55">
+            <div class="el-profe-de-ingls-frame581">
+              <span class="el-profe-de-ingls-text112">Tú:</span>
+              <div class="el-profe-de-ingls-frame521">
+                <span class="el-profe-de-ingls-text113">
+                  ¿Cómo así, cómo así?
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="el-profe-de-ingls-frame541">
+            <img
+              alt="Profedeingles11191"
+              src="public/external/profe%20de%20ingle%C3%AC%C2%81s-200h.jpg"
+              class="el-profe-de-ingls-profedeingles12"
+            />
+            <div class="el-profe-de-ingls-frame611">
+              <div class="el-profe-de-ingls-frame522">
+                <span class="el-profe-de-ingls-text114">Práctico ¿no?</span>
+              </div>
+              <div class="el-profe-de-ingls-frame531">
+                <span class="el-profe-de-ingls-text115">
+                  <span>. . .</span>
+                  <span>Se pone mejor! 🤫</span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="el-profe-de-ingls-frame512">
+          <div class="el-profe-de-ingls-frame591">
+            <div class="el-profe-de-ingls-frame561">
+              <span class="el-profe-de-ingls-text118">🎯 Me adapto a ti</span>
+              <span class="el-profe-de-ingls-text119">
+                <span class="el-profe-de-ingls-text120">
+                  No soy “el profe de inglés”,
+                </span>
+                <span class="el-profe-de-ingls-text121">
+                  soy tu profe de inglés.
+                </span>
+                <span>
+                  A tu ritmo, con tu curiosidad y hasta con tus ocurrencias.
+                </span>
+              </span>
+            </div>
+            <div class="el-profe-de-ingls-frame542">
+              <div class="el-profe-de-ingls-frame582">
+                <span class="el-profe-de-ingls-text123">Tú:</span>
+                <div class="el-profe-de-ingls-frame523">
+                  <span class="el-profe-de-ingls-text124">
+                    ¡No lo sé, Rick, parece falso!
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="el-profe-de-ingls-frame571">
+              <img
+                alt="Profedeingles11191"
+                src="public/external/profe%20de%20ingle%C3%AC%C2%81s-200h.jpg"
+                class="el-profe-de-ingls-profedeingles13"
+              />
+              <div class="el-profe-de-ingls-frame612">
+                <div class="el-profe-de-ingls-frame524">
+                  <span class="el-profe-de-ingls-text125">
+                    Espera, que apenas comienzo. . .
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="el-profe-de-ingls-frame572">
+            <span class="el-profe-de-ingls-text126">
+              ¡Esta no te la esperas!
+            </span>
+            <div class="el-profe-de-ingls-frame601">
+              <span class="el-profe-de-ingls-text127">
+                <span class="el-profe-de-ingls-text128">
+                  No necesitas descargar nada
+                </span>
+                <span class="el-profe-de-ingls-text129">nuevo</span>
+                <span>ni aprender a usar otra app complicada.</span>
+              </span>
+              <span class="el-profe-de-ingls-text131">
+                <span class="el-profe-de-ingls-text132">
+                  Estoy en WhatsApp,
+                </span>
+                <span class="el-profe-de-ingls-text133"></span>
+                <span>
+                  esa aplicación que ya tienes en tu teléfono y usas todos los
+                  días para hablar con tus amigos.
+                </span>
+              </span>
+              <span class="el-profe-de-ingls-text135">
+                Practicar inglés ahora es tan fácil como enviar un mensaje o una
+                nota de voz.
+              </span>
+            </div>
+            <div class="el-profe-de-ingls-frame543">
+              <div class="el-profe-de-ingls-frame583">
+                <span class="el-profe-de-ingls-text136">Tú:</span>
+                <div class="el-profe-de-ingls-frame62">
+                  <div class="el-profe-de-ingls-frame525">
+                    <span class="el-profe-de-ingls-text137">
+                      Wow, así si me quedo
+                    </span>
+                  </div>
+                  <div class="el-profe-de-ingls-frame532">
+                    <span class="el-profe-de-ingls-text138">cuéntame más</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="el-profe-de-ingls-frame513">
+          <div class="el-profe-de-ingls-frame592">
+            <div class="el-profe-de-ingls-frame562">
+              <span class="el-profe-de-ingls-text139">
+                🎤 Sin vergüenza ni estrés
+              </span>
+              <span class="el-profe-de-ingls-text140">
+                Te explico cómo pronunciar cada sílaba por separado. Despacio,
+                claro y con paciencia, hasta que suenes como un nativo.
+              </span>
+            </div>
+            <div class="el-profe-de-ingls-frame584">
+              <img
+                alt="Profedeingles11191"
+                src="public/external/profe%20de%20ingle%C3%AC%C2%81s-200h.jpg"
+                class="el-profe-de-ingls-profedeingles14"
+              />
+              <div class="el-profe-de-ingls-frame613">
+                <div class="el-profe-de-ingls-frame526">
+                  <span class="el-profe-de-ingls-text141">
+                    <span class="el-profe-de-ingls-text142">
+                      Por ejemplo: La palabra
+                    </span>
+                    <span class="el-profe-de-ingls-text143">*awesome*</span>
+                    <span class="el-profe-de-ingls-text144">
+                      se pronuncia como
+                    </span>
+                    <span class="el-profe-de-ingls-text145">*ósom*.</span>
+                  </span>
+                </div>
+                <div class="el-profe-de-ingls-frame533">
+                  <span class="el-profe-de-ingls-text146">
+                    Se usa para expresar que algo es increíble o asombroso,
+                  </span>
+                </div>
+                <div class="el-profe-de-ingls-frame544">
+                  <span class="el-profe-de-ingls-text147">¡como yo! 😎</span>
+                </div>
+              </div>
+            </div>
+            <div class="el-profe-de-ingls-frame545">
+              <div class="el-profe-de-ingls-frame585">
+                <span class="el-profe-de-ingls-text148">Tú:</span>
+                <div class="el-profe-de-ingls-frame527">
+                  <span class="el-profe-de-ingls-text149">JAJAJA</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="el-profe-de-ingls-frame514">
+          <div class="el-profe-de-ingls-frame573">
+            <span class="el-profe-de-ingls-text150">
+              🌟 Aprenderás con ejemplos reales
+            </span>
+            <div class="el-profe-de-ingls-frame602">
+              <span class="el-profe-de-ingls-text151">
+                ¿Quieres pedir un café en Starbucks sin que te miren raro?
+              </span>
+              <span class="el-profe-de-ingls-text152">
+                ¿Hacer un chiste que no termine en silencio incómodo?
+              </span>
+              <span class="el-profe-de-ingls-text153">
+                ¿O por fin impresionar a tu pareja con algo más que “I love
+                you”?
+              </span>
+              <span class="el-profe-de-ingls-text154">
+                Tranquilo, ¡yo te enseño cómo hacerlo!
+              </span>
+              <span class="el-profe-de-ingls-text155">
+                ✅ Soy gringo, así que mi inglés es 100% nativo.
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="el-profe-de-ingls-frame515">
+          <div class="el-profe-de-ingls-frame574">
+            <span class="el-profe-de-ingls-text156">Planes</span>
+            <div class="el-profe-de-ingls-frame603">
+              <a
+                href="https://api.whatsapp.com/send?phone=51983772218"
+                target="_blank"
+                rel="noreferrer noopener"
+                class="el-profe-de-ingls-link1"
+              >
+                <div class="el-profe-de-ingls-frame64">
+                  <div class="el-profe-de-ingls-frame651">
+                    <span class="el-profe-de-ingls-text157">Gratis</span>
+                    <span class="el-profe-de-ingls-text158">
+                      (ideal para probar mi método)
+                    </span>
+                  </div>
+                  <span class="el-profe-de-ingls-text159">✅ 100 mensajes</span>
+                  <div class="el-profe-de-ingls-frame63">
+                    <span class="el-profe-de-ingls-text160">
+                      ✅ 100 notas de voz
+                    </span>
+                    <span class="el-profe-de-ingls-text161">
+                      Sí, también hablo y escucho 😎
+                    </span>
+                  </div>
+                  <div class="el-profe-de-ingls-frame66">
+                    <span class="el-profe-de-ingls-text162">¡Lo quiero!</span>
+                  </div>
+                </div>
+              </a>
+              <a
+                href="https://api.whatsapp.com/send?phone=51945692831"
+                target="_blank"
+                rel="noreferrer noopener"
+                class="el-profe-de-ingls-link2"
+              >
+                <div class="el-profe-de-ingls-frame652">
+                  <div class="el-profe-de-ingls-frame653">
+                    <span class="el-profe-de-ingls-text163">Preventa</span>
+                    <span class="el-profe-de-ingls-text164">
+                      $50 USD mensual
+                    </span>
+                    <span class="el-profe-de-ingls-text165">
+                      ¡aprovecha antes de que suba!
+                    </span>
+                  </div>
+                  <span class="el-profe-de-ingls-text166">
+                    ✅ Mensajes ilimitados
+                  </span>
+                  <span class="el-profe-de-ingls-text167">
+                    ✅ Notas de voz ilimitadas
+                  </span>
+                  <span class="el-profe-de-ingls-text168">
+                    ✅ Atención personalizada
+                  </span>
+                  <div class="el-profe-de-ingls-frame67">
+                    <span class="el-profe-de-ingls-text169">¡Lo quiero!</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="el-profe-de-ingls-frame586">
+              <img
+                alt="Profedeingles11192"
+                src="public/external/profe%20de%20ingle%C3%AC%C2%81s-200h.jpg"
+                class="el-profe-de-ingls-profedeingles15"
+              />
+              <div class="el-profe-de-ingls-frame614">
+                <div class="el-profe-de-ingls-frame528">
+                  <span class="el-profe-de-ingls-text170">
+                    📩 Escríbeme ahora en WhatsApp y empieza tu aventura en
+                    inglés.
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="el-profe-de-ingls-frame516">
+          <div class="el-profe-de-ingls-frame575">
+            <span class="el-profe-de-ingls-text171">Información Técnica</span>
+            <span class="el-profe-de-ingls-text172">
+              Si eres un curioso de la tecnología como mi creador, esta
+              información extra es para ti:
+            </span>
+            <div class="el-profe-de-ingls-frame615">
+              <div class="el-profe-de-ingls-container2">
+                <span class="el-profe-de-ingls-text173">
+                  ¿Qué tecnología uso?
+                </span>
+                <span class="el-profe-de-ingls-text174">
+                  <span>⚈ OpenAI por supuesto</span>
+                  <br />
+                  <span>⚈</span>
+                  <span>&nbsp;</span>
+                  <span>Laravel</span>
+                  <br />
+                  <span>⚈</span>
+                  <span>&nbsp;</span>
+                  <span>API Oficial de WhatsApp</span>
+                </span>
+              </div>
+              <div class="el-profe-de-ingls-container3">
+                <span class="el-profe-de-ingls-text184">
+                  ¿Cuales son las próximas actualizaciones?
+                </span>
+                <span class="el-profe-de-ingls-text185">
+                  <span>⚈ Migrar a Firebase Function con NodeJS</span>
+                  <br />
+                  <span>⚈</span>
+                  <span>&nbsp;</span>
+                  <span>
+                    Conectarme a la API de Azure para que pueda evaluar la
+                    pronunciación
+                  </span>
+                  <br />
+                  <span>⚈</span>
+                  <span>&nbsp;</span>
+                  <span>
+                    Crear una App móvil para evaluar los mensajes de los
+                    usuarios
+                  </span>
+                  <br />
+                  <span>⚈</span>
+                  <span>&nbsp;</span>
+                  <span>
+                    Entrenarme mediante las reacciones con emojis de los
+                    usuarios de WhatsApp
+                  </span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="el-profe-de-ingls-container4">
+          <a
+            href="https://api.whatsapp.com/send?phone=51983772218"
+            target="_blank"
+            rel="noreferrer noopener"
+            class="el-profe-de-ingls-link3"
+          >
+            <div class="el-profe-de-ingls-frame2">
+              <img
+                alt="Union1111"
+                src="public/external/union1111-ykdm.svg"
+                class="el-profe-de-ingls-union"
+              />
+              <span class="el-profe-de-ingls-text199">Pruébalo</span>
+            </div>
+          </a>
+          <a
+            href="https://api.whatsapp.com/send?phone=51945692831"
+            target="_blank"
+            rel="noreferrer noopener"
+            class="el-profe-de-ingls-link4"
+          >
+            <div class="el-profe-de-ingls-frame43">
+              <img
+                alt="Union41111"
+                src="public/external/union41111-39po.svg"
+                class="el-profe-de-ingls-union4"
+              />
+              <span class="el-profe-de-ingls-text200">Soporte</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+              'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+              })(window,document,'script','dataLayer','GTM-TM8FZ626');
+    </script>
+    <script type="text/javascript">
+      const firebaseFunctionUrl = 'https://us-central1-mosqueda-cordova-992b2.cloudfunctions.net/getInstagramImages'; // URL de tu función de Firebase
+
+      // Función para actualizar los mensajes de carga y error
+      function updateLoadingMessage(isLoading, container, message = '', targetContainer = null) {
+          container.style.display = isLoading || message ? 'block' : 'none';
+          container.classList.toggle('shine', isLoading);
+          container.innerHTML = message;
+
+          if (targetContainer) {
+              targetContainer.style.background = isLoading ? '' : 'none';
+          }
+      }
+
+      async function fetchInstagramImages() {
+          const instagramLoadingImgMessageEscritorio = document.getElementById('instagramLoadingImgMessageEscritorio');
+          const instagramLoadingImgMessageMovil = document.getElementById('instagramLoadingImgMessageMovil');
+          const instagramImageContainerEscritorio = document.getElementById('instagramImageContainerEscritorio');
+          const instagramImageContainerMovil = document.getElementById('instagramImageContainerMovil');
+
+          // Mostrar carga
+          updateLoadingMessage(true, instagramLoadingImgMessageEscritorio);
+          updateLoadingMessage(true, instagramLoadingImgMessageMovil);
+
+          try {
+              const response = await fetch(firebaseFunctionUrl);
+              const data = await response.json();
+
+              // Verificar si hay imágenes
+              if (data && data.length > 0) {
+                  const imagesToShow = data.slice(0, 6); // Limitar a las primeras 6 imágenes
+
+                  // Función para agregar imágenes a los contenedores
+                  const addImagesToContainer = (container) => {
+                      container.innerHTML = ''; // Limpiar contenedor antes de agregar nuevas imágenes
+                      imagesToShow.forEach(item => {
+                          const imgElement = document.createElement('img');
+                          imgElement.src = item.media_url;
+                          imgElement.alt = 'Instagram Image';
+                          container.appendChild(imgElement);
+                      });
+                  };
+
+                  // Agregar imágenes a ambos contenedores
+                  addImagesToContainer(instagramImageContainerEscritorio);
+                  addImagesToContainer(instagramImageContainerMovil);
+
+                  // Ocultar mensajes de carga
+                  updateLoadingMessage(false, instagramLoadingImgMessageEscritorio, '', instagramImageContainerEscritorio);
+                  updateLoadingMessage(false, instagramLoadingImgMessageMovil, '', instagramImageContainerMovil);
+              } else {
+                  // Mensaje cuando no se encuentran imágenes
+                  updateLoadingMessage(false, instagramLoadingImgMessageEscritorio, 'No se encontraron imágenes.');
+                  updateLoadingMessage(false, instagramLoadingImgMessageMovil, 'No se encontraron imágenes.');
+              }
+          } catch (error) {
+              console.error('Error al obtener las imágenes:', error);
+              // Mostrar mensaje de error
+              updateLoadingMessage(false, instagramLoadingImgMessageEscritorio, 'Error al cargar imágenes.');
+              updateLoadingMessage(false, instagramLoadingImgMessageMovil, 'Error al cargar imágenes.');
+          }
+      }
+
+      // URL de tu servicio
+      const reviewApiUrl = 'https://us-central1-mosqueda-cordova-992b2.cloudfunctions.net/getReviews';
+
+      async function fetchReviews() {
+              try {
+                  const response = await fetch(reviewApiUrl);
+                  const data = await response.json();
+
+                  if (data.reviews && data.reviews.length > 0) {
+                      const reviewsContainer = document.getElementById('reviews-container');
+
+                      data.reviews.forEach(review => {
+                          const reviewCard = document.createElement('div');
+                          reviewCard.classList.add('review-card');
+
+                          // Limitar la longitud del texto de la reseña
+                          const maxLength = 100; // Cambia este valor según la longitud deseada
+                          const truncatedText = review.text.length > maxLength
+                              ? review.text.substring(0, maxLength) + '...'
+                              : review.text;
+
+                          reviewCard.innerHTML = `
+                              <div>
+                                  <img src="${review.profile_photo_url}" alt="${review.author_name}">
+                              </div>
+                              <div class="content-text-revews">
+                                  <div>${review.author_name}</div>
+                                  <p>${truncatedText}</p>
+                                  <a href="https://maps.app.goo.gl/TtC437T2MnumiJ7S7" target="_blank">
+                                      Ver completa
+                                  <a>
+                              </div>
+                          `;
+
+                          reviewsContainer.appendChild(reviewCard);
+                      });
+                  } else {
+                      document.getElementById('reviews-container').innerHTML = 'No se encontraron reseñas.';
+                  }
+              } catch (error) {
+                  console.error('Error al obtener las reseñas:', error);
+                  document.getElementById('reviews-container').innerHTML = 'Error al cargar reseñas.';
+              }
+      }
+
+       // Llamar a ambas funciones cuando se cargue la página
+       window.onload = () => {
+          fetchInstagramImages();
+          fetchReviews();
+      };
+    </script>
+  </body>
+</html>
