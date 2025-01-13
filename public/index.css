@@ -191,6 +191,10 @@ svg{
   background-color: white;
   z-index: 999;
 }
+.btns_previews{
+  display: flex;
+  gap: 8px;
+}
 /* Efecto de "brillo" */
 .shine {
   width: 100%; /* Ancho del brillo */
@@ -213,15 +217,12 @@ svg{
       left: 100%;
   }
 }
-@media (orientation: portrait) {
-
-}
-@media (orientation: landscape) {
-  
-}
 @media (max-width: 767px) {
   .container{
     width: 100%;
+  }
+  .btns_previews{
+    flex-direction: column;
   }
 }
 @media (min-width: 767px) {
