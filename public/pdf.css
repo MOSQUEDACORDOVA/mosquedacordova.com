@@ -1,0 +1,25 @@
+@media print {
+    body {
+      margin: 0; /* Elimina márgenes globales */
+      width: 100%; /* Ancho completo */
+    }
+  
+    /* Selecciona contenedores principales */
+    div, section, article, table {
+      page-break-inside: avoid; /* Evita que el contenido se divida dentro del contenedor */
+      break-inside: avoid; /* Para navegadores modernos */
+      overflow: visible; /* Asegúrate de que todo sea visible */
+    }
+  
+    /* Ajusta la configuración de página */
+    @page {
+      margin: 0; /* Márgenes de la página impresora */
+      size: auto; /* Permite el ajuste automático del tamaño */
+    }
+  
+    /* Optimiza para contenido largo */
+    html, body {
+      height: auto; /* Permite que el contenido crezca verticalmente */
+    }
+  }
+  
