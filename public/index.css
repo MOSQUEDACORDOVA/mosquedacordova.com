@@ -141,6 +141,7 @@ svg{
   height: 96px;
   background-color: #ddd;
   background-image: url('yo.webp');
+  background-size: cover;
   border-radius: 1000px;
   border: 4px solid #F8F8F8;
   margin-top: 32px;
