@@ -195,6 +195,10 @@ svg{
   display: flex;
   gap: 8px;
 }
+.animated_link svg {
+  fill: rgb(255, 63, 130);
+  animation: colorChange 3s infinite ease-in-out; 
+}
 /* Efecto de "brillo" */
 .shine {
   width: 100%; /* Ancho del brillo */
@@ -208,13 +212,23 @@ svg{
   left: -100%; /* Empieza fuera del contenedor */
   animation: shine-animation 1s infinite; /* Animación */
 }
-/* Animación del brillo */
 @keyframes shine-animation {
   0% {
       left: -100%;
   }
   100% {
       left: 100%;
+  }
+}
+@keyframes colorChange {
+  0% {
+    fill: rgb(255, 196, 0);
+  }
+  50% {
+    fill: rgb(0, 229, 255);
+  }
+  100% {
+    fill: rgb(255, 63, 130);
   }
 }
 @media (max-width: 767px) {
