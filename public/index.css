@@ -242,6 +242,7 @@ svg{
   }
   .profile_image{
     width: 148px;
+    height: 148px;
     margin-top: 96px;
   }
 }
