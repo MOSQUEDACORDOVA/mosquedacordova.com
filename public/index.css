@@ -36,8 +36,13 @@ a{
   color: black;
 }
 svg{
-  fill: #666;
+  fill: #999;
   height: 22px;
+}
+.svgEspecial{
+  fill: none !important;
+  height: 28px;
+  width: 28px;
 }
 .small{
   font-size: 14px;
