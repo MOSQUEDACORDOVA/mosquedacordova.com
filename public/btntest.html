@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Isaac Mosqueda</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description"
+      content="Systems Engineer | Specialized in Software Development.">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Isaac Mosqueda">
+    <meta property="og:title" content="Isaac Mosqueda">
+    <meta property="og:description"
+      content="Systems Engineer | Specialized in Software Development.">
+    
+    <meta property="og:image"
+      content="https://firebasestorage.googleapis.com/v0/b/mosqueda-cordova-992b2.firebasestorage.app/o/b1200.jpg?alt=media&token=5c2bf6d4-9a7b-4150-bda6-312876d96ba2">
+    <meta property="twitter:image"
+      content="https://firebasestorage.googleapis.com/v0/b/mosqueda-cordova-992b2.firebasestorage.app/o/b1200.jpg?alt=media&token=5c2bf6d4-9a7b-4150-bda6-312876d96ba2">
+    <meta property="og:url" content="https://mosquedacordova.com">
+    <meta property="twitter:site" content="Isaac Mosqueda">
+    <meta property="twitter:title" content="Isaac Mosqueda">
+    <meta property="twitter:description"
+      content="Systems Engineer | Specialized in Software Development.">
+
+    <meta name="author" content="Isaac Mosqueda">
+    <meta property="fb:app_id" content="1034040834725429" />
+    <meta property="article:published_time" content="2020-06-15T10:00:00Z" />
+
+    <style>
+      body{
+        background-color: #eee;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .rainbow-glow {
+        padding: 2px;
+        border: 2px solid #eee;
+        position: relative;
+        overflow: hidden;
+      }
+      .card-rainbow{
+        padding: 16px 32px;
+        background-color: #ddd;
+        z-index: 1;
+        position: relative;
+      }
+      .rainbow{
+        width: 200%;
+        height: 100%;
+        position: absolute;
+        left: -50%;
+        top: 0px;
+        z-index: 0;
+        animation: rainbowRotate 4s ease-in-out infinite;
+        
+      }
+      .rainbow-chaild{
+        background-color: #f00;
+        width: 45%;
+        height: 80%;
+        position: relative;
+        top: 0;
+        z-index: 0;
+        
+      }
+      @keyframes rainbowRotate {
+          0% {
+              transform: rotate(0deg);
+          }
+
+          100% {
+              transform: rotate(360deg);
+          }
+      }
+    </style>
+    
+  </head>
+
+  
+  <body >
+    <div class="rainbow-glow">
+      <div class="rainbow">
+        <div class="rainbow-chaild"></div>
+      </div>
+      <div class="card-rainbow">
+        <div class="content">Content.</div>
+      </div>
+    </div>
+    
+  </body>
+</html>
