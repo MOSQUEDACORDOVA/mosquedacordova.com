@@ -992,6 +992,13 @@ import "./borde_rainbow.css";
 		delay: 4.5,
 	});
 
+	const tl6 = gsap.timeline();
+	tl6.from(".btn_contact", {
+		x: "100vw",
+		duration: 1,
+		delay: 3,
+	});
+
 	document.querySelectorAll<HTMLElement>(".box").forEach((box, index) => {
 		gsap.from(box, {
 			y: "100vh",
@@ -999,6 +1006,6 @@ import "./borde_rainbow.css";
 			delay: index * 0.1, // acá sí usamos el índice
 		});
 	});
-	GSDevTools.create();
+	//GSDevTools.create();
 </script>
 <script src="../scripts/instagram.js"></script>
