@@ -1,0 +1,123 @@
+/* Estilos por altura con data-attribute */
+@media (max-width: 767px){
+	.img_portfolio[data-altura="1"] {
+		height: 5vh;
+	}
+	.img_portfolio[data-altura="2"] {
+		height: 6vh;
+	}
+
+	.img_portfolio[data-altura="3"] {
+		height: 7vh;
+	}
+
+	.img_portfolio[data-altura="4"] {
+		height: 8vh;
+	}
+
+	.img_portfolio[data-altura="5"] {
+		height: 9vh;
+	}
+
+	.img_portfolio[data-altura="6"] {
+		height: 10vh;
+	}
+
+	.img_portfolio[data-altura="7"] {
+		height: 11vh;
+	}
+
+	.img_portfolio[data-altura="8"] {
+		height: 12vh;
+	}
+
+	.img_portfolio[data-altura="9"] {
+		height: 13vh;
+	}
+
+	.img_portfolio[data-altura="10"] {
+		height: 14vh;
+	}
+}
+@media (min-width: 768px) and (max-height: 999px) {
+	.img_portfolio[data-altura="1"] {
+		height: 15vh;
+	}
+
+	.img_portfolio[data-altura="2"] {
+		height: 17vh;
+	}
+
+	.img_portfolio[data-altura="3"] {
+		height: 19vh;
+	}
+
+	.img_portfolio[data-altura="4"] {
+		height: 22vh;
+	}
+
+	.img_portfolio[data-altura="5"] {
+		height: 24vh;
+	}
+
+	.img_portfolio[data-altura="6"] {
+		height: 26vh;
+	}
+
+	.img_portfolio[data-altura="7"] {
+		height: 28vh;
+	}
+
+	.img_portfolio[data-altura="8"] {
+		height: 30vh;
+	}
+
+	.img_portfolio[data-altura="9"] {
+		height: 32vh;
+	}
+
+	.img_portfolio[data-altura="10"] {
+		height: 34vh;
+	}
+}
+@media (min-width: 768px) and (min-height: 1000px) {
+	.img_portfolio[data-altura="1"] {
+		height: 6vh;
+	}
+	.img_portfolio[data-altura="2"] {
+		height: 7vh;
+	}
+
+	.img_portfolio[data-altura="3"] {
+		height: 8vh;
+	}
+
+	.img_portfolio[data-altura="4"] {
+		height: 9vh;
+	}
+
+	.img_portfolio[data-altura="5"] {
+		height: 10vh;
+	}
+
+	.img_portfolio[data-altura="6"] {
+		height: 11vh;
+	}
+
+	.img_portfolio[data-altura="7"] {
+		height: 12vh;
+	}
+
+	.img_portfolio[data-altura="8"] {
+		height: 13vh;
+	}
+
+	.img_portfolio[data-altura="9"] {
+		height: 14vh;
+	}
+
+	.img_portfolio[data-altura="10"] {
+		height: 15vh;
+	}
+}
+

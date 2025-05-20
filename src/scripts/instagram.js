@@ -21,10 +21,10 @@ async function fetchInstagramImages() {
                 container.innerHTML = '';
                 imagesToShow.forEach(item => {
                   const imgContainerElement = document.createElement('div');
-                  imgContainerElement.className = "insta_img";
                   const imgElement = document.createElement('img');
                   imgElement.src = item.media_url;
                   imgElement.alt = 'Instagram Image';
+                  imgElement.className="img-fluid rounded";
                   imgContainerElement.appendChild(imgElement);
                   container.appendChild(imgContainerElement);
                 });
@@ -40,3 +40,6 @@ async function fetchInstagramImages() {
         preLoaderInstagram(false, instagramLoadingImg, 'Error al cargar imágenes.');
     }
 }
+window.onload = () => {
+		fetchInstagramImages();
+	};
