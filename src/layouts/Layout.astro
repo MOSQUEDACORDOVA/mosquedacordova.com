@@ -135,7 +135,49 @@ import "../styles/global.css";
 				style="display:none;visibility:hidden"></iframe></noscript
 		>
 		<!-- End Google Tag Manager (noscript) -->
-		<div class="loading_temporal"></div>
+		<div class="loading_temporal">
+			<div class="d-flex justify-content-center align-items-center">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					fill="none"
+					viewBox="0 0 452 149"
+					class="preloader"
+				>
+					<path
+						d="M6 139.034C6 139.034 67 17.0343 143 28.0343C209 37.0343 192 121.034 257 139.034C344 163.034 446 4.03427 446 4.03427"
+						stroke="white"
+						stroke-opacity="0.2"
+						stroke-width="13"></path>
+					<path
+						stroke="url(#a)"
+						stroke-width="13"
+						d="M6 139S67 17 143 28c66 9 49 93 114 111C344 163 446 4 446 4"
+					></path>
+					<defs>
+						<linearGradient
+							id="a"
+							x1="-20%"
+							x2="0%"
+							y1="72.7"
+							y2="72.7"
+							gradientUnits="userSpaceOnUse"
+							class="gradientPreloader"
+						>
+							<stop
+								offset="0%"
+								stop-color="#ff8709"
+								stop-opacity="0"></stop>
+							<stop offset="30%" stop-color="#ff8709"></stop>
+							<stop offset="70%" stop-color="#f7bdf8"></stop>
+							<stop
+								offset="100%"
+								stop-color="#f7bdf8"
+								stop-opacity="0"></stop>
+						</linearGradient>
+					</defs>
+				</svg>
+			</div>
+		</div>
 		<div
 			class="container d-flex justify-content-center flex-column align-items-center gap-2 mb-5"
 		>
@@ -143,3 +185,15 @@ import "../styles/global.css";
 		</div>
 	</body>
 </html>
+
+
+<script>
+	import { gsap } from "gsap";
+	const gradientPreloader = gsap.timeline();
+	gradientPreloader.to(".gradientPreloader", {
+		attr: { x1: "100%", x2: "120%" },
+		repeat: 2,
+		duration: 2,
+		yoyo: true,
+	});
+</script>

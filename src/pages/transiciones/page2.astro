@@ -1,0 +1,63 @@
+---
+import { ClientRouter } from "astro:transitions";
+const slideAnimation = {
+  forwards: {
+    old: {
+      name: "slide-out",
+      duration: "0.5s",
+      easing: "ease-in-out",
+    },
+    new: {
+      name: "slide-in",
+      duration: "0.5s",
+      easing: "ease-in-out",
+    },
+  },
+  backwards: {
+    old: {
+      name: "slide-in",
+      duration: "0.5s",
+      easing: "ease-in-out",
+      direction: "reverse",
+    },
+    new: {
+      name: "slide-out",
+      duration: "0.5s",
+      easing: "ease-in-out",
+      direction: "reverse",
+    },
+  },
+};
+---
+<html lang="en" transition:name="page-slide" transition:persist="page-slide" transition:animate={slideAnimation}>
+  <head>
+    <title>Página 2</title>
+    <ClientRouter />
+  </head>
+  <body style="background:#f00">
+    <main>
+          <h1>Página 2</h1>
+    <a href="/transiciones/page1/">Volver a Página 1</a>
+    </main>
+  </body>
+</html>
+
+<style is:global>
+  @keyframes slide-in {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+
+  @keyframes slide-out {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+</style>
