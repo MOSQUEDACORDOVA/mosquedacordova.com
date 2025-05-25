@@ -56,16 +56,8 @@
     border-radius: 100%;
     position: absolute;
     background-position: center center;
-    background-image: linear-gradient(
-      90deg,
-      #fff845,
-      #1cc98c,
-      #24cbde,
-      #57a9f7,
-      #bd52f9,
-      #ebb347
-    );
-    filter: blur(4px);
+    background: linear-gradient(90deg,rgb(255, 0, 200) 0%, rgb(0, 236, 253) 100%);
+    filter: blur(6px);
   }
 
   .contenedor_borde_rgb {
@@ -87,6 +79,7 @@
     right: 12px;
     z-index: 999;
     border-radius: 8px;
+    transform: translateX(100vw);
   }
 </style>
 
@@ -146,8 +139,8 @@
   });
 
   const tl6 = gsap.timeline();
-  tl6.from(".btn_contact", {
-    x: "100vw",
+  tl6.to(".btn_contact", {
+    x: "0vw",
     duration: 1,
     delay: 6,
   });

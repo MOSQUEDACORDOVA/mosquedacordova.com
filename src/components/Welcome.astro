@@ -807,6 +807,9 @@ import Contactame from "./Contactame.astro";
 		overflow: hidden;
 		transform: scale(0);
 	}
+	.otras_tarjetas{
+		transform: translateY(100vh);
+	}
 	@keyframes shine-animation {
 		0% {
 			left: -100%;
@@ -822,6 +825,7 @@ import Contactame from "./Contactame.astro";
 		width: 30px;
 		height: 100vh;
 		flex-shrink: 0;
+		transform: translateY(100vh);
 	}
 	.contenedor_banner {
 		height: 120px;
@@ -908,6 +912,13 @@ import Contactame from "./Contactame.astro";
 	import { GSDevTools } from "gsap/GSDevTools";
 	gsap.registerPlugin(GSDevTools);
 
+	gsap.to("#gradientPreloader", {
+		attr: { x1: "100%", x2: "120%" },
+		repeat: 2,
+		duration: 2,
+		yoyo: true,
+	});
+	
 	const tl1 = gsap.timeline({ id: "timeline1" });
 	tl1.to(".preloader", {
 			opacity: "0",
@@ -967,8 +978,8 @@ import Contactame from "./Contactame.astro";
 	});
 
 	const tl3 = gsap.timeline();
-	tl3.from(".otras_tarjetas", {
-		y: "100vh",
+	tl3.to(".otras_tarjetas", {
+		y: "0",
 		duration: 1,
 		delay: 8,
 		id: "otras_tarjetas",
@@ -985,14 +996,14 @@ import Contactame from "./Contactame.astro";
 	// Al final del script, después de haber definido tl1
 	setTimeout(() => {
 		document.querySelectorAll(".box").forEach((box, index) => {
-			gsap.from(box, {
-				y: "100vh",
+			gsap.to(box, {
+				y: "0vh",
 				duration: gsap.utils.random(1, 3),
 				delay: index * 0.2,
 			});
 		});
 	}, 2800); // Convertimos a milisegundos
 
-	GSDevTools.create();
+	//GSDevTools.create();
 </script>
 <script src="../scripts/instagram.js"></script>
