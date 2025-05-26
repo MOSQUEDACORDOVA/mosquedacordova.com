@@ -12,6 +12,3 @@ h2 {
 a {
   text-decoration: none !important;
 }
-.btn-outline-primary {
-  --bs-btn-border-color: #ddd;
-}
