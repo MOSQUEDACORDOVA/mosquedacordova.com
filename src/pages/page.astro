@@ -6,7 +6,7 @@ import Temporal from "../layouts/Temporal.astro";
 ---
 
 <Temporal>
-        <div class="separante1"></div>
+    <div class="separante1"></div>
 
     <div class="contenedor-mascara">
         <svg
@@ -20,17 +20,31 @@ import Temporal from "../layouts/Temporal.astro";
         </svg>
     </div>
 
-    <div class="contenido-mascarado">
-        <div class="contenido">
-            <!-- contenido visible solo dentro del SVG -->
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. ... Hola mundo
-            chao y bueno adios tambien xq quiero er
+    <div class="contenedor-contenido-mascarado d-flex justify-content-center">
+        <div class="contenido-mascarado">
+            <div class="contenido">
+                <!-- contenido visible solo dentro del SVG -->
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. ... Hola
+                mundo chao y bueno adios tambien xq quiero er
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. ... Hola
+                mundo chao y bueno adios tambien xq quiero er
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. ... Hola
+                mundo chao y bueno adios tambien xq quiero er
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. ... Hola
+                mundo chao y bueno adios tambien xq quiero er
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. ... Hola
+                mundo chao y bueno adios tambien xq quiero er
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. ... Hola
+                mundo chao y bueno adios tambien xq quiero er
+
+            </div>
         </div>
     </div>
-<div class="separante2"></div>
+
+    <div class="separante2"></div>
     <style>
         .contenedor-mascara {
-            background-color: rgb(253, 176, 253);
+            background-color: rgba(253, 176, 253, 0.5);
             width: 100vw;
             height: 100vh;
             display: flex;
@@ -42,25 +56,32 @@ import Temporal from "../layouts/Temporal.astro";
 
         .svg-mascara {
             width: 100vh;
-            transform: scale(110);
-            
+            transform: scale(100);
         }
 
         .contenido-mascarado {
-            width: 100px;
             height: 400px;
-            position: relative;
+            background-color: #fa0;
+            width: 100vw;
+            overflow: hidden;
+            z-index: 1;
         }
-        .separante1{
-        background-color: #2332ff;
-        width: 50vw;
-        height: 100vh;
-    }
-    .separante2{
-        background-color: #94ff94;
-        width: 50vw;
-        height: 100vh;
-    }
+        .separante1 {
+            background-color: #2332ff;
+            width: 50vw;
+            height: 100vh;
+            position: absolute;
+        }
+        .separante2 {
+            background-color: #94ff94;
+            width: 50vw;
+            height: 100vh;
+        }
+        .contenido{
+            width: 100vw;    
+            position: absolute;
+            left: 0;    
+        }
     </style>
 </Temporal>
 
@@ -69,17 +90,28 @@ import Temporal from "../layouts/Temporal.astro";
     import { GSDevTools } from "gsap/GSDevTools";
     import { ScrollTrigger } from "gsap/ScrollTrigger";
     gsap.registerPlugin(GSDevTools);
-gsap.registerPlugin(ScrollTrigger);
+    gsap.registerPlugin(ScrollTrigger);
 
     gsap.to(".svg-mascara", {
         scrollTrigger: {
-        trigger: '.separante1',
-        start: "top top",
-        end: "25% 10% ",
-        scrub: 4,
-        markers: true
-    },
+            trigger: ".separante1",
+            start: "top top",
+            end: "25% 10% ",
+            scrub: 4,
+            markers: true,
+        },
         scale: 1,
+    });
+
+    gsap.to(".contenido-mascarado", {
+        scrollTrigger: {
+            trigger: ".separante1",
+            start: "top top",
+            end: "25% 10% ",
+            scrub: 4,
+            markers: true,
+        },
+        width: "10vw",
     });
 
     //GSDevTools.create();

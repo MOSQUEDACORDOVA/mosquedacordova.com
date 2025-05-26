@@ -5,20 +5,3 @@ $body-color: #6c7a87;
 $headings-color: #000;
 
 @import "/node_modules/bootstrap/scss/bootstrap";
-html,
-body {
-  margin: 0;
-  background-color: #f8f8f8;
-  overflow: hidden;
-}
-
-h2 {
-  font-weight: 400;
-}
-
-a {
-  text-decoration: none !important;
-}
-.btn-outline-primary {
-  --bs-btn-border-color: #ddd;
-}

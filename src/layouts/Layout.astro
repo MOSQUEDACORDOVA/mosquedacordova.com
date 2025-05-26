@@ -186,7 +186,6 @@ import "../styles/global.css";
 </html>
 
 <style is:global>
-
 	.loading_temporal {
 		content: " ";
 		display: block;
@@ -206,5 +205,10 @@ import "../styles/global.css";
 	}
 	.preloader {
 		width: 22vw;
+	}
+	@media (max-width: 767px) {
+		.preloader {
+			width: 42vw;
+		}
 	}
 </style>
