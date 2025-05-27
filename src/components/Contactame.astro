@@ -4,7 +4,7 @@
   target="_blank"
 >
   <div class="animacion_rgb sombra_bola_rgb"></div>
-  <div class="rounded border overflow-hidden boton_rgb">
+  <div class="rounded overflow-hidden boton_rgb">
     <div class="contenedor_borde_rgb">
       <svg class="borde_rgb" xmlns="http://www.w3.org/2000/svg">
         <path id="path" fill="none" stroke="transparent" stroke-width="2"
@@ -16,7 +16,7 @@
       >
         <!-- contenido aquí -->
         <i class="hgi hgi-stroke hgi-whatsapp fs-3 text-body"></i>
-        <div class="text-primary fw-bold">Contáctame</div>
+        <div class="fw-bold">Contáctame</div>
       </div>
     </div>
   </div>
@@ -24,15 +24,17 @@
 
 <style>
   .boton_rgb {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     padding: 2px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
   }
   .contenido_btn_rgb {
     position: relative;
     z-index: 2;
-    background: white;
+    background: black;
+    color: white;
   }
   .sombra_bola_rgb {
     width: 100px;
@@ -121,10 +123,12 @@
   import { gsap } from "gsap";
   import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
   import { MotionPathPlugin } from "gsap/MotionPathPlugin";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
   import { GSDevTools } from "gsap/GSDevTools";
   gsap.registerPlugin(DrawSVGPlugin);
   gsap.registerPlugin(MotionPathPlugin);
   gsap.registerPlugin(GSDevTools);
+	gsap.registerPlugin(ScrollTrigger);
 
   gsap.to(".animacion_rgb", {
     duration: 5,
@@ -138,12 +142,16 @@
     },
   });
 
-  const tl6 = gsap.timeline();
-  tl6.to(".btn_contact", {
+  gsap.to(".btn_contact", {
+		scrollTrigger: {
+			trigger: ".mascara_divider_1",
+			start: "top top",
+			end: "25% 10% ",
+			scrub: 4,
+			//markers: true,
+		},
     x: "0vw",
-    duration: 1,
-    delay: 6,
-  });
+	});
 
   //GSDevTools.create();
 </script>

@@ -1,11 +1,766 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
+import Welcome from "../components/Welcome.astro";
+import Layout from "../layouts/Layout.astro";
+import Contactame from "../components/Contactame.astro";
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
-<Layout>
-	<Welcome />
-</Layout>
 
+<Layout>
+	<div class="loading_temporal">
+		<div class="d-flex justify-content-center align-items-center">
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				fill="none"
+				viewBox="0 0 452 149"
+				class="preloader"
+			>
+				<path
+					d="M6 139.034C6 139.034 67 17.0343 143 28.0343C209 37.0343 192 121.034 257 139.034C344 163.034 446 4.03427 446 4.03427"
+					stroke="white"
+					stroke-opacity="0.2"
+					stroke-width="13"></path>
+				<path
+					stroke="url(#gradientPreloader)"
+					stroke-width="13"
+					d="M6 139S67 17 143 28c66 9 49 93 114 111C344 163 446 4 446 4"
+				></path>
+				<defs>
+					<linearGradient
+						id="gradientPreloader"
+						x1="-20%"
+						x2="0%"
+						y1="72.7"
+						y2="72.7"
+						gradientUnits="userSpaceOnUse"
+					>
+						<stop offset="0%" stop-color="#ff8709" stop-opacity="0"
+						></stop>
+						<stop offset="30%" stop-color="#ff8709"></stop>
+						<stop offset="70%" stop-color="#f7bdf8"></stop>
+						<stop
+							offset="100%"
+							stop-color="#f7bdf8"
+							stop-opacity="0"></stop>
+					</linearGradient>
+				</defs>
+			</svg>
+		</div>
+	</div>
+	<div class="mascara_divider_1">
+		<div class="mascara_puzzle_background"></div>
+	</div>
+
+	<div class="mascara_content_container">
+		<div class="mascara_content">
+			<div class="mascara_contenido_tarjeta_1">
+				<div
+					class="container d-flex justify-content-center flex-column align-items-center gap-2"
+				>
+					<Welcome />
+				</div>
+			</div>
+			<div class="mascara_puzzle_piece_background"></div>
+		</div>
+		<div class="mascara_over_container_puzzle"></div>
+	</div>
+
+	<div
+		class="container justify-content-center flex-column align-items-center gap-2 contenedor_fuera_de_mascara mb-5"
+		style="display: none;"
+	>
+		<div class="mascara_tarjeta_2 mb-5">
+			<div class="row justify-content-center align-items-center">
+				<div class="col-12 col-md-8">
+					<h1 class="text-white text-center fw-bold display-1">
+						Soy la persona que buscas. . .
+					</h1>
+				</div>
+			</div>
+		</div>
+		<a
+			href="https://www.instagram.com/imosquedacordova/"
+			class="card border col-12 col-md-9 otras_tarjetas"
+			target="_blank"
+			data-bs-theme="dark"
+		>
+			<div class="card-body">
+				<div class="d-flex gap-2 align-items-center">
+					<h3 class="fs-4 fw-bold">Actividad</h3>
+				</div>
+				<div class="d-flex mb-3 align-items-center gap-2">
+					<i class="hgi hgi-stroke hgi-instagram fs-5 text-secondary"></i>
+					imosquedacordova
+				</div>
+				<div class="card border">
+					<div
+						class="card-body d-flex justify-content-between align-items-center"
+					>
+						<div class="d-flex flex-column">
+							<strong class="text-white">Sígueme</strong>
+							<div class="color-body">
+								Continuamente diseño y propongo nuevos conceptos
+								para inspirarte. . .
+							</div>
+						</div>
+						<i class="hgi hgi-stroke hgi-circle-arrow-right-02 fs-3 text-secondary"
+						></i>
+					</div>
+				</div>
+				<div id="instagramLoadingImg"></div>
+				<div id="instagramImageContainer" class="list_img mt-3">
+					<div class="insta_img"></div>
+					<div class="insta_img"></div>
+					<div class="insta_img"></div>
+				</div>
+			</div>
+			<div
+				class="card-footer d-flex align-items-center justify-content-center gap-2"
+			>
+				Ver más en instagram
+				<i class="hgi hgi-stroke hgi-share-01 fs-4 text-secondary"></i>
+			</div>
+		</a>
+		<a
+			href="https://profe-de-ingles-64fd4.web.app/"
+			class="card border col-12 col-md-9 otras_tarjetas"
+			target="_blank"
+			data-bs-theme="dark"
+		>
+			<div class="card-body">
+				<div class="d-flex gap-2 align-items-center mb-3">
+					<i class="hgi hgi-stroke hgi-star-award-02 fs-2 text-secondary"
+					></i>
+					<h3 class="fs-4 mb-0 fw-bold">Último proyecto</h3>
+				</div>
+				<div class="card border">
+					<div class="card-body">
+						<div class="d-flex gap-1 gap-md-2">
+							<div class="col-2 col-md-1">
+								<div class="rounded-pill">
+									<img
+										src="https://profe-de-ingles-64fd4.web.app/public/profileprofe.jpg"
+										class="img-fluid rounded-pill"
+									/>
+								</div>
+							</div>
+							<div class="col-10 col-md-11">
+								<div class="">
+									<div>
+										<h6 class="mb-0">El Profe de inglés</h6>
+										<div class="small">25/12/2024</div>
+										<div class="small">
+											<strong class="text-white"
+												>Tecnologías:</strong
+											>
+											ChatGPT, WhatsApp, Laravel + Más. . .
+										</div>
+									</div>
+									<div class="mt-2">
+										Mejora tu inglés sin lidiar con horarios
+										incómodos 😎 <br />
+										y claro, lo harás directamente desde WhatsApp.
+									</div>
+									<div class="btn btn-outline-primary mt-2">
+										<div
+											class="d-flex gap-2 align-items-center"
+										>
+											<i
+												class="hgi hgi-stroke hgi-play-circle fs-3 text-secondary"
+											></i>
+											<div class="text-white">
+												Ver proyecto
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</a>
+		<div
+			class="card border col-12 col-md-9 otras_tarjetas"
+			data-bs-theme="dark"
+		>
+			<div class="card-body">
+				<div class="d-flex gap-2 align-items-center mb-3">
+					<h3 class="fs-4 mb-0 fw-bold">
+						Licencias y certificaciones
+					</h3>
+				</div>
+				<div class="d-flex flex-column gap-2">
+					<div class="card border">
+						<div class="card-body">
+							<div class="d-flex gap-1 gap-md-2">
+								<div class="col-2 col-md-1">
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										xml:space="preserve"
+										style="enable-background:new 0 0 256 256"
+										viewBox="0 0 256 256"
+										class="rounded"
+									>
+										<path
+											d="M0 0h256v256H0z"
+											style="fill:#0e141e"></path>
+										<path
+											d="M125.4 85.3H106c-.6 0-1.1.6-1.1 1.2v30.6H84.1V86.5c0-.6-.5-1.1-1.2-1.1H63.8c-.7 0-1.2.5-1.2 1.1v82.9c0 .6.5 1.2 1.2 1.2H83c.7 0 1.2-.6 1.2-1.2v-30.6H105v30.6c0 .6.5 1.2 1.1 1.2h19.3c.6 0 1.2-.6 1.2-1.2V86.5c0-.6-.6-1.2-1.2-1.2z"
+											style="fill:#fff"></path>
+										<path
+											d="M199.8 170.6H138c-.6 0-1.2-.6-1.2-1.2V86.5c0-.6.6-1.1 1.2-1.1h61.7c.6 0 1.1.5 1.1 1.1v82.9c0 .6-.5 1.2-1.1 1.2z"
+											style="fill:#00ea64"></path>
+									</svg>
+								</div>
+								<div class="col-10 col-md-11">
+									<div>
+										<h6>Software Engineer Certificate</h6>
+										<div class="small">HackerRank</div>
+										<div class="small">
+											Expedición: ene. 2025
+										</div>
+										<div class="small">
+											<strong class="text-white"
+												>ID de la credencial:</strong
+											> D72E9EBD14E0
+										</div>
+									</div>
+									<a
+										href="https://www.hackerrank.com/certificates/d72e9ebd14e0"
+										target="_blank"
+										class="btn btn-outline-primary mt-2"
+									>
+										<div
+											class="d-flex gap-2 align-items-center"
+										>
+											<div class="text-white">
+												Mostrar credencial
+											</div>
+											<i
+												class="hgi hgi-stroke hgi-share-01 fs-5 text-secondary"
+											></i>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card border">
+						<div class="card-body">
+							<div class="d-flex gap-1 gap-md-2">
+								<div class="col-2 col-md-1">
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										xml:space="preserve"
+										style="enable-background:new 0 0 256 256"
+										viewBox="0 0 256 256"
+										class="rounded"
+									>
+										<path
+											d="M0 0h256v256H0z"
+											style="fill:#0e141e"></path>
+										<path
+											d="M125.4 85.3H106c-.6 0-1.1.6-1.1 1.2v30.6H84.1V86.5c0-.6-.5-1.1-1.2-1.1H63.8c-.7 0-1.2.5-1.2 1.1v82.9c0 .6.5 1.2 1.2 1.2H83c.7 0 1.2-.6 1.2-1.2v-30.6H105v30.6c0 .6.5 1.2 1.1 1.2h19.3c.6 0 1.2-.6 1.2-1.2V86.5c0-.6-.6-1.2-1.2-1.2z"
+											style="fill:#fff"></path>
+										<path
+											d="M199.8 170.6H138c-.6 0-1.2-.6-1.2-1.2V86.5c0-.6.6-1.1 1.2-1.1h61.7c.6 0 1.1.5 1.1 1.1v82.9c0 .6-.5 1.2-1.1 1.2z"
+											style="fill:#00ea64"></path>
+									</svg>
+								</div>
+								<div class="col-10 col-md-11">
+									<div>
+										<h6>
+											Frontend Developer (React)
+											Certificate
+										</h6>
+										<div class="small">HackerRank</div>
+										<div class="small">
+											Expedición: nov. 2024
+										</div>
+										<div class="small">
+											<strong class="text-white"
+												>ID de la credencial:</strong
+											> 91703D76C45E
+										</div>
+									</div>
+									<a
+										href="https://www.hackerrank.com/certificates/91703d76c45e"
+										target="_blank"
+										class="btn btn-outline-primary mt-2"
+									>
+										<div
+											class="d-flex gap-2 align-items-center"
+										>
+											<div class="text-white">
+												Mostrar credencial
+											</div>
+											<i
+												class="hgi hgi-stroke hgi-share-01 fs-5 text-secondary"
+											></i>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<a
+			href="https://maps.app.goo.gl/TtC437T2MnumiJ7S7"
+			class="card border col-12 col-md-9 otras_tarjetas mb-5"
+			target="_blank"
+			data-bs-theme="dark"
+		>
+			<div class="card-body">
+				<div class="d-flex gap-2 align-items-center">
+					<h3 class="fs-4 fw-bold">Recomendaciones</h3>
+				</div>
+				<div class="d-flex gap-2 align-items-center">
+					<i class="hgi hgi-stroke hgi-location-06 fs-5 text-secondary"></i>
+					<strong>4.8</strong>
+					<div class="stars">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							class="star"
+							viewBox="0 0 22 22"
+							><path
+								d="M11 0c.6 0 1.8.3 2.6 2l1.8 3.5a1.2 1.2 0 0 0 .7.6l3.2.5a3 3 0 0 1 2.6 2 3 3 0 0 1-1 3l-2.5 2.5a1.2 1.2 0 0 0-.3.9l.7 3a3.5 3.5 0 0 1-.4 3.2 2.2 2.2 0 0 1-1.7.8 4.4 4.4 0 0 1-2.2-.7l-3-1.8a1 1 0 0 0-.5-.1 1 1 0 0 0-.5.1l-3 1.8a4.3 4.3 0 0 1-2.2.7 2.2 2.2 0 0 1-1.7-.8 3.5 3.5 0 0 1-.4-3.1l.7-3.1a1.2 1.2 0 0 0-.3-.9l-2.5-2.5a3.1 3.1 0 0 1-1-3.1 3 3 0 0 1 2.6-1.9L6 6.1a1.2 1.2 0 0 0 .7-.5L8.4 2c.8-1.7 2-2 2.6-2Z"
+								data-name="Path 14"></path></svg
+						>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							class="star"
+							viewBox="0 0 22 22"
+							><path
+								d="M11 0c.6 0 1.8.3 2.6 2l1.8 3.5a1.2 1.2 0 0 0 .7.6l3.2.5a3 3 0 0 1 2.6 2 3 3 0 0 1-1 3l-2.5 2.5a1.2 1.2 0 0 0-.3.9l.7 3a3.5 3.5 0 0 1-.4 3.2 2.2 2.2 0 0 1-1.7.8 4.4 4.4 0 0 1-2.2-.7l-3-1.8a1 1 0 0 0-.5-.1 1 1 0 0 0-.5.1l-3 1.8a4.3 4.3 0 0 1-2.2.7 2.2 2.2 0 0 1-1.7-.8 3.5 3.5 0 0 1-.4-3.1l.7-3.1a1.2 1.2 0 0 0-.3-.9l-2.5-2.5a3.1 3.1 0 0 1-1-3.1 3 3 0 0 1 2.6-1.9L6 6.1a1.2 1.2 0 0 0 .7-.5L8.4 2c.8-1.7 2-2 2.6-2Z"
+								data-name="Path 14"></path></svg
+						>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							class="star"
+							viewBox="0 0 22 22"
+							><path
+								d="M11 0c.6 0 1.8.3 2.6 2l1.8 3.5a1.2 1.2 0 0 0 .7.6l3.2.5a3 3 0 0 1 2.6 2 3 3 0 0 1-1 3l-2.5 2.5a1.2 1.2 0 0 0-.3.9l.7 3a3.5 3.5 0 0 1-.4 3.2 2.2 2.2 0 0 1-1.7.8 4.4 4.4 0 0 1-2.2-.7l-3-1.8a1 1 0 0 0-.5-.1 1 1 0 0 0-.5.1l-3 1.8a4.3 4.3 0 0 1-2.2.7 2.2 2.2 0 0 1-1.7-.8 3.5 3.5 0 0 1-.4-3.1l.7-3.1a1.2 1.2 0 0 0-.3-.9l-2.5-2.5a3.1 3.1 0 0 1-1-3.1 3 3 0 0 1 2.6-1.9L6 6.1a1.2 1.2 0 0 0 .7-.5L8.4 2c.8-1.7 2-2 2.6-2Z"
+								data-name="Path 14"></path></svg
+						>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							class="star"
+							viewBox="0 0 22 22"
+							><path
+								d="M11 0c.6 0 1.8.3 2.6 2l1.8 3.5a1.2 1.2 0 0 0 .7.6l3.2.5a3 3 0 0 1 2.6 2 3 3 0 0 1-1 3l-2.5 2.5a1.2 1.2 0 0 0-.3.9l.7 3a3.5 3.5 0 0 1-.4 3.2 2.2 2.2 0 0 1-1.7.8 4.4 4.4 0 0 1-2.2-.7l-3-1.8a1 1 0 0 0-.5-.1 1 1 0 0 0-.5.1l-3 1.8a4.3 4.3 0 0 1-2.2.7 2.2 2.2 0 0 1-1.7-.8 3.5 3.5 0 0 1-.4-3.1l.7-3.1a1.2 1.2 0 0 0-.3-.9l-2.5-2.5a3.1 3.1 0 0 1-1-3.1 3 3 0 0 1 2.6-1.9L6 6.1a1.2 1.2 0 0 0 .7-.5L8.4 2c.8-1.7 2-2 2.6-2Z"
+								data-name="Path 14"></path></svg
+						>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							class="star"
+							viewBox="0 0 22 22"
+							><path
+								d="M11 0c.6 0 1.8.3 2.6 2l1.8 3.5a1.2 1.2 0 0 0 .7.6l3.2.5a3 3 0 0 1 2.6 2 3 3 0 0 1-1 3l-2.5 2.5a1.2 1.2 0 0 0-.3.9l.7 3a3.5 3.5 0 0 1-.4 3.2 2.2 2.2 0 0 1-1.7.8 4.4 4.4 0 0 1-2.2-.7l-3-1.8a1 1 0 0 0-.5-.1 1 1 0 0 0-.5.1l-3 1.8a4.3 4.3 0 0 1-2.2.7 2.2 2.2 0 0 1-1.7-.8 3.5 3.5 0 0 1-.4-3.1l.7-3.1a1.2 1.2 0 0 0-.3-.9l-2.5-2.5a3.1 3.1 0 0 1-1-3.1 3 3 0 0 1 2.6-1.9L6 6.1a1.2 1.2 0 0 0 .7-.5L8.4 2c.8-1.7 2-2 2.6-2Z"
+								data-name="Path 14"></path></svg
+						>
+					</div>
+					<div>en Google (API Oficial)</div>
+				</div>
+
+				<div class="mt-3 d-flex flex-column gap-2">
+					<div class="card border">
+						<div class="card-body d-flex gap-2">
+							<div class="col-2 col-md-1">
+								<div class="rounded-pill">
+									<img
+										src="https://firebasestorage.googleapis.com/v0/b/mosqueda-cordova-992b2.firebasestorage.app/o/andrea.png?alt=media&token=af9741eb-3467-4f67-82a1-bfd2db76ccc3"
+										alt="Andrea Montalvo"
+										class="img-fluid rounded-pill"
+									/>
+								</div>
+							</div>
+							<div
+								class="flex_1 flex_direction_column body_sub_card"
+							>
+								<div class="d-flex gap-2 flex-column">
+									<h6 class="mb-0">Andrea Montalvo</h6>
+									<div class="small color_body">
+										Hace algunos años, tuve la suerte de
+										encontrar sus servicios por redes
+										sociales, <br />desde ese momento s...
+									</div>
+									<div class="small">
+										<strong>Ver completa</strong>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card border">
+						<div class="card-body d-flex gap-2">
+							<div class="col-2 col-md-1">
+								<div class="rounded-pill">
+									<img
+										src="https://firebasestorage.googleapis.com/v0/b/mosqueda-cordova-992b2.firebasestorage.app/o/mariana.jpeg?alt=media&token=f6ce259f-f9db-497e-a36d-54edea3aa17c"
+										alt="Mariana Banda"
+										class="img-fluid rounded-pill"
+									/>
+								</div>
+							</div>
+							<div
+								class="flex_1 flex_direction_column body_sub_card"
+							>
+								<div class="d-flex gap-2 flex-column">
+									<h6 class="mb-0">Mariana Banda Alvarado</h6>
+									<div class="small color_body">
+										El bot de inglés con IA que hizo Isaac
+										está buenísimo. <br />Es como tener un
+										profesor personal que siempr...
+									</div>
+									<div class="small">
+										<strong>Ver completa</strong>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card border">
+						<div class="card-body d-flex gap-2">
+							<div class="col-2 col-md-1">
+								<div class="rounded-pill">
+									<img
+										src="https://firebasestorage.googleapis.com/v0/b/mosqueda-cordova-992b2.firebasestorage.app/o/rafael.jpg?alt=media&token=679abed1-841e-464d-81e3-bb84176593c9"
+										alt="Rafael Pacheco"
+										class="img-fluid rounded-pill"
+									/>
+								</div>
+							</div>
+							<div
+								class="flex_1 flex_direction_column body_sub_card"
+							>
+								<div class="d-flex gap-2 flex-column">
+									<h6 class="mb-0">Rafael Pacheco</h6>
+									<div class="small color_body">
+										Isaac es súper profesional, se nota qué
+										sabe lo qué hace. <br />Yo soy
+										comerciante, le expliqué lo qué nec...
+									</div>
+									<div class="small">
+										<strong>Ver completa</strong>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card border">
+						<div class="card-body d-flex gap-2">
+							<div class="col-2 col-md-1">
+								<div class="rounded-pill">
+									<img
+										src="https://firebasestorage.googleapis.com/v0/b/mosqueda-cordova-992b2.firebasestorage.app/o/hilda.jpeg?alt=media&token=a0c51cc0-08d0-4013-a92f-c5b71085fcc6"
+										alt="Hilda Lopez"
+										class="img-fluid rounded-pill"
+									/>
+								</div>
+							</div>
+							<div
+								class="flex_1 flex_direction_column body_sub_card"
+							>
+								<div class="d-flex gap-2 flex-column">
+									<h6 class="mb-0">Hilda lopez</h6>
+									<div class="small color_body">
+										Isaac trabajó en el desarrollo de mi app
+										y la verdad, <br />quedó espectacular.
+										Demostró ser un profesiona...
+									</div>
+									<div class="small">
+										<strong>Ver completa</strong>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div
+				class="card-footer d-flex align-items-center justify-content-center gap-2"
+			>
+				Ver más en Google Maps
+				<i class="hgi hgi-stroke hgi-share-01 fs-4 text-secondary"></i>
+			</div>
+		</a>
+	</div>
+	<Contactame />
+</Layout>
+<style>
+	.otras_tarjetas {
+		position: relative;
+		z-index: 2;
+	}
+	.insta_img {
+		border-radius: 8px;
+		overflow: hidden;
+		background-color: #ddd;
+		aspect-ratio: 1 / 1;
+	}
+	.list_img {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 4px;
+	}
+	.star {
+		height: 12px;
+		fill: #ffde46;
+	}
+	.stars {
+		display: flex;
+		align-items: center;
+		gap: 2px;
+		position: relative;
+		overflow: hidden;
+	}
+	/* Efecto de "brillo" */
+	.shine,
+	.stars::after {
+		width: 100%; /* Ancho del brillo */
+		height: 100%; /* Alto del brillo */
+		background: linear-gradient(
+			90deg,
+			rgba(255, 255, 255, 0) 0%,
+			rgba(255, 255, 255, 0.5) 50%,
+			rgba(255, 255, 255, 0) 100%
+		);
+		position: absolute;
+		top: 0;
+		left: -100%; /* Empieza fuera del contenedor */
+	}
+	.shine {
+		animation: shine-animation 1s infinite; /* Animación */
+	}
+	@keyframes shine-animation {
+		0% {
+			left: -100%;
+		}
+		100% {
+			left: 100%;
+		}
+	}
+</style>
+
+<style is:global>
+	html {
+		background-color: #000;
+	}
+	.loading_temporal {
+		content: " ";
+		display: block;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-color: #000;
+		z-index: 99;
+		pointer-events: none;
+		overflow: hidden;
+	}
+	.loading_temporal div {
+		width: 100vw;
+		height: 100vh;
+	}
+	.preloader {
+		width: 22vw;
+	}
+	@media (max-width: 767px) {
+		.preloader {
+			width: 42vw;
+		}
+	}
+</style>
+
+<style is:global>
+	.mascara_tarjeta_2 {
+		margin-top: -50vh;
+		position: relative;
+		z-index: 2;
+	}
+	.mascara_puzzle_piece_background {
+		position: absolute;
+		width: 100vw;
+		height: 100vh;
+		pointer-events: none;
+		top: 0;
+		left: 0;
+		background: -webkit-linear-gradient(
+			137deg,
+			rgba(255, 135, 9, 1) 0%,
+			rgba(255, 135, 9, 1) 38%,
+			rgba(247, 189, 248, 1) 64%,
+			rgba(247, 189, 248, 1) 100%
+		);
+		background: -moz-linear-gradient(
+			137deg,
+			rgba(255, 135, 9, 1) 0%,
+			rgba(255, 135, 9, 1) 38%,
+			rgba(247, 189, 248, 1) 64%,
+			rgba(247, 189, 248, 1) 100%
+		);
+		background: linear-gradient(
+			137deg,
+			rgba(255, 135, 9, 1) 0%,
+			rgba(255, 135, 9, 1) 38%,
+			rgba(247, 189, 248, 1) 64%,
+			rgba(247, 189, 248, 1) 100%
+		);
+		opacity: 0;
+	}
+	.mascara_content_container {
+		height: 200vh;
+		width: 100vw;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	.mascara_divider_1 {
+		width: 100vw;
+		height: 200vh;
+	}
+	.mascara_container_puzzle {
+		height: 200vh;
+		width: 100vw;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	.mascara_puzzle_background {
+		width: 100vw;
+		height: 100vh;
+		position: fixed;
+		top: 0;
+		left: 0;
+		background-image: url("/assets/puzzle.svg");
+		background-size: 100vw;
+		background-repeat: no-repeat;
+		background-position: center;
+		opacity: 0;
+	}
+	.mascara_content {
+		width: 100vw;
+		height: 100vh;
+		position: fixed;
+		top: 0;
+		left: 0;
+		overflow: hidden;
+		z-index: 1;
+		background-color: white;
+		mask-image: url("/assets/VIstack.fe9b0515.svg");
+		-webkit-mask-size: auto 1300vh;
+		mask-size: auto 1300vh;
+		-webkit-mask-repeat: no-repeat;
+		mask-repeat: no-repeat;
+		-webkit-mask-position: center;
+		mask-position: center;
+		-webkit-mask-origin: content-box;
+		mask-origin: content-box;
+	}
+	.mascara_over_container_puzzle {
+		width: 100vw;
+		height: 100vh;
+		position: fixed;
+		top: 0;
+		left: 0;
+		background-color: #000;
+		opacity: 0;
+		z-index: 2;
+		pointer-events: none;
+	}
+	@media (orientation: landscape) {
+		.mascara_content {
+			-webkit-mask-size: 1300vw auto;
+			mask-size: 1300vw auto;
+		}
+		.mascara_tarjeta_2 {
+			margin-top: -15vw;
+		}
+	}
+	@media (orientation: landscape) and (min-width: 2000px) {
+
+		.mascara_tarjeta_2 {
+			margin-top: -50vh;
+		}
+
+	}
+	.mascara_contenido_tarjeta_1 {
+		width: 100vw;
+		position: absolute;
+		left: 0;
+		height: 100vh;
+		background-color: #fff;
+	}
+</style>
+
+<script>
+	import { gsap } from "gsap";
+	import { GSDevTools } from "gsap/GSDevTools";
+	import { ScrollTrigger } from "gsap/ScrollTrigger";
+	gsap.registerPlugin(GSDevTools);
+	gsap.registerPlugin(ScrollTrigger);
+
+	gsap.to(".mascara_content", {
+		scrollTrigger: {
+			trigger: ".mascara_divider_1",
+			start: "top top",
+			end: "25% 10% ",
+			scrub: 4,
+			//markers: true,
+		},
+		maskSize: "100vw auto",
+		webkitMaskSize: "100vw auto",
+	});
+
+	gsap.to(".mascara_puzzle_background", {
+		scrollTrigger: {
+			trigger: ".mascara_divider_1",
+			start: "15% 10%",
+			end: "45%",
+			scrub: 2,
+			//markers: true,
+		},
+		opacity: 1,
+	});
+
+	gsap.to(".mascara_over_container_puzzle", {
+		scrollTrigger: {
+			trigger: ".contenedor_fuera_de_mascara",
+			start: "-10% 50%",
+			end: "5% 60%",
+			scrub: 2,
+			//markers: true,
+		},
+		opacity: 0.8,
+	});
+
+	gsap.to(".mascara_contenido_tarjeta_1", {
+		scrollTrigger: {
+			trigger: ".mascara_divider_1",
+			start: "5% top",
+			end: "25% 10% ",
+			scrub: 2,
+			//markers: true,
+		},
+		scale: 0.6,
+		opacity: 0,
+		pointerEvents: "none",
+	});
+	gsap.to(".mascara_puzzle_piece_background", {
+		scrollTrigger: {
+			trigger: ".mascara_divider_1",
+			start: "5% top",
+			end: "25% 10% ",
+			scrub: 2,
+			//markers: true,
+		},
+		opacity: 1,
+	});
+
+	//GSDevTools.create();
+</script>
+<script src="../scripts/instagram.js"></script>
