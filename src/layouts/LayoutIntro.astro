@@ -124,7 +124,7 @@ import "../styles/global.css";
 			href="https://use.hugeicons.com/font/icons.css"
 		/>
 	</head>
-	<body style="overflow: hidden;" class="bg-black">
+	<body class="bg-black">
 		<!-- Google Tag Manager (noscript) -->
 		<noscript
 			><iframe
@@ -137,3 +137,10 @@ import "../styles/global.css";
 		<slot />
 	</body>
 </html>
+
+<style>
+	html,body{
+		width: 100vw;
+		overflow-x: hidden !important;
+	}
+</style>

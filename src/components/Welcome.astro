@@ -244,7 +244,7 @@ import "./borde_rainbow.css";
 						></svg
 					>
 				</div>
-				<h2 class="fs-5 text-body">
+				<h2 class="fs-5 text-body fw-normal">
 					Ing. de Sistemas | Especializado en desarrollo de software
 				</h2>
 			</div>
@@ -363,15 +363,15 @@ import "./borde_rainbow.css";
 
 <div class="alerta_scroll text-center mt-5 fs-1">
 	¡No hagas Scroll..!
-	<div class="icon_alerta_scroll"><i class="hgi hgi-stroke hgi-circle-arrow-down-02"></i></div>
+	<div class="icon_alerta_scroll">
+		<i class="hgi hgi-stroke hgi-circle-arrow-down-02 icon_alerta_scroll_icon"></i>
+	</div>
 </div>
 
 <style>
-	.alerta_scroll{
+	.alerta_scroll {
 		opacity: 0;
 	}
-
-
 
 	.cuerpo_tarjeta_previa_animacion {
 		overflow: hidden;
@@ -541,13 +541,13 @@ import "./borde_rainbow.css";
 		duration: 2,
 		yoyo: true,
 	});
-	
+
 	const tl1 = gsap.timeline({ id: "timeline1" });
 	tl1.to(".preloader", {
-			opacity: "0",
-			duration: 2,
-			delay: 2,
-		})
+		opacity: "0",
+		duration: 2,
+		delay: 2,
+	})
 		.to(".loading_temporal", {
 			height: "0",
 			duration: 0,
@@ -557,7 +557,6 @@ import "./borde_rainbow.css";
 			scale: 5,
 			duration: 5,
 			ease: "power2.out",
-			
 		})
 		.to(".banner", {
 			rotate: -24,
@@ -595,9 +594,10 @@ import "./borde_rainbow.css";
 		.to(".alerta_scroll", {
 			opacity: 1,
 			duration: 1,
-		}).to(".icon_alerta_scroll", {
-			y: "8",
-			duration: 1,
+		})
+		.to(".icon_alerta_scroll", {
+			y: "16",
+			duration: 0.5,
 			repeat: -1,
 			yoyo: true,
 			ease: "power1.in",
