@@ -47,7 +47,7 @@ import ContactameInline from "../components/ContactameInline.astro";
                         >
                             <div class="w-100"><ContactameInline /></div>
                             <a
-                                class="boton_rgb py-3 px-4 rounded border border-secondary w-100 text-center"
+                                class="boton_rgb py-3 px-4 rounded border border-secondary w-100 text-center text-white"
                                 href="/overview"
                                 data-bs-theme="dark"
                             >
@@ -116,7 +116,7 @@ import ContactameInline from "../components/ContactameInline.astro";
 
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(
-        100,
+        32,
         window.innerWidth / window.innerHeight,
         0.1,
         100,
@@ -147,7 +147,7 @@ import ContactameInline from "../components/ContactameInline.astro";
             texture.mapping = THREE.EquirectangularReflectionMapping;
             scene.environment = texture;
             //scene.background = texture;
-            //scene.environmentIntensity = 0.5;
+            scene.environmentIntensity = 0.5;
         },
     );
 
@@ -157,7 +157,7 @@ import ContactameInline from "../components/ContactameInline.astro";
     directionalLight_3.position.z = -5;
     scene.add(directionalLight_3);
 
-    const directionalLight_4 = new THREE.DirectionalLight(0x00ffaf, 2); // Color blanco, intensidad 1
+    const directionalLight_4 = new THREE.DirectionalLight(0xffffff, 3); // Color blanco, intensidad 1
     directionalLight_4.position.x = 10;
     directionalLight_4.position.y = -10;
     directionalLight_4.position.z = 5;
@@ -173,18 +173,18 @@ import ContactameInline from "../components/ContactameInline.astro";
         if (window.innerWidth > window.innerHeight) {
             // Landscape
             //Posición de la cámara
-            camera.position.x = 15.66;
-            camera.position.y = 1.33;
-            camera.position.z = 3.94;
+            camera.position.x = 76.85;
+            camera.position.y = 1.11;
+            camera.position.z = 2.05;
 
             //Rotación de la cámara
-            camera.rotation.x = -0.33;
-            camera.rotation.y = 1.31;
-            camera.rotation.z = 0.32;
+            camera.rotation.x = -0.5;
+            camera.rotation.y = 1.54;
+            camera.rotation.z = 0.5;
 
             //Posición del cubo
-            cube.position.x = 0.0;
-            cube.position.y = 0.0;
+            cube.position.x = 3.0;
+            cube.position.y = -1.0;
             cube.position.z = 0.0;
 
             //Rotación del cubo
@@ -193,18 +193,18 @@ import ContactameInline from "../components/ContactameInline.astro";
             cube.rotation.z = 0.0;
         } else {
             //Posición de la cámara
-            camera.position.x = 15.66;
-            camera.position.y = 1.33;
-            camera.position.z = 3.94;
+            camera.position.x = 76.85;
+            camera.position.y = 1.11;
+            camera.position.z = 2.05;
 
             //Rotación de la cámara
-            camera.rotation.x = -0.33;
-            camera.rotation.y = 1.31;
-            camera.rotation.z = 0.32;
+            camera.rotation.x = -0.5;
+            camera.rotation.y = 1.54;
+            camera.rotation.z = 0.5;
 
             //Posición del cubo
-            cube.position.x = -1.0;
-            cube.position.y = 3.0;
+            cube.position.x = 0.0;
+            cube.position.y = 0.5;
             cube.position.z = 0.0;
 
             //Rotación del cubo
@@ -215,30 +215,27 @@ import ContactameInline from "../components/ContactameInline.astro";
         updateCameraInfo(); // Actualizar la información en pantalla
     }
 
-    function primerLoad(camera, cube) {
+    function primerLoad(camera, cubeGroup) {
         const tlLoad = gsap.timeline({ id: "primerLoad" });
 
         if (window.innerWidth > window.innerHeight) {
             // Landscape
             tlLoad
                 .to(camera.position, {
-                    x: 0.66,
-                    y: 0.55,
-                    z: 5.46,
-                    duration: 2,
-                    ease: "back.inOut(1.7)",
-                })
-                .to(cube.position, {
-                    x: 4.0,
+                    x: 3.79,
+                    y: 0.91,
+                    z: 17.98,
                     duration: 2,
                     ease: "back.inOut(1.7)",
                 })
                 .to(camera.rotation, {
-                    x: -0.12,
+                    x: -0.05,
+                    y: 0.21,
+                    z: 0.01,
                     duration: 2,
                     ease: "back.inOut(1.7)",
                 })
-                .to(cube.position, {
+                .to(cubeGroup.position, {
                     y: "+=0.5",
                     duration: 1,
                     ease: "sine.inOut",
@@ -261,20 +258,20 @@ import ContactameInline from "../components/ContactameInline.astro";
         } else {
             tlLoad
                 .to(camera.position, {
-                    x: 0.83,
-                    y: 0.69,
-                    z: 6.88,
+                    x: 5.29,
+                    y: 1.27,
+                    z: 25.08,
                     duration: 2,
                     ease: "back.inOut(1.7)",
                 })
                 .to(camera.rotation, {
-                    x: -0.1,
-                    y: 0.12,
-                    z: 0.0,
-                    duration: 1,
+                    x: -0.05,
+                    y: 0.21,
+                    z: 0.01,
+                    duration: 2,
                     ease: "back.inOut(1.7)",
                 })
-                .to(cube.position, {
+                .to(cubeGroup.position, {
                     y: "+=0.5",
                     duration: 1,
                     ease: "sine.inOut",
@@ -286,13 +283,13 @@ import ContactameInline from "../components/ContactameInline.astro";
                     y: "0",
                     duration: 1,
                     ease: "sine.inOut",
-                    delay: -1,
+                    delay: -2,
                 })
                 .to(".primer-sutitulo", {
                     y: "0",
                     duration: 1,
                     ease: "sine.inOut",
-                    delay: 0,
+                    delay: -0.5,
                 });
         }
         return tlLoad;
@@ -307,65 +304,47 @@ import ContactameInline from "../components/ContactameInline.astro";
     gltfLoader.load("/assets/scene.glb", (gltf) => {
         cube = gltf.scene;
         cube.scale.set(1, 1, 1); // Ajusta la escala del modelo
-        scene.add(cube);
+        const cubeGroup = new THREE.Group();
+        cubeGroup.add(cube);
+        scene.add(cubeGroup);
 
         //1 call-to-action
         sectionTimeline("call-to-action", (tl1) => {
             if (window.innerWidth > window.innerHeight) {
                 tl1.fromTo(
                     camera.position,
-                    { x: 0.66, y: 0.55, z: 5.46 },
-                    { x: -0.46, y: 0.55, z: 6.46, ease: "power1.out" },
+                    { x: 3.79, y: 0.91, z: 17.98 },
+                    { x: 3.79, y: 0.91, z: 17.98, ease: "power1.out" },
                     0,
-                );
-                tl1.fromTo(
-                    camera.rotation,
-                    { x: -0.12, y: 1.31, z: 0.32 },
-                    { x: -0.12, y: 1.31, z: 0.32, ease: "power1.out" },
-                    0,
-                );
-                tl1.fromTo(
-                    cube.position,
-                    { x: 4.0, y: 0.0, z: 0.0 },
-                    { x: -6.0, y: 0.2, z: 0.0, ease: "power1.out" },
-                    0,
-                );
-                tl1.fromTo(
-                    cube.rotation,
-                    { x: 0.0, y: 0.0, z: 0.0 },
-                    { x: -0.03, y: 3.5, z: 0.0, ease: "power1.out" },
-                    0,
-                );
+                )
+                    .fromTo(
+                        cube.position,
+                        { x: 3.0, y: -1.0, z: 0.0 },
+                        { x: -3.0, y: 0.0, z: 0.0, ease: "power1.out" },
+                        0,
+                    )
+                    .fromTo(
+                        cube.rotation,
+                        { x: 0.0, y: 0.0, z: 0.0 },
+                        { x: 0.0, y: 3.19, z: 0.0, ease: "power1.out" },
+                        0,
+                    );
             } else {
                 tl1.fromTo(
-                    camera.position,
-                    { x: 0.83, y: 0.69, z: 6.88 },
-                    { x: 0.83, y: 0.69, z: 6.88, ease: "power1.out" },
-                    0,
-                );
-                tl1.fromTo(
-                    camera.rotation,
-                    { x: -0.1, y: 0.12, z: 0.0 },
-                    { x: -0.1, y: 0.12, z: 0.0, ease: "power1.out" },
-                    0,
-                );
-
-                tl1.fromTo(
                     cube.position,
-                    { x: -1.0, y: 0.12, z: 0.0 },
-                    { x: 1.0, y: 3.2, z: -1.0, ease: "power1.out" },
+                    { x: 0.0, y: 0.5, z: 0.0 },
+                    { x: 1.0, y: 3.0, z: 0.0, ease: "power1.out" },
                     0,
-                );
-                tl1.fromTo(
+                ).fromTo(
                     cube.rotation,
                     { x: 0.0, y: 0.0, z: 0.0 },
-                    { x: -0.03, y: 3.5, z: 0.0, ease: "power1.out" },
+                    { x: 0.0, y: 3.0, z: 0.0, ease: "power1.out" },
                     0,
                 );
             }
         });
         defaultCoordenadas();
-        primerLoad(camera, cube);
+        primerLoad(camera, cubeGroup);
     });
 
     const controls = new OrbitControls(camera, renderer.domElement);
@@ -447,6 +426,7 @@ import ContactameInline from "../components/ContactameInline.astro";
 
     // Asignar la función al evento
     //window.addEventListener("mousemove", handleMouseMove);
+
     function resizeCanvas() {
         const width = window.innerWidth;
         const height = window.innerHeight;

@@ -1,0 +1,322 @@
+---
+import LayoutIntro from "../layouts/LayoutIntro.astro";
+import ContactameInline from "../components/ContactameInline.astro";
+---
+
+<LayoutIntro>
+    <main>
+        <section class="scrollers" id="hero">
+            <div class="container h-100">
+                <div
+                    class="col-md-6 d-flex flex-column justify-content-end justify-content-md-center h-100"
+                >
+                    <div class="overflow-hidden">
+                        <h1
+                            data-bs-theme="dark"
+                            class="display-1 primer-titulo"
+                        >
+                            Juntos podemos construirlo...
+                        </h1>
+                        <p
+                            data-bs-theme="dark"
+                            class="display-5 primer-sutitulo"
+                        >
+                            Visión, estrategia y <b>acción</b>. Todo en un mismo
+                            lugar.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="scrollers" id="call-to-action">
+            <div class="container h-100 pb-5">
+                <div class="row justify-content-end h-100">
+                    <div
+                        class="col-md-8 d-flex flex-column justify-content-end justify-content-md-center h-100 text-end align-items-end"
+                    >
+                        <div class="overflow-hidden">
+                            <h1
+                                data-bs-theme="dark"
+                                class="display-1 segundo-titulo"
+                            >
+                                Comencemos con la mejor decisión.
+                            </h1>
+                        </div>
+                        <div
+                            class="d-flex flex-column flex-md-row justify-content-end mt-4 align-items-center gap-2"
+                        >
+                            <div class="w-100"><ContactameInline /></div>
+                            <a
+                                class="boton_rgb py-3 px-4 rounded border border-secondary w-100 text-center text-white"
+                                href="/overview"
+                                data-bs-theme="dark"
+                            >
+                                Quiero saber más
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div class="webgl"></div>
+    <div id="camera-info">Cargando posición de la cámara...</div>
+</LayoutIntro>
+<style>
+    .boton_rgb {
+        background-color: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        padding: 2px;
+    }
+    .primer-titulo,
+    .primer-sutitulo {
+        transform: translateY(50vh);
+    }
+    .scrollers {
+        height: 100svh;
+        /* border-bottom: 1px solid #f00; */
+        background-color: #000;
+    }
+
+    .webgl {
+        padding: 0;
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100vh;
+        z-index: 0;
+        /* pointer-events: none; */
+        line-height: 0;
+    }
+    #camera-info {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        padding: 10px;
+        border-radius: 5px;
+        font-family: monospace;
+        z-index: 10000;
+        /* display: none; */
+    }
+</style>
+
+<script>
+    import * as THREE from "three";
+    import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
+    import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
+    import { RGBELoader } from "three/examples/jsm/loaders/RGBELoader.js";
+    import { DRACOLoader } from "three/examples/jsm/loaders/DRACOLoader.js";
+    import { gsap } from "gsap";
+    import { ScrollTrigger } from "gsap/ScrollTrigger";
+    import { GSDevTools } from "gsap/GSDevTools";
+
+    gsap.registerPlugin(GSDevTools);
+
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(
+        32,
+        window.innerWidth / window.innerHeight,
+        0.1,
+        1000,
+    );
+
+    const renderer = new THREE.WebGLRenderer({
+        powerPreference: "high-performance",
+        antialias: false, //TEMPORAL
+        alpha: true,
+    });
+    const deviceRatio = Math.min(window.devicePixelRatio, 2);
+
+    renderer.useLegacyLights = true;
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.shadowMap.enabled = true; // Activar sombras
+    renderer.setPixelRatio(deviceRatio);
+
+    renderer.setSize(window.innerWidth, window.innerHeight);
+
+    document.querySelector(".webgl").appendChild(renderer.domElement);
+
+    // CARGAR HDR
+    const rgbeLoader = new RGBELoader();
+    rgbeLoader.load(
+        "/assets/christmas_photo_studio_06_1k.hdr",
+        function (texture) {
+            texture.mapping = THREE.EquirectangularReflectionMapping;
+            scene.environment = texture;
+            //scene.background = texture;
+            scene.environmentIntensity = 0.5;
+        },
+    );
+
+    const directionalLight_3 = new THREE.DirectionalLight(0xffffff, 2); // Color blanco, intensidad 1
+    directionalLight_3.position.x = 0;
+    directionalLight_3.position.y = 25;
+    directionalLight_3.position.z = -20;
+    directionalLight_3.shadow.camera.left = -3; // Extender hacia la izquierda
+    directionalLight_3.shadow.camera.right = 3; // Extender hacia la derecha
+    directionalLight_3.shadow.camera.top = 3; // Extender hacia arriba
+    directionalLight_3.shadow.camera.bottom = -1;
+
+    scene.add(directionalLight_3);
+    directionalLight_3.castShadow = true; // Habilitar sombras
+    directionalLight_3.shadow.mapSize.width = 2048; // Aumentar resolución del mapa de sombras
+    directionalLight_3.shadow.mapSize.height = 2048;
+    directionalLight_3.shadow.camera.near = 1; // Ajustar el rango de la cámara de sombras
+
+    const directionalLightHelper = new THREE.DirectionalLightHelper(
+        directionalLight_3,
+        1,
+    );
+    scene.add(directionalLightHelper);
+    const helper = new THREE.CameraHelper(directionalLight_3.shadow.camera);
+    scene.add(helper);
+
+    const gltfLoader = new GLTFLoader();
+    const dracoLoader = new DRACOLoader();
+    dracoLoader.setDecoderPath("/draco/");
+    gltfLoader.setDRACOLoader(dracoLoader);
+
+    // Cargar el modelo RING.glb
+    let ring; // Declarar el objeto para el anillo
+    let ringMixer; // Declarar el mixer para las animaciones del anillo
+
+    gltfLoader.load("/assets/Ring.glb", (gltf) => {
+        ring = gltf.scene;
+        ring.scale.set(0.1, 0.1, 0.1); // Ajusta la escala del modelo
+
+        // Posición inicial del anillo
+        ring.position.x = 0.0;
+        ring.position.y = 0;
+        ring.position.z = 0;
+
+        // Rotación inicial del anillo
+        ring.rotation.x = 0.1;
+        ring.rotation.y = 0;
+        ring.rotation.z = 0.0;
+        ring.castShadow = true;
+        ring.receiveShadow = true;
+
+        ring.traverse((child) => {
+    if (child.isMesh) {
+        child.castShadow = true;
+        child.receiveShadow = true;
+    }
+});
+
+        scene.add(ring);
+
+        // Configurar el AnimationMixer si el modelo tiene animaciones
+        if (gltf.animations && gltf.animations.length > 0) {
+            ringMixer = new THREE.AnimationMixer(ring);
+            gltf.animations.forEach((clip) => {
+                const action = ringMixer.clipAction(clip);
+                action.play(); // Reproducir la animación
+            });
+        }
+    });
+
+    // Crear un cubo
+    const cubeGeometry = new THREE.BoxGeometry(1, 1, 1); // Ancho, alto, profundidad
+    const cubeMaterial = new THREE.MeshStandardMaterial({ color: 0x00ff00 }); // Color verde
+    const cube = new THREE.Mesh(cubeGeometry, cubeMaterial);
+
+    // Posicionar el cubo
+    cube.position.set(2, 2, 2); // Cambia las coordenadas según sea necesario
+
+    // Habilitar sombras para el cubo
+    cube.castShadow = true;
+    cube.receiveShadow = true;
+
+    // Agregar el cubo a la escena
+    scene.add(cube);
+
+    // Crear un triángulo
+    const triangleGeometry = new THREE.BufferGeometry();
+    const vertices = new Float32Array([
+        0.0,
+        1.0,
+        0.0, // Vértice superior
+        -1.0,
+        -1.0,
+        0.0, // Vértice inferior izquierdo
+        1.0,
+        -1.0,
+        0.0, // Vértice inferior derecho
+    ]);
+    triangleGeometry.setAttribute(
+        "position",
+        new THREE.BufferAttribute(vertices, 3),
+    );
+
+    const triangleMaterial = new THREE.MeshBasicMaterial({
+        color: 0xff0000,
+        side: THREE.DoubleSide,
+    }); // Color rojo
+    const triangle = new THREE.Mesh(triangleGeometry, triangleMaterial);
+
+    // Posicionar el triángulo
+    triangle.position.set(-2, 2, 0); // Cambia las coordenadas según sea necesario
+
+    // Agregar el triángulo a la escena
+    scene.add(triangle);
+
+    // Crear un suelo
+    const planeGeometry = new THREE.PlaneGeometry(20, 20); // Ancho y alto del plano
+    const planeMaterial = new THREE.MeshStandardMaterial({ color: 0x808080 }); // Color gris
+    const plane = new THREE.Mesh(planeGeometry, planeMaterial);
+
+    // Rotar el plano para que sea horizontal
+    plane.rotation.x = -Math.PI / 2; // Rotación de 90 grados en el eje X
+
+    // Posicionar el plano
+    plane.position.y = -1; // Ajusta la posición según sea necesario
+
+    // Habilitar sombras para el suelo
+    plane.receiveShadow = true;
+
+    // Agregar el plano a la escena
+    scene.add(plane);
+
+    const controls = new OrbitControls(camera, renderer.domElement);
+    camera.position.set(0, 0, 10); // Ajusta la posición de la cámara
+
+    // Actualizar el mixer en el bucle de renderizado
+    function render() {
+        requestAnimationFrame(render);
+
+        controls.update();
+        renderer.render(scene, camera);
+    }
+    render();
+
+    // Variables para controlar la velocidad de movimiento
+    const moveSpeed = 0.1;
+
+    // Escuchar eventos de teclado
+    window.addEventListener("keydown", (event) => {
+        switch (event.key) {
+            case "ArrowUp": // Mover hacia arriba en el eje Y
+                cube.position.y += moveSpeed;
+                break;
+            case "ArrowDown": // Mover hacia abajo en el eje Y
+                cube.position.y -= moveSpeed;
+                break;
+            case "ArrowLeft": // Mover hacia la izquierda en el eje X
+                cube.position.x -= moveSpeed;
+                break;
+            case "ArrowRight": // Mover hacia la derecha en el eje X
+                cube.position.x += moveSpeed;
+                break;
+            case "w": // Mover hacia adelante en el eje Z
+                cube.position.z -= moveSpeed;
+                break;
+            case "s": // Mover hacia atrás en el eje Z
+                cube.position.z += moveSpeed;
+                break;
+        }
+    });
+    //GSDevTools.create();
+</script>
