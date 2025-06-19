@@ -21,13 +21,15 @@ import ContactameInline from "../components/ContactameInline.astro";
                             data-bs-theme="dark"
                             class="fs-3 primer-sutitulo mb-0"
                         >
-                            Un unicornio es una startup valorada en <span class="text-white">más de mil millones</span> de dólares. 
+                            Un unicornio es una empresa valorada en <span
+                                class="text-white">más de mil millones</span
+                            > de dólares.
                         </p>
                         <p
                             data-bs-theme="dark"
                             class="fs-6 primer-sutitulo mt-2"
                         >
-                            Airbnb, Uber, Stripe, Rappi, ¿cuál es tu idea?
+                            Facebook, Uber, OnlyFans, Rappi, ¿cuál es tu idea?
                         </p>
                     </div>
                 </div>
@@ -112,12 +114,9 @@ import ContactameInline from "../components/ContactameInline.astro";
     import * as THREE from "three";
     import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
     import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
-    import { RGBELoader } from "three/examples/jsm/loaders/RGBELoader.js";
     import { DRACOLoader } from "three/examples/jsm/loaders/DRACOLoader.js";
     import { gsap } from "gsap";
     import { ScrollTrigger } from "gsap/ScrollTrigger";
-    import { GSDevTools } from "gsap/GSDevTools";
-    gsap.registerPlugin(GSDevTools);
 
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(
@@ -129,50 +128,36 @@ import ContactameInline from "../components/ContactameInline.astro";
 
     const renderer = new THREE.WebGLRenderer({
         powerPreference: "high-performance",
-        antialias: false, //TEMPORAL
+        antialias: true,
         alpha: true,
     });
     const deviceRatio = Math.min(window.devicePixelRatio, 1);
 
-    renderer.useLegacyLights = true;
     renderer.setSize(window.innerWidth, window.innerHeight);
-    renderer.shadowMap.enabled = false; //TEMPORAL
+    renderer.shadowMap.enabled = true;
     renderer.shadowMap.type = THREE.PCFSoftShadowMap;
     renderer.setPixelRatio(deviceRatio);
 
     renderer.setSize(window.innerWidth, window.innerHeight);
 
-    document.querySelector(".webgl").appendChild(renderer.domElement);
+    const webglContainer = document.querySelector(".webgl");
+    if (webglContainer) {
+        webglContainer.appendChild(renderer.domElement);
+    }
 
-    // CARGAR HDR
-    const rgbeLoader = new RGBELoader();
-    rgbeLoader.load(
-        "/assets/christmas_photo_studio_06_1k.hdr",
-        function (texture) {
-            texture.mapping = THREE.EquirectangularReflectionMapping;
-            scene.environment = texture;
-            //scene.background = texture;
-            scene.environmentIntensity = 0.5;
-        },
-    );
+    const Luz1 = agregarLuzSpot({
+        color: 0xffb5da,
+        intensidad: 2000,
+        posicion: { x: -8, y: 10, z: 15 },
+        agregarHelper: true,
+    });
 
-    const directionalLight_3 = new THREE.DirectionalLight(0xff00af, 2); // Color blanco, intensidad 1
-    directionalLight_3.position.x = -10;
-    directionalLight_3.position.y = 10;
-    directionalLight_3.position.z = -5;
-    scene.add(directionalLight_3);
-
-    const directionalLight_4 = new THREE.DirectionalLight(0xffffff, 3); // Color blanco, intensidad 1
-    directionalLight_4.position.x = 10;
-    directionalLight_4.position.y = -10;
-    directionalLight_4.position.z = 5;
-    scene.add(directionalLight_4);
-
-    const directionalLightHelper = new THREE.DirectionalLightHelper(
-        directionalLight_4,
-        1,
-    );
-    //scene.add(directionalLightHelper);
+    const Luz2 = agregarLuzSpot({
+        color: 0x87ceeb,
+        intensidad: 1000,
+        posicion: { x:18, y: 0, z: 5 },
+        agregarHelper: false,
+    });
 
     function defaultCoordenadas() {
         if (window.innerWidth > window.innerHeight) {
@@ -209,7 +194,7 @@ import ContactameInline from "../components/ContactameInline.astro";
 
             //Posición del cubo
             cube.position.x = 0.0;
-            cube.position.y = 0.5;
+            cube.position.y = 2.1;
             cube.position.z = 0.0;
 
             //Rotación del cubo
@@ -220,7 +205,7 @@ import ContactameInline from "../components/ContactameInline.astro";
         updateCameraInfo(); // Actualizar la información en pantalla
     }
 
-    function primerLoad(camera, cubeGroup) {
+    function primerLoad(camera: THREE.PerspectiveCamera, cubeGroup: THREE.Group) {
         const tlLoad = gsap.timeline({ id: "primerLoad" });
 
         if (window.innerWidth > window.innerHeight) {
@@ -240,25 +225,17 @@ import ContactameInline from "../components/ContactameInline.astro";
                     duration: 2,
                     ease: "back.inOut(1.7)",
                 })
-                .to(cubeGroup.position, {
-                    y: "+=0.5",
-                    duration: 1,
-                    ease: "sine.inOut",
-                    repeat: -1,
-                    yoyo: true,
-                    delay: -2,
-                })
                 .to(".primer-titulo", {
                     y: "0",
                     duration: 1,
                     ease: "sine.inOut",
-                    delay: -2,
+                    delay: -3.5,
                 })
                 .to(".primer-sutitulo", {
                     y: "0",
                     duration: 1,
                     ease: "sine.inOut",
-                    delay: -0.5,
+                    delay: -3,
                 });
         } else {
             tlLoad
@@ -306,7 +283,7 @@ import ContactameInline from "../components/ContactameInline.astro";
     const dracoLoader = new DRACOLoader();
     dracoLoader.setDecoderPath("/draco/");
     gltfLoader.setDRACOLoader(dracoLoader);
-    gltfLoader.load("/assets/scene.glb", (gltf) => {
+    gltfLoader.load("/assets/Unicorn.glb", (gltf) => {
         cube = gltf.scene;
         cube.scale.set(1, 1, 1); // Ajusta la escala del modelo
         const cubeGroup = new THREE.Group();
@@ -337,7 +314,7 @@ import ContactameInline from "../components/ContactameInline.astro";
             } else {
                 tl1.fromTo(
                     cube.position,
-                    { x: 0.0, y: 0.5, z: 0.0 },
+                    { x: 0.0, y: 2, z: 0.0 },
                     { x: 1.0, y: 3.0, z: 0.0, ease: "power1.out" },
                     0,
                 ).fromTo(
@@ -356,27 +333,58 @@ import ContactameInline from "../components/ContactameInline.astro";
 
     function updateCameraInfo() {
         const cameraInfoDiv = document.getElementById("camera-info");
-        cameraInfoDiv.innerHTML = `
-            //Posición de la cámara <br>
-            camera.position.x=${camera.position.x.toFixed(2)}<br>
-			camera.position.y=${camera.position.y.toFixed(2)}<br>
-			camera.position.z=${camera.position.z.toFixed(2)}<br>
+        if (cameraInfoDiv) {
+            cameraInfoDiv.innerHTML = `
+                //Posición de la cámara <br>
+                camera.position.x=${camera.position.x.toFixed(2)}<br>
+                camera.position.y=${camera.position.y.toFixed(2)}<br>
+                camera.position.z=${camera.position.z.toFixed(2)}<br>
 
-            <br><br>//Rotación de la cámara <br>
-            camera.rotation.x=${camera.rotation.x.toFixed(2)}<br>
-			camera.rotation.y=${camera.rotation.y.toFixed(2)}<br>
-			camera.rotation.z=${camera.rotation.z.toFixed(2)}<br>
+                <br><br>//Rotación de la cámara <br>
+                camera.rotation.x=${camera.rotation.x.toFixed(2)}<br>
+                camera.rotation.y=${camera.rotation.y.toFixed(2)}<br>
+                camera.rotation.z=${camera.rotation.z.toFixed(2)}<br>
 
-            <br><br>//Posición del cubo <br>
-            cube.position.x=${cube.position.x.toFixed(2)}<br>
-			cube.position.y=${cube.position.y.toFixed(2)}<br>
-			cube.position.z=${cube.position.z.toFixed(2)}<br>
+                <br><br>//Posición del cubo <br>
+                cube.position.x=${cube.position.x.toFixed(2)}<br>
+                cube.position.y=${cube.position.y.toFixed(2)}<br>
+                cube.position.z=${cube.position.z.toFixed(2)}<br>
 
-            <br><br>//Rotación del cubo <br>
-            cube.rotation.x=${cube.rotation.x.toFixed(2)}<br>
-			cube.rotation.y=${cube.rotation.y.toFixed(2)}<br>
-			cube.rotation.z=${cube.rotation.z.toFixed(2)}<br>
-        `;
+                <br><br>//Rotación del cubo <br>
+                cube.rotation.x=${cube.rotation.x.toFixed(2)}<br>
+                cube.rotation.y=${cube.rotation.y.toFixed(2)}<br>
+                cube.rotation.z=${cube.rotation.z.toFixed(2)}<br>
+            `;
+        }
+    }
+
+    function agregarLuzSpot({
+        color = 0xffffff,
+        intensidad = 1,
+        posicion = { x: 0, y: 0, z: 0 },
+        mapSize = { width: 48, height: 48 },
+        bias = -0.0001,
+        agregarHelper = false,
+    }) {
+        const luz = new THREE.SpotLight(color, intensidad);
+        luz.position.set(posicion.x, posicion.y, posicion.z);
+        luz.shadow.mapSize.width = mapSize.width;
+        luz.shadow.mapSize.height = mapSize.height;
+        luz.shadow.bias = bias;
+        luz.castShadow = true;
+
+        scene.add(luz);
+
+        if (agregarHelper) {
+
+            const helper = new THREE.CameraHelper(luz.shadow.camera);
+            scene.add(helper);
+
+            const spotLightHelper = new THREE.SpotLightHelper(luz, 0xff00ff);
+            scene.add(spotLightHelper);            
+        }
+
+        return luz;
     }
 
     function render() {
@@ -396,16 +404,6 @@ import ContactameInline from "../components/ContactameInline.astro";
         updateCameraInfo();
     });
 
-    function handleMouseMove(event) {
-        const x = (event.clientX / window.innerWidth) * 2 - 1; // Normalizar posición X
-        const y = (event.clientY / window.innerHeight) * 2 - 1; // Normalizar posición Y
-
-        cube.rotation.x = y * Math.PI; // Rotar en el eje X
-        cube.rotation.y = x * Math.PI; // Rotar en el eje Y
-
-        updateCameraInfo(); // Actualizar la información en pantalla
-    }
-
     gsap.registerPlugin(ScrollTrigger);
 
     let sectionTimeline = (
@@ -418,7 +416,7 @@ import ContactameInline from "../components/ContactameInline.astro";
                 scrollTrigger: {
                     ...{
                         trigger: "#" + section,
-                        scrub: true,
+                        scrub: 2,
                         start: "clamp(top bottom)",
                         end: "clamp(top top)",
                         // markers: true,
@@ -428,19 +426,5 @@ import ContactameInline from "../components/ContactameInline.astro";
         });
         callback(tl);
     };
-
-    // Asignar la función al evento
-    //window.addEventListener("mousemove", handleMouseMove);
-
-    function resizeCanvas() {
-        const width = window.innerWidth;
-        const height = window.innerHeight;
-        renderer.setSize(width, height);
-        camera.aspect = width / height;
-        camera.updateProjectionMatrix();
-    }
-    window.addEventListener("resize", resizeCanvas);
-    resizeCanvas(); // llamalo una vez al inicio
-
-    //GSDevTools.create();
+    
 </script>

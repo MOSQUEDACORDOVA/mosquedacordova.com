@@ -15,5 +15,8 @@
     "meshoptimizer": "^0.24.0",
     "sass": "^1.89.0",
     "three": "^0.177.0"
+  },
+  "devDependencies": {
+    "@types/three": "^0.177.0"
   }
 }

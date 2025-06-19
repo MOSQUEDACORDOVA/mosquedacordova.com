@@ -7,46 +7,6 @@ import Contactame from "../components/Contactame.astro";
 ---
 
 <Layout>
-	<div class="loading_temporal">
-		<div class="d-flex justify-content-center align-items-center">
-			<svg
-				xmlns="http://www.w3.org/2000/svg"
-				fill="none"
-				viewBox="0 0 452 149"
-				class="preloader"
-			>
-				<path
-					d="M6 139.034C6 139.034 67 17.0343 143 28.0343C209 37.0343 192 121.034 257 139.034C344 163.034 446 4.03427 446 4.03427"
-					stroke="white"
-					stroke-opacity="0.2"
-					stroke-width="13"></path>
-				<path
-					stroke="url(#gradientPreloader)"
-					stroke-width="13"
-					d="M6 139S67 17 143 28c66 9 49 93 114 111C344 163 446 4 446 4"
-				></path>
-				<defs>
-					<linearGradient
-						id="gradientPreloader"
-						x1="-20%"
-						x2="0%"
-						y1="72.7"
-						y2="72.7"
-						gradientUnits="userSpaceOnUse"
-					>
-						<stop offset="0%" stop-color="#ff8709" stop-opacity="0"
-						></stop>
-						<stop offset="30%" stop-color="#ff8709"></stop>
-						<stop offset="70%" stop-color="#f7bdf8"></stop>
-						<stop
-							offset="100%"
-							stop-color="#f7bdf8"
-							stop-opacity="0"></stop>
-					</linearGradient>
-				</defs>
-			</svg>
-		</div>
-	</div>
 	<div class="mascara_divider_1">
 		<div class="mascara_puzzle_background"></div>
 	</div>
@@ -67,7 +27,7 @@ import Contactame from "../components/Contactame.astro";
 
 	<div
 		class="container justify-content-center flex-column align-items-center gap-2 contenedor_fuera_de_mascara mb-5"
-		style="display: none;"
+		
 	>
 		<div class="mascara_tarjeta_2 mb-5">
 			<div class="row justify-content-center align-items-center">
@@ -80,7 +40,7 @@ import Contactame from "../components/Contactame.astro";
 		</div>
 		<a
 			href="https://www.instagram.com/imosquedacordova/"
-			class="card border col-12 col-md-9 otras_tarjetas"
+			class="card border col-12 col-md-9 otras_tarjetas overflow-hidden"
 			target="_blank"
 			data-bs-theme="dark"
 		>
@@ -549,31 +509,6 @@ import Contactame from "../components/Contactame.astro";
 	html {
 		background-color: #000;
 	}
-	.loading_temporal {
-		content: " ";
-		display: block;
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		top: 0;
-		left: 0;
-		background-color: #000;
-		z-index: 99;
-		pointer-events: none;
-		overflow: hidden;
-	}
-	.loading_temporal div {
-		width: 100vw;
-		height: 100vh;
-	}
-	.preloader {
-		width: 22vw;
-	}
-	@media (max-width: 767px) {
-		.preloader {
-			width: 42vw;
-		}
-	}
 </style>
 
 <style is:global>
@@ -699,9 +634,7 @@ import Contactame from "../components/Contactame.astro";
 
 <script>
 	import { gsap } from "gsap";
-	import { GSDevTools } from "gsap/GSDevTools";
 	import { ScrollTrigger } from "gsap/ScrollTrigger";
-	gsap.registerPlugin(GSDevTools);
 	gsap.registerPlugin(ScrollTrigger);
 
 	gsap.to(".mascara_content", {
@@ -761,6 +694,5 @@ import Contactame from "../components/Contactame.astro";
 		opacity: 1,
 	});
 
-	//GSDevTools.create();
 </script>
 <script src="../scripts/instagram.js"></script>

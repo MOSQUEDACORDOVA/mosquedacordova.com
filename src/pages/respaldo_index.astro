@@ -1,0 +1,446 @@
+---
+import LayoutIntro from "../layouts/LayoutIntro.astro";
+import ContactameInline from "../components/ContactameInline.astro";
+---
+
+<LayoutIntro>
+    <main>
+        <section class="scrollers" id="hero">
+            <div class="container h-100">
+                <div
+                    class="col-md-6 d-flex flex-column justify-content-end justify-content-md-center h-100"
+                >
+                    <div class="overflow-hidden">
+                        <h1
+                            data-bs-theme="dark"
+                            class="display-1 primer-titulo"
+                        >
+                            Juntos podemos construirlo...
+                        </h1>
+                        <p
+                            data-bs-theme="dark"
+                            class="fs-3 primer-sutitulo mb-0"
+                        >
+                            Un unicornio es una empresa valorada en <span
+                                class="text-white">más de mil millones</span
+                            > de dólares.
+                        </p>
+                        <p
+                            data-bs-theme="dark"
+                            class="fs-6 primer-sutitulo mt-2"
+                        >
+                            Facebook, Uber, OnlyFans, Rappi, ¿cuál es tu idea?
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="scrollers" id="call-to-action">
+            <div class="container h-100 pb-5">
+                <div class="row justify-content-end h-100">
+                    <div
+                        class="col-md-8 d-flex flex-column justify-content-end justify-content-md-center h-100 text-end align-items-end"
+                    >
+                        <div class="overflow-hidden">
+                            <h1
+                                data-bs-theme="dark"
+                                class="display-1 segundo-titulo"
+                            >
+                                Comencemos con la mejor decisión.
+                            </h1>
+                        </div>
+                        <div
+                            class="d-flex flex-column flex-md-row justify-content-end mt-4 align-items-center gap-2"
+                        >
+                            <div class="w-100"><ContactameInline /></div>
+                            <a
+                                class="boton_rgb py-3 px-4 rounded border border-secondary w-100 text-center text-white"
+                                href="/overview"
+                                data-bs-theme="dark"
+                            >
+                                Quiero saber más
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div class="webgl"></div>
+    <div id="camera-info">Cargando posición de la cámara...</div>
+</LayoutIntro>
+<style>
+    .boton_rgb {
+        background-color: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        padding: 2px;
+    }
+    .primer-titulo,
+    .primer-sutitulo {
+        transform: translateY(100vh);
+    }
+    .scrollers {
+        height: 100svh;
+        /* border-bottom: 1px solid #f00; */
+        background-color: #000;
+    }
+
+    .webgl {
+        padding: 0;
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100vh;
+        z-index: 0;
+        pointer-events: none;
+        line-height: 0;
+    }
+    #camera-info {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        padding: 10px;
+        border-radius: 5px;
+        font-family: monospace;
+        z-index: 10000;
+        display: none;
+    }
+</style>
+
+<script>
+    import * as THREE from "three";
+    import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
+    import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
+    import { DRACOLoader } from "three/examples/jsm/loaders/DRACOLoader.js";
+    import { gsap } from "gsap";
+    import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(
+        32,
+        window.innerWidth / window.innerHeight,
+        0.1,
+        100,
+    );
+
+    const renderer = new THREE.WebGLRenderer({
+        powerPreference: "high-performance",
+        antialias: true,
+        alpha: true,
+    });
+    const deviceRatio = Math.min(window.devicePixelRatio, 1);
+
+    renderer.useLegacyLights = true;
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.shadowMap.enabled = true;
+    renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+    renderer.setPixelRatio(deviceRatio);
+
+    renderer.setSize(window.innerWidth, window.innerHeight);
+
+    document.querySelector(".webgl").appendChild(renderer.domElement);
+
+    const Luz1 = agregarLuzSpot({
+        color: 0xff69b4,
+        intensidad: 300,
+        posicion: { x: -8, y: 5, z: 5 },
+        agregarHelper: false,
+    });
+
+    const Luz2 = agregarLuzSpot({
+        color: 0x87ceeb,
+        intensidad: 300,
+        posicion: { x:18, y: 0, z: 5 },
+        agregarHelper: false,
+    });
+   
+
+    function defaultCoordenadas() {
+        if (window.innerWidth > window.innerHeight) {
+            // Landscape
+            //Posición de la cámara
+            camera.position.x = 76.85;
+            camera.position.y = 1.11;
+            camera.position.z = 2.05;
+
+            //Rotación de la cámara
+            camera.rotation.x = -0.5;
+            camera.rotation.y = 1.54;
+            camera.rotation.z = 0.5;
+
+            //Posición del cubo
+            cube.position.x = 3.0;
+            cube.position.y = -1.0;
+            cube.position.z = 0.0;
+
+            //Rotación del cubo
+            cube.rotation.x = 0.0;
+            cube.rotation.y = 0.0;
+            cube.rotation.z = 0.0;
+        } else {
+            //Posición de la cámara
+            camera.position.x = 76.85;
+            camera.position.y = 1.11;
+            camera.position.z = 2.05;
+
+            //Rotación de la cámara
+            camera.rotation.x = -0.5;
+            camera.rotation.y = 1.54;
+            camera.rotation.z = 0.5;
+
+            //Posición del cubo
+            cube.position.x = 0.0;
+            cube.position.y = 2.1;
+            cube.position.z = 0.0;
+
+            //Rotación del cubo
+            cube.rotation.x = 0.0;
+            cube.rotation.y = 0.0;
+            cube.rotation.z = 0.0;
+        }
+        updateCameraInfo(); // Actualizar la información en pantalla
+    }
+
+    function primerLoad(camera, cubeGroup) {
+        const tlLoad = gsap.timeline({ id: "primerLoad" });
+
+        if (window.innerWidth > window.innerHeight) {
+            // Landscape
+            tlLoad
+                .to(camera.position, {
+                    x: 3.79,
+                    y: 0.91,
+                    z: 17.98,
+                    duration: 2,
+                    ease: "back.inOut(1.7)",
+                })
+                .to(camera.rotation, {
+                    x: -0.05,
+                    y: 0.21,
+                    z: 0.01,
+                    duration: 2,
+                    ease: "back.inOut(1.7)",
+                })
+                .to(".primer-titulo", {
+                    y: "0",
+                    duration: 1,
+                    ease: "sine.inOut",
+                    delay: -2,
+                })
+                .to(".primer-sutitulo", {
+                    y: "0",
+                    duration: 1,
+                    ease: "sine.inOut",
+                    delay: -0.5,
+                });
+        } else {
+            tlLoad
+                .to(camera.position, {
+                    x: 5.29,
+                    y: 1.27,
+                    z: 25.08,
+                    duration: 2,
+                    ease: "back.inOut(1.7)",
+                })
+                .to(camera.rotation, {
+                    x: -0.05,
+                    y: 0.21,
+                    z: 0.01,
+                    duration: 2,
+                    ease: "back.inOut(1.7)",
+                })
+                .to(cubeGroup.position, {
+                    y: "+=0.5",
+                    duration: 1,
+                    ease: "sine.inOut",
+                    repeat: -1,
+                    yoyo: true,
+                    delay: -2,
+                })
+                .to(".primer-titulo", {
+                    y: "0",
+                    duration: 1,
+                    ease: "sine.inOut",
+                    delay: -2,
+                })
+                .to(".primer-sutitulo", {
+                    y: "0",
+                    duration: 1,
+                    ease: "sine.inOut",
+                    delay: -0.5,
+                });
+        }
+        return tlLoad;
+    }
+
+    // CUBE
+    let cube: THREE.Object3D;
+    const gltfLoader = new GLTFLoader();
+    const dracoLoader = new DRACOLoader();
+    dracoLoader.setDecoderPath("/draco/");
+    gltfLoader.setDRACOLoader(dracoLoader);
+    gltfLoader.load("/assets/scene.glb", (gltf) => {
+        cube = gltf.scene;
+        cube.scale.set(1, 1, 1); // Ajusta la escala del modelo
+        const cubeGroup = new THREE.Group();
+        cubeGroup.add(cube);
+        scene.add(cubeGroup);
+
+        //1 call-to-action
+        sectionTimeline("call-to-action", (tl1) => {
+            if (window.innerWidth > window.innerHeight) {
+                tl1.fromTo(
+                    camera.position,
+                    { x: 3.79, y: 0.91, z: 17.98 },
+                    { x: 3.79, y: 0.91, z: 17.98, ease: "power1.out" },
+                    0,
+                )
+                    .fromTo(
+                        cube.position,
+                        { x: 3.0, y: -1.0, z: 0.0 },
+                        { x: -3.0, y: 0.0, z: 0.0, ease: "power1.out" },
+                        0,
+                    )
+                    .fromTo(
+                        cube.rotation,
+                        { x: 0.0, y: 0.0, z: 0.0 },
+                        { x: 0.0, y: 3.19, z: 0.0, ease: "power1.out" },
+                        0,
+                    );
+            } else {
+                tl1.fromTo(
+                    cube.position,
+                    { x: 0.0, y: 2, z: 0.0 },
+                    { x: 1.0, y: 3.0, z: 0.0, ease: "power1.out" },
+                    0,
+                ).fromTo(
+                    cube.rotation,
+                    { x: 0.0, y: 0.0, z: 0.0 },
+                    { x: 0.0, y: 3.0, z: 0.0, ease: "power1.out" },
+                    0,
+                );
+            }
+        });
+        defaultCoordenadas();
+        primerLoad(camera, cubeGroup);
+    });
+
+    const controls = new OrbitControls(camera, renderer.domElement);
+
+    function updateCameraInfo() {
+        const cameraInfoDiv = document.getElementById("camera-info");
+        cameraInfoDiv.innerHTML = `
+            //Posición de la cámara <br>
+            camera.position.x=${camera.position.x.toFixed(2)}<br>
+			camera.position.y=${camera.position.y.toFixed(2)}<br>
+			camera.position.z=${camera.position.z.toFixed(2)}<br>
+
+            <br><br>//Rotación de la cámara <br>
+            camera.rotation.x=${camera.rotation.x.toFixed(2)}<br>
+			camera.rotation.y=${camera.rotation.y.toFixed(2)}<br>
+			camera.rotation.z=${camera.rotation.z.toFixed(2)}<br>
+
+            <br><br>//Posición del cubo <br>
+            cube.position.x=${cube.position.x.toFixed(2)}<br>
+			cube.position.y=${cube.position.y.toFixed(2)}<br>
+			cube.position.z=${cube.position.z.toFixed(2)}<br>
+
+            <br><br>//Rotación del cubo <br>
+            cube.rotation.x=${cube.rotation.x.toFixed(2)}<br>
+			cube.rotation.y=${cube.rotation.y.toFixed(2)}<br>
+			cube.rotation.z=${cube.rotation.z.toFixed(2)}<br>
+        `;
+    }
+
+    function agregarLuzSpot({
+        color = 0xffffff,
+        intensidad = 1,
+        posicion = { x: 0, y: 0, z: 0 },
+        mapSize = { width: 48, height: 48 },
+        bias = -0.0001,
+        agregarHelper = false,
+    }) {
+        const luz = new THREE.SpotLight(color, intensidad);
+        luz.position.set(posicion.x, posicion.y, posicion.z);
+        luz.shadow.mapSize.width = mapSize.width;
+        luz.shadow.mapSize.height = mapSize.height;
+        luz.shadow.bias = bias;
+        scene.add(luz);
+
+        if (agregarHelper) {
+            const spotLightHelper = new THREE.SpotLightHelper(luz, 1);
+            scene.add(spotLightHelper);
+
+            const cameraHelper = new THREE.CameraHelper(luz.shadow.camera);
+            scene.add(cameraHelper);
+        }
+
+        return luz;
+    }
+
+    function render() {
+        requestAnimationFrame(render);
+        controls.update();
+        renderer.render(scene, camera);
+    }
+    render();
+
+    // Detectar cuando comienza el arrastre
+    window.addEventListener("mousedown", () => {
+        updateCameraInfo();
+    });
+
+    // Detectar cuando termina el arrastre
+    window.addEventListener("mouseup", () => {
+        updateCameraInfo();
+    });
+
+    function handleMouseMove(event) {
+        const x = (event.clientX / window.innerWidth) * 2 - 1; // Normalizar posición X
+        const y = (event.clientY / window.innerHeight) * 2 - 1; // Normalizar posición Y
+
+        cube.rotation.x = y * Math.PI; // Rotar en el eje X
+        cube.rotation.y = x * Math.PI; // Rotar en el eje Y
+
+        updateCameraInfo(); // Actualizar la información en pantalla
+    }
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    let sectionTimeline = (
+        section: string,
+        callback: (tl: gsap.core.Timeline) => void,
+    ) => {
+        let tl = gsap.timeline({
+            ...{
+                onUpdate: render,
+                scrollTrigger: {
+                    ...{
+                        trigger: "#" + section,
+                        scrub: 2,
+                        start: "clamp(top bottom)",
+                        end: "clamp(top top)",
+                        // markers: true,
+                    },
+                },
+            },
+        });
+        callback(tl);
+    };
+
+    // Asignar la función al evento
+    //window.addEventListener("mousemove", handleMouseMove);
+
+    function resizeCanvas() {
+        const width = window.innerWidth;
+        const height = window.innerHeight;
+        renderer.setSize(width, height);
+        camera.aspect = width / height;
+        camera.updateProjectionMatrix();
+    }
+    window.addEventListener("resize", resizeCanvas);
+    resizeCanvas();
+</script>

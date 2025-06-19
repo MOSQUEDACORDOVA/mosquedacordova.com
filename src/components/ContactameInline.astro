@@ -120,10 +120,8 @@
   import { gsap } from "gsap";
   import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
   import { MotionPathPlugin } from "gsap/MotionPathPlugin";
-  import { GSDevTools } from "gsap/GSDevTools";
   gsap.registerPlugin(DrawSVGPlugin);
   gsap.registerPlugin(MotionPathPlugin);
-  gsap.registerPlugin(GSDevTools);
 
   gsap.to(".animacion_rgb", {
     duration: 5,
@@ -137,5 +135,4 @@
     },
   });
 
-  //GSDevTools.create();
 </script>
