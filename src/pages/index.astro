@@ -128,10 +128,10 @@ import ContactameInline from "../components/ContactameInline.astro";
 
     const renderer = new THREE.WebGLRenderer({
         powerPreference: "high-performance",
-        antialias: true,
+        antialias: false,
         alpha: true,
     });
-    const deviceRatio = Math.min(window.devicePixelRatio, 1);
+    const deviceRatio = Math.min(window.devicePixelRatio, 0.8);
 
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.shadowMap.enabled = true;
@@ -149,13 +149,13 @@ import ContactameInline from "../components/ContactameInline.astro";
         color: 0xffb5da,
         intensidad: 2000,
         posicion: { x: -8, y: 10, z: 15 },
-        agregarHelper: true,
+        agregarHelper: false,
     });
 
     const Luz2 = agregarLuzSpot({
         color: 0x87ceeb,
         intensidad: 1000,
-        posicion: { x:18, y: 0, z: 5 },
+        posicion: { x: 18, y: 0, z: 5 },
         agregarHelper: false,
     });
 
@@ -194,7 +194,11 @@ import ContactameInline from "../components/ContactameInline.astro";
 
             //Posición del cubo
             cube.position.x = 0.0;
-            cube.position.y = 2.1;
+            if (window.innerHeight < 800) {
+                cube.position.y = 2;
+            } else {
+                cube.position.y = 0;
+            }
             cube.position.z = 0.0;
 
             //Rotación del cubo
@@ -205,7 +209,10 @@ import ContactameInline from "../components/ContactameInline.astro";
         updateCameraInfo(); // Actualizar la información en pantalla
     }
 
-    function primerLoad(camera: THREE.PerspectiveCamera, cubeGroup: THREE.Group) {
+    function primerLoad(
+        camera: THREE.PerspectiveCamera,
+        cubeGroup: THREE.Group,
+    ) {
         const tlLoad = gsap.timeline({ id: "primerLoad" });
 
         if (window.innerWidth > window.innerHeight) {
@@ -312,17 +319,31 @@ import ContactameInline from "../components/ContactameInline.astro";
                         0,
                     );
             } else {
-                tl1.fromTo(
-                    cube.position,
-                    { x: 0.0, y: 2, z: 0.0 },
-                    { x: 1.0, y: 3.0, z: 0.0, ease: "power1.out" },
-                    0,
-                ).fromTo(
-                    cube.rotation,
-                    { x: 0.0, y: 0.0, z: 0.0 },
-                    { x: 0.0, y: 3.0, z: 0.0, ease: "power1.out" },
-                    0,
-                );
+                if (window.innerHeight < 800) {
+                    tl1.fromTo(
+                        cube.position,
+                        { x: 0.0, y: 2, z: 0.0 },
+                        { x: 1.0, y: 3.0, z: 0.0, ease: "power1.out" },
+                        0,
+                    ).fromTo(
+                        cube.rotation,
+                        { x: 0.0, y: 0.0, z: 0.0 },
+                        { x: 0.0, y: 3.0, z: 0.0, ease: "power1.out" },
+                        0,
+                    );
+                } else {
+                    tl1.fromTo(
+                        cube.position,
+                        { x: 0.0, y: 0, z: 0.0 },
+                        { x: 1.0, y: 1.5, z: 0.0, ease: "power1.out" },
+                        0,
+                    ).fromTo(
+                        cube.rotation,
+                        { x: 0.0, y: 0.0, z: 0.0 },
+                        { x: 0.0, y: 3.0, z: 0.0, ease: "power1.out" },
+                        0,
+                    );
+                }
             }
         });
         defaultCoordenadas();
@@ -376,12 +397,11 @@ import ContactameInline from "../components/ContactameInline.astro";
         scene.add(luz);
 
         if (agregarHelper) {
-
             const helper = new THREE.CameraHelper(luz.shadow.camera);
             scene.add(helper);
 
             const spotLightHelper = new THREE.SpotLightHelper(luz, 0xff00ff);
-            scene.add(spotLightHelper);            
+            scene.add(spotLightHelper);
         }
 
         return luz;
@@ -412,11 +432,10 @@ import ContactameInline from "../components/ContactameInline.astro";
     ) => {
         let tl = gsap.timeline({
             ...{
-                onUpdate: render,
                 scrollTrigger: {
                     ...{
                         trigger: "#" + section,
-                        scrub: 2,
+                        scrub: true,
                         start: "clamp(top bottom)",
                         end: "clamp(top top)",
                         // markers: true,
@@ -426,5 +445,4 @@ import ContactameInline from "../components/ContactameInline.astro";
         });
         callback(tl);
     };
-    
 </script>

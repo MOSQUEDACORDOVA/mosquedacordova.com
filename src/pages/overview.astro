@@ -2,8 +2,9 @@
 import Welcome from "../components/Welcome.astro";
 import Layout from "../layouts/Layout.astro";
 import Contactame from "../components/Contactame.astro";
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import { Image } from "astro:assets";
+import ProfileAstronaut from "../assets/profile_astronaut.png";
+import ProfileSaas from "../assets/landing-saas.png";
 ---
 
 <Layout>
@@ -27,7 +28,6 @@ import Contactame from "../components/Contactame.astro";
 
 	<div
 		class="container justify-content-center flex-column align-items-center gap-2 contenedor_fuera_de_mascara mb-5"
-		
 	>
 		<div class="mascara_tarjeta_2 mb-5">
 			<div class="row justify-content-center align-items-center">
@@ -49,7 +49,19 @@ import Contactame from "../components/Contactame.astro";
 					<h3 class="fs-4 fw-bold">Actividad</h3>
 				</div>
 				<div class="d-flex mb-3 align-items-center gap-2">
-					<i class="hgi hgi-stroke hgi-instagram fs-5 text-secondary"></i>
+					<svg
+						viewBox="0 0 28 28"
+						width="1.2rem"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+						><path
+							d="M25.3 14c0-3 0-5.2-.2-6.8-.2-1.5-.6-2.4-1.2-3-.7-.7-1.5-1.1-3.1-1.3-1.6-.2-3.8-.2-6.8-.2s-5.2 0-6.8.2c-1.5.2-2.4.6-3 1.2-.7.7-1.1 1.6-1.3 3.1-.2 1.6-.2 3.8-.2 6.8s0 5.2.2 6.8c.2 1.5.6 2.4 1.2 3 .7.7 1.6 1.1 3.1 1.3 1.6.2 3.8.2 6.8.2s5.2 0 6.8-.2c1.6-.2 2.4-.6 3-1.2.7-.7 1.1-1.6 1.3-3.1.2-1.6.2-3.8.2-6.8Zm2.7 0c0 3 0 5.3-.2 7.1a7.6 7.6 0 0 1-2 4.7 7.6 7.6 0 0 1-4.7 2c-1.8.2-4.2.2-7.1.2-3 0-5.3 0-7.1-.2a7.6 7.6 0 0 1-4.7-2 7.6 7.6 0 0 1-2-4.7C0 19.3 0 17 0 14s0-5.3.2-7.1c.3-1.9.8-3.4 2-4.7A7.6 7.6 0 0 1 7 .2C8.7 0 11 0 14 0s5.3 0 7.1.2c1.9.3 3.4.8 4.7 2a7.6 7.6 0 0 1 2 4.7c.2 1.8.2 4.2.2 7.1Z"
+							fill="#a0acb7"></path><path
+							d="M18.7 14a4.7 4.7 0 1 0-9.4 0 4.7 4.7 0 0 0 9.4 0Zm2.6 0a7.3 7.3 0 1 1-14.6 0 7.3 7.3 0 0 1 14.6 0Z"
+							fill="#a0acb7"></path><path
+							d="M21.3 5.3a1.3 1.3 0 1 1 0 2.7 1.3 1.3 0 1 1 0-2.7Z"
+							fill="#a0acb7"></path></svg
+					>
 					imosquedacordova
 				</div>
 				<div class="card border">
@@ -63,8 +75,17 @@ import Contactame from "../components/Contactame.astro";
 								para inspirarte. . .
 							</div>
 						</div>
-						<i class="hgi hgi-stroke hgi-circle-arrow-right-02 fs-3 text-secondary"
-						></i>
+						<svg
+							viewBox="0 0 30 30"
+							width="1.6rem"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+							><path
+								d="M26.67 15a12 12 0 1 0-24 0 12 12 0 0 0 24 0Zm2.67 0A14.67 14.67 0 1 1 0 15a14.67 14.67 0 0 1 29.34 0Z"
+								fill="#a0acb7"></path><path
+								d="M14.26 9.54c.41-.55 1.17-.7 1.75-.36l.12.08.01.01.04.03a28.39 28.39 0 0 1 .7.54c.45.35 1.06.83 1.66 1.36.6.52 1.24 1.11 1.73 1.67.25.28.49.58.67.89.17.27.4.72.4 1.24 0 .53-.23.97-.4 1.24-.18.3-.42.61-.67.9a21.1 21.1 0 0 1-1.73 1.66 41.98 41.98 0 0 1-2.2 1.78l-.16.12-.04.03h-.01v.01l-.12.08a1.33 1.33 0 0 1-1.47-2.23h.02l.03-.03a41.36 41.36 0 0 0 2.71-2.23H9.34a1.33 1.33 0 1 1 0-2.66h7.96a25.54 25.54 0 0 0-2.06-1.73l-.5-.4-.15-.1-.04-.03a1.33 1.33 0 0 1-.29-1.87Z"
+								fill="#a0acb7"></path></svg
+						>
 					</div>
 				</div>
 				<div id="instagramLoadingImg"></div>
@@ -78,22 +99,43 @@ import Contactame from "../components/Contactame.astro";
 				class="card-footer d-flex align-items-center justify-content-center gap-2"
 			>
 				Ver más en instagram
-				<i class="hgi hgi-stroke hgi-share-01 fs-4 text-secondary"></i>
+				<svg
+					viewBox="0 0 27 28"
+					width="1.2rem"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+					><path
+						d="M0 14c0-2.8 0-5.02.23-6.77.24-1.78.75-3.26 1.92-4.42a6.66 6.66 0 0 1 3.54-1.77c1.35-.28 3-.35 4.96-.37a1.33 1.33 0 1 1 .03 2.66c-1.96.02-3.38.1-4.46.32-1.05.21-1.7.55-2.19 1.04-.59.6-.96 1.41-1.16 2.9-.2 1.52-.2 3.54-.2 6.4 0 2.87 0 4.89.2 6.41.2 1.5.57 2.3 1.16 2.9.6.59 1.41.96 2.9 1.16 1.52.2 3.54.2 6.4.2 2.87 0 4.9 0 6.42-.2 1.48-.2 2.3-.57 2.9-1.16.48-.5.82-1.14 1.03-2.19.22-1.08.3-2.5.32-4.46a1.33 1.33 0 0 1 2.67.03 28 28 0 0 1-.38 4.97 6.67 6.67 0 0 1-1.76 3.53c-1.17 1.17-2.65 1.68-4.43 1.92-1.74.24-3.97.23-6.76.23-2.8 0-5.02 0-6.77-.23-1.78-.24-3.25-.75-4.42-1.92C.98 24.02.47 22.54.23 20.76 0 19.02 0 16.79 0 14Zm12.94 2.28a1.33 1.33 0 0 1-1.88-1.89l1.88 1.89ZM24 11.33V5.22L12.93 16.28l-.94-.95-.94-.94L22.1 3.34H16a1.33 1.33 0 1 1 0-2.67h5.33c.9 0 1.72 0 2.38.08.69.1 1.4.31 1.98.9.58.57.8 1.29.9 1.98.06.49.07 1.07.08 1.71v6a1.33 1.33 0 1 1-2.67 0Z"
+						fill="#a0acb7"></path></svg
+				>
 			</div>
 		</a>
-		<a
-			href="https://profe-de-ingles-64fd4.web.app/"
+		<div
 			class="card border col-12 col-md-9 otras_tarjetas"
-			target="_blank"
 			data-bs-theme="dark"
 		>
 			<div class="card-body">
 				<div class="d-flex gap-2 align-items-center mb-3">
-					<i class="hgi hgi-stroke hgi-star-award-02 fs-2 text-secondary"
-					></i>
-					<h3 class="fs-4 mb-0 fw-bold">Último proyecto</h3>
+					<svg
+						viewBox="0 0 23 30"
+						width="1.2rem"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+						><path
+							d="M20.34 11.67a8.67 8.67 0 1 0-17.34 0 8.67 8.67 0 0 0 17.34 0Zm2.66 0a11.33 11.33 0 1 1-22.66 0 11.33 11.33 0 0 1 22.66 0Z"
+							fill="#a0acb7"></path><path
+							d="M15.27 7.73a1.33 1.33 0 1 1 .8 2.54c-1.05.33-2.35 1.43-3.49 2.64a25 25 0 0 0-1.8 2.16l-.02.03A1.34 1.34 0 0 1 8.5 15c-.4-.72-.75-.98-.9-1.07a.57.57 0 0 0-.09-.04 1.33 1.33 0 0 1 .15-2.66v1.07-1.07h.04a1.86 1.86 0 0 1 .46.07c.23.06.5.16.8.34.23.14.47.31.71.54.28-.33.6-.7.96-1.08 1.15-1.23 2.86-2.8 4.63-3.36ZM7.6 13.89h.07-.1.03Z"
+							fill="#a0acb7"></path><path
+							d="M20.38 23c.28 1.35.51 2.47.6 3.33.07.82.05 1.84-.65 2.62-.37.4-.84.65-1.38.7-.49.05-.95-.05-1.32-.18-.72-.25-1.61-.74-2.59-1.27l-3.03-1.66-.3-.17-.04-.02-.04.02-.3.17L8.3 28.2c-.98.53-1.87 1.02-2.6 1.27-.37.13-.83.23-1.3.18a2.13 2.13 0 0 1-1.4-.7c-.7-.78-.7-1.8-.64-2.62.08-.86.32-1.98.6-3.32l.9-4.28 2.6.54-.89 4.28A31.06 31.06 0 0 0 5 26.88c.44-.17 1.06-.5 2.01-1.02l3.04-1.66c.22-.12.46-.26.68-.35.25-.11.56-.21.94-.21h.14c.31.02.58.11.8.2.22.1.46.24.68.36l3.03 1.66c.96.52 1.57.85 2.01 1.02l-.01-.3c-.07-.68-.26-1.62-.55-3.03l-.9-4.28 2.61-.54.9 4.28Z"
+							fill="#a0acb7"></path></svg
+					>
+					<h3 class="fs-4 mb-0 fw-bold">Últimos proyectos</h3>
 				</div>
-				<div class="card border">
+				<a
+					href="https://profe-de-ingles-64fd4.web.app/"
+					target="_blank"
+					class="card border"
+				>
 					<div class="card-body">
 						<div class="d-flex gap-1 gap-md-2">
 							<div class="col-2 col-md-1">
@@ -125,9 +167,18 @@ import Contactame from "../components/Contactame.astro";
 										<div
 											class="d-flex gap-2 align-items-center"
 										>
-											<i
-												class="hgi hgi-stroke hgi-play-circle fs-3 text-secondary"
-											></i>
+											<svg
+												viewBox="0 0 30 30"
+												width="1.6rem"
+												fill="none"
+												xmlns="http://www.w3.org/2000/svg"
+												><path
+													d="M26.667 15c0-6.628-5.372-12-12-12-6.627 0-12 5.372-12 12 0 6.627 5.373 12 12 12 6.628 0 12-5.373 12-12Zm2.667 0c0 8.1-6.567 14.666-14.667 14.666S.001 23.1.001 15C.001 6.9 6.567.335 14.667.333 22.767.333 29.334 6.9 29.334 15Z"
+													fill="#a0acb7"></path><path
+													d="M11.914 9.094c.851-.225 1.668-.013 2.4.277.73.29 1.614.762 2.662 1.318 1.085.575 2 1.057 2.661 1.508.608.415 1.24.954 1.523 1.751l.052.163.053.22a3.27 3.27 0 0 1-.053 1.557c-.25.888-.926 1.472-1.575 1.914-.662.451-1.576.935-2.66 1.51-1.049.555-1.933 1.026-2.664 1.316-.73.29-1.547.503-2.4.277a3.545 3.545 0 0 1-1.522-.841c-.66-.622-.875-1.446-.967-2.208-.092-.757-.09-1.727-.09-2.856 0-1.129-.002-2.099.09-2.855.092-.763.307-1.587.967-2.21.43-.403.955-.69 1.523-.841ZM12 15c0 1.2.002 1.977.07 2.534.032.267.073.422.107.51.016.04.029.06.035.07l.005.007.001.001a.875.875 0 0 0 .376.205c.017.005.174.045.734-.177.562-.224 1.293-.61 2.398-1.195 1.143-.605 1.898-1.008 2.408-1.356.395-.27.492-.41.51-.44a.602.602 0 0 0 0-.319c-.018-.03-.116-.17-.51-.438-.51-.348-1.265-.752-2.408-1.358-1.104-.586-1.836-.971-2.398-1.194-.56-.222-.716-.182-.734-.178a.875.875 0 0 0-.376.205l-.002.002-.004.007a.38.38 0 0 0-.035.07 2.191 2.191 0 0 0-.107.509C12.002 13.023 12 13.8 12 15Z"
+													fill="#a0acb7"></path></svg
+											>
+
 											<div class="text-white">
 												Ver proyecto
 											</div>
@@ -137,9 +188,134 @@ import Contactame from "../components/Contactame.astro";
 							</div>
 						</div>
 					</div>
-				</div>
+				</a>
+				<a href="https://landing-page-astronauta-astro.web.app/" target="_blank" class="card border mt-2">
+					<div class="card-body">
+						<div class="d-flex gap-1 gap-md-2">
+							<div class="col-2 col-md-1">
+								<div class="rounded-pill border border-white">
+									<Image
+										src={ProfileAstronaut}
+										alt="Astronauta"
+										class="img-fluid rounded-pill"
+									/>
+								</div>
+							</div>
+							<div class="col-10 col-md-11">
+								<div class="">
+									<div>
+										<h6 class="mb-0">
+											Landing Page for the Astronaut
+											Developer
+										</h6>
+										<div class="small">06/06/2025</div>
+										<div class="small">
+											<strong class="text-white"
+												>Tecnologías:</strong
+											>
+											ThreeJS, Gsap, Astro, Firebase + Más.
+											. .
+										</div>
+									</div>
+									<div class="mt-2">
+										Desarrollé este script para ayudarte a
+										impresionar a tus clientes con una
+										landing page innovadora y única. No es
+										una landing page completa; mi objetivo
+										es ahorrarte tiempo integrando GSAP y
+										Three.js.
+									</div>
+									<div class="btn btn-outline-primary mt-2">
+										<div
+											class="d-flex gap-2 align-items-center"
+										>
+											<svg
+												viewBox="0 0 30 30"
+												width="1.6rem"
+												fill="none"
+												xmlns="http://www.w3.org/2000/svg"
+												><path
+													d="M26.667 15c0-6.628-5.372-12-12-12-6.627 0-12 5.372-12 12 0 6.627 5.373 12 12 12 6.628 0 12-5.373 12-12Zm2.667 0c0 8.1-6.567 14.666-14.667 14.666S.001 23.1.001 15C.001 6.9 6.567.335 14.667.333 22.767.333 29.334 6.9 29.334 15Z"
+													fill="#a0acb7"></path><path
+													d="M11.914 9.094c.851-.225 1.668-.013 2.4.277.73.29 1.614.762 2.662 1.318 1.085.575 2 1.057 2.661 1.508.608.415 1.24.954 1.523 1.751l.052.163.053.22a3.27 3.27 0 0 1-.053 1.557c-.25.888-.926 1.472-1.575 1.914-.662.451-1.576.935-2.66 1.51-1.049.555-1.933 1.026-2.664 1.316-.73.29-1.547.503-2.4.277a3.545 3.545 0 0 1-1.522-.841c-.66-.622-.875-1.446-.967-2.208-.092-.757-.09-1.727-.09-2.856 0-1.129-.002-2.099.09-2.855.092-.763.307-1.587.967-2.21.43-.403.955-.69 1.523-.841ZM12 15c0 1.2.002 1.977.07 2.534.032.267.073.422.107.51.016.04.029.06.035.07l.005.007.001.001a.875.875 0 0 0 .376.205c.017.005.174.045.734-.177.562-.224 1.293-.61 2.398-1.195 1.143-.605 1.898-1.008 2.408-1.356.395-.27.492-.41.51-.44a.602.602 0 0 0 0-.319c-.018-.03-.116-.17-.51-.438-.51-.348-1.265-.752-2.408-1.358-1.104-.586-1.836-.971-2.398-1.194-.56-.222-.716-.182-.734-.178a.875.875 0 0 0-.376.205l-.002.002-.004.007a.38.38 0 0 0-.035.07 2.191 2.191 0 0 0-.107.509C12.002 13.023 12 13.8 12 15Z"
+													fill="#a0acb7"></path></svg
+											>
+
+											<div class="text-white">
+												Ver proyecto
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</a>
+				<a
+					href="https://landing-preview-saas.web.app/es/"
+					target="_blank"
+					class="card border mt-2"
+				>
+					<div class="card-body">
+						<div class="d-flex gap-1 gap-md-2">
+							<div class="col-2 col-md-1">
+								<div class="rounded-pill border border-white">
+									<Image
+										src={ProfileSaas}
+										alt="SAAS Landing Preview"
+										class="img-fluid rounded-pill"
+									/>
+								</div>
+							</div>
+							<div class="col-10 col-md-11">
+								<div class="">
+									<div>
+										<h6 class="mb-0">
+											Landing preview SAAS
+										</h6>
+										<div class="small">23/06/2025</div>
+										<div class="small">
+											<strong class="text-white"
+												>Tecnologías:</strong
+											>
+											Gsap, Astro, Firebase + Más. . .
+										</div>
+									</div>
+									<div class="mt-2">
+										¿Quieres presentar tu aplicación de
+										forma visualmente impactante y salir de
+										lo común? Esta plantilla está diseñada
+										para impresionar desde el primer
+										scroll...
+									</div>
+									<div class="btn btn-outline-primary mt-2">
+										<div
+											class="d-flex gap-2 align-items-center"
+										>
+											<svg
+												viewBox="0 0 30 30"
+												width="1.6rem"
+												fill="none"
+												xmlns="http://www.w3.org/2000/svg"
+												><path
+													d="M26.667 15c0-6.628-5.372-12-12-12-6.627 0-12 5.372-12 12 0 6.627 5.373 12 12 12 6.628 0 12-5.373 12-12Zm2.667 0c0 8.1-6.567 14.666-14.667 14.666S.001 23.1.001 15C.001 6.9 6.567.335 14.667.333 22.767.333 29.334 6.9 29.334 15Z"
+													fill="#a0acb7"></path><path
+													d="M11.914 9.094c.851-.225 1.668-.013 2.4.277.73.29 1.614.762 2.662 1.318 1.085.575 2 1.057 2.661 1.508.608.415 1.24.954 1.523 1.751l.052.163.053.22a3.27 3.27 0 0 1-.053 1.557c-.25.888-.926 1.472-1.575 1.914-.662.451-1.576.935-2.66 1.51-1.049.555-1.933 1.026-2.664 1.316-.73.29-1.547.503-2.4.277a3.545 3.545 0 0 1-1.522-.841c-.66-.622-.875-1.446-.967-2.208-.092-.757-.09-1.727-.09-2.856 0-1.129-.002-2.099.09-2.855.092-.763.307-1.587.967-2.21.43-.403.955-.69 1.523-.841ZM12 15c0 1.2.002 1.977.07 2.534.032.267.073.422.107.51.016.04.029.06.035.07l.005.007.001.001a.875.875 0 0 0 .376.205c.017.005.174.045.734-.177.562-.224 1.293-.61 2.398-1.195 1.143-.605 1.898-1.008 2.408-1.356.395-.27.492-.41.51-.44a.602.602 0 0 0 0-.319c-.018-.03-.116-.17-.51-.438-.51-.348-1.265-.752-2.408-1.358-1.104-.586-1.836-.971-2.398-1.194-.56-.222-.716-.182-.734-.178a.875.875 0 0 0-.376.205l-.002.002-.004.007a.38.38 0 0 0-.035.07 2.191 2.191 0 0 0-.107.509C12.002 13.023 12 13.8 12 15Z"
+													fill="#a0acb7"></path></svg
+											>
+
+											<div class="text-white">
+												Ver proyecto
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</a>
 			</div>
-		</a>
+		</div>
 		<div
 			class="card border col-12 col-md-9 otras_tarjetas"
 			data-bs-theme="dark"
@@ -197,9 +373,15 @@ import Contactame from "../components/Contactame.astro";
 											<div class="text-white">
 												Mostrar credencial
 											</div>
-											<i
-												class="hgi hgi-stroke hgi-share-01 fs-5 text-secondary"
-											></i>
+											<svg
+												viewBox="0 0 27 28"
+												width="1rem"
+												fill="none"
+												xmlns="http://www.w3.org/2000/svg"
+												><path
+													d="M0 14c0-2.8 0-5.02.23-6.77.24-1.78.75-3.26 1.92-4.42a6.66 6.66 0 0 1 3.54-1.77c1.35-.28 3-.35 4.96-.37a1.33 1.33 0 1 1 .03 2.66c-1.96.02-3.38.1-4.46.32-1.05.21-1.7.55-2.19 1.04-.59.6-.96 1.41-1.16 2.9-.2 1.52-.2 3.54-.2 6.4 0 2.87 0 4.89.2 6.41.2 1.5.57 2.3 1.16 2.9.6.59 1.41.96 2.9 1.16 1.52.2 3.54.2 6.4.2 2.87 0 4.9 0 6.42-.2 1.48-.2 2.3-.57 2.9-1.16.48-.5.82-1.14 1.03-2.19.22-1.08.3-2.5.32-4.46a1.33 1.33 0 0 1 2.67.03 28 28 0 0 1-.38 4.97 6.67 6.67 0 0 1-1.76 3.53c-1.17 1.17-2.65 1.68-4.43 1.92-1.74.24-3.97.23-6.76.23-2.8 0-5.02 0-6.77-.23-1.78-.24-3.25-.75-4.42-1.92C.98 24.02.47 22.54.23 20.76 0 19.02 0 16.79 0 14Zm12.94 2.28a1.33 1.33 0 0 1-1.88-1.89l1.88 1.89ZM24 11.33V5.22L12.93 16.28l-.94-.95-.94-.94L22.1 3.34H16a1.33 1.33 0 1 1 0-2.67h5.33c.9 0 1.72 0 2.38.08.69.1 1.4.31 1.98.9.58.57.8 1.29.9 1.98.06.49.07 1.07.08 1.71v6a1.33 1.33 0 1 1-2.67 0Z"
+													fill="#a0acb7"></path></svg
+											>
 										</div>
 									</a>
 								</div>
@@ -255,9 +437,15 @@ import Contactame from "../components/Contactame.astro";
 											<div class="text-white">
 												Mostrar credencial
 											</div>
-											<i
-												class="hgi hgi-stroke hgi-share-01 fs-5 text-secondary"
-											></i>
+											<svg
+												viewBox="0 0 27 28"
+												width="1rem"
+												fill="none"
+												xmlns="http://www.w3.org/2000/svg"
+												><path
+													d="M0 14c0-2.8 0-5.02.23-6.77.24-1.78.75-3.26 1.92-4.42a6.66 6.66 0 0 1 3.54-1.77c1.35-.28 3-.35 4.96-.37a1.33 1.33 0 1 1 .03 2.66c-1.96.02-3.38.1-4.46.32-1.05.21-1.7.55-2.19 1.04-.59.6-.96 1.41-1.16 2.9-.2 1.52-.2 3.54-.2 6.4 0 2.87 0 4.89.2 6.41.2 1.5.57 2.3 1.16 2.9.6.59 1.41.96 2.9 1.16 1.52.2 3.54.2 6.4.2 2.87 0 4.9 0 6.42-.2 1.48-.2 2.3-.57 2.9-1.16.48-.5.82-1.14 1.03-2.19.22-1.08.3-2.5.32-4.46a1.33 1.33 0 0 1 2.67.03 28 28 0 0 1-.38 4.97 6.67 6.67 0 0 1-1.76 3.53c-1.17 1.17-2.65 1.68-4.43 1.92-1.74.24-3.97.23-6.76.23-2.8 0-5.02 0-6.77-.23-1.78-.24-3.25-.75-4.42-1.92C.98 24.02.47 22.54.23 20.76 0 19.02 0 16.79 0 14Zm12.94 2.28a1.33 1.33 0 0 1-1.88-1.89l1.88 1.89ZM24 11.33V5.22L12.93 16.28l-.94-.95-.94-.94L22.1 3.34H16a1.33 1.33 0 1 1 0-2.67h5.33c.9 0 1.72 0 2.38.08.69.1 1.4.31 1.98.9.58.57.8 1.29.9 1.98.06.49.07 1.07.08 1.71v6a1.33 1.33 0 1 1-2.67 0Z"
+													fill="#a0acb7"></path></svg
+											>
 										</div>
 									</a>
 								</div>
@@ -278,7 +466,17 @@ import Contactame from "../components/Contactame.astro";
 					<h3 class="fs-4 fw-bold">Recomendaciones</h3>
 				</div>
 				<div class="d-flex gap-2 align-items-center">
-					<i class="hgi hgi-stroke hgi-location-06 fs-5 text-secondary"></i>
+					<svg
+						viewBox="0 0 28 30"
+						width="1.2rem"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+						><path
+							d="M14 .3c5.2 0 10.2 3.1 12.3 8 2 4.6.9 8.5-1.3 11.8-2 3.2-5.4 6-8 8.4a4.5 4.5 0 0 1-6 0C8.3 26 5 23.3 3 20A11.7 11.7 0 0 1 1.7 8.3c2-4.9 7-8 12.3-8ZM14 3C9.8 3 5.8 5.5 4.1 9.4c-1.5 3.5-.7 6.4 1.1 9.2 1.9 2.9 4.8 5.3 7.6 8a1.8 1.8 0 0 0 2.4 0l2.1-2c2-2 4-3.9 5.5-6 1.8-2.8 2.6-5.7 1-9.2A10.8 10.8 0 0 0 14 3Z"
+							fill="#a0acb7"></path><path
+							d="M17.3 13.7a3.3 3.3 0 1 0-6.6 0 3.3 3.3 0 0 0 6.6 0Zm2.7 0a6 6 0 1 1-12 0 6 6 0 0 1 12 0Z"
+							fill="#a0acb7"></path></svg
+					>
 					<strong>4.8</strong>
 					<div class="stars">
 						<svg
@@ -444,7 +642,15 @@ import Contactame from "../components/Contactame.astro";
 				class="card-footer d-flex align-items-center justify-content-center gap-2"
 			>
 				Ver más en Google Maps
-				<i class="hgi hgi-stroke hgi-share-01 fs-4 text-secondary"></i>
+				<svg
+					viewBox="0 0 27 28"
+					width="1.2rem"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+					><path
+						d="M0 14c0-2.8 0-5.02.23-6.77.24-1.78.75-3.26 1.92-4.42a6.66 6.66 0 0 1 3.54-1.77c1.35-.28 3-.35 4.96-.37a1.33 1.33 0 1 1 .03 2.66c-1.96.02-3.38.1-4.46.32-1.05.21-1.7.55-2.19 1.04-.59.6-.96 1.41-1.16 2.9-.2 1.52-.2 3.54-.2 6.4 0 2.87 0 4.89.2 6.41.2 1.5.57 2.3 1.16 2.9.6.59 1.41.96 2.9 1.16 1.52.2 3.54.2 6.4.2 2.87 0 4.9 0 6.42-.2 1.48-.2 2.3-.57 2.9-1.16.48-.5.82-1.14 1.03-2.19.22-1.08.3-2.5.32-4.46a1.33 1.33 0 0 1 2.67.03 28 28 0 0 1-.38 4.97 6.67 6.67 0 0 1-1.76 3.53c-1.17 1.17-2.65 1.68-4.43 1.92-1.74.24-3.97.23-6.76.23-2.8 0-5.02 0-6.77-.23-1.78-.24-3.25-.75-4.42-1.92C.98 24.02.47 22.54.23 20.76 0 19.02 0 16.79 0 14Zm12.94 2.28a1.33 1.33 0 0 1-1.88-1.89l1.88 1.89ZM24 11.33V5.22L12.93 16.28l-.94-.95-.94-.94L22.1 3.34H16a1.33 1.33 0 1 1 0-2.67h5.33c.9 0 1.72 0 2.38.08.69.1 1.4.31 1.98.9.58.57.8 1.29.9 1.98.06.49.07 1.07.08 1.71v6a1.33 1.33 0 1 1-2.67 0Z"
+						fill="#a0acb7"></path></svg
+				>
 			</div>
 		</a>
 	</div>
@@ -617,11 +823,9 @@ import Contactame from "../components/Contactame.astro";
 		}
 	}
 	@media (orientation: landscape) and (min-width: 2000px) {
-
 		.mascara_tarjeta_2 {
 			margin-top: -50vh;
 		}
-
 	}
 	.mascara_contenido_tarjeta_1 {
 		width: 100vw;
@@ -693,6 +897,5 @@ import Contactame from "../components/Contactame.astro";
 		},
 		opacity: 1,
 	});
-
 </script>
 <script src="../scripts/instagram.js"></script>

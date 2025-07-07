@@ -2,7 +2,7 @@
 import "../styles/bootstrap.scss";
 import "../styles/fonts.css";
 import "../styles/global.css";
-import "../styles/icons.css";
+const canonical = `https://mosquedacordova.com${Astro.url.pathname}`;
 ---
 
 <!doctype html>
@@ -118,12 +118,8 @@ import "../styles/icons.css";
 			sizes="57x57"
 			href="https://mosqueda-cordova-992b2.web.app/favicon.png"
 		/>
-		<link rel="canonical" href="https://mosquedacordova.com" />
+		<link rel="canonical" href={canonical} />
 
-		<link
-			rel="stylesheet"
-			href="https://use.hugeicons.com/font/icons.css"
-		/>
 	</head>
 	<body style="overflow: hidden;" class="bg-black">
 		<!-- Google Tag Manager (noscript) -->

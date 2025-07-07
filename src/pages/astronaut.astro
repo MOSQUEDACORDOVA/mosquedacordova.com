@@ -1,0 +1,77 @@
+---
+import LayoutGeneric from "../layouts/LayoutGeneric.astro";
+import { Image } from "astro:assets";
+import Astronaut from "../assets/landing-astronaut.png";
+---
+
+<LayoutGeneric>
+    <main>
+        <div class="container">
+            <div class="row justify-content-center my-2 my-md-5">
+                <div class="col-md-6">
+                    <h1 class="mb-3">
+                        Landing Page for the Astronaut Developer | HTML
+                    </h1>
+                    <Image
+                        src={Astronaut}
+                        alt="Astronauta"
+                        class="w-100 h-auto rounded"
+                    />
+                    <p class="mt-3">
+                        Hi there 👋 I’ve developed this script to help you
+                        impress your clients with a disruptive and unique
+                        landing page. It’s not a full landing page — my goal is
+                        to save you time by integrating GSAP and Three.js for
+                        you. The code is ready for you to customize with your
+                        own content. 🙌 — and the best part: it’s fully
+                        responsive. 🚀
+                    </p>
+                    <p class="mt-3">
+                        <div class="text-black">Language:</div> HTML, CSS, and JavaScript.
+                    </p>
+                    <a
+                        href="https://www.paypal.com/invoice/p/#7VXQR6KTVVKM7R2Y"
+                        class="btn btn-primary btn-lg mt-3 w-100"
+                    >
+                        Buy it now for $10
+                    </a>
+                    <a
+                        href="https://www.paypal.com/invoice/p/#GS73HVA646FTKQ4K"
+                        class="btn btn-outline-primary btn-lg mt-3 text-start w-100"
+                    >
+                        <span class="text-body"
+                            >I want it in another language</span>
+                        <div class="fw-bold">+ $50</div>
+                        <span class="text-muted fs-6">
+                            For example: React, Vue, Angular, Svelte, etc.
+                        </span>
+                    </a>
+                    <a
+                        href="https://landing-page-astronauta-astro.web.app/"
+                        class="btn btn-outline-primary btn-lg mt-3 text-start w-100"
+                        target="_blank"
+                    >
+                        <span
+                            >See Demo</span>
+                    </a>
+                    <div class="col-12 d-flex justify-content-between gap-2">
+                        <a
+                        href="https://api.whatsapp.com/send?phone=51945692831"
+                        class="btn btn-outline-primary btn-lg mt-3 col-6"
+                        target="_blank"
+                    >
+                        Contact me
+                    </a>
+                    <a
+                        href="https://www.mosquedacordova.com/"
+                        class="btn btn-outline-primary btn-lg mt-3 col-6"
+                        target="_blank"
+                    >
+                        About me
+                    </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</LayoutGeneric>
